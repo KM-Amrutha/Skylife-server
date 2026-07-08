@@ -4,6 +4,7 @@ import { sendResponse } from "@shared/utils/http.response";
 import { StatusCodes, JWT_MESSAGES } from "@shared/constants/index.constants";
 import { TokenUseCase } from "@di/file-imports-index";
 import { TYPES_AUTH_USECASES } from "@di/types-usecases";
+import { setAuthCookies } from "@shared/utils/cookie";
 
 @injectable()
 export class RefreshAccessTokenController {
@@ -13,17 +14,18 @@ export class RefreshAccessTokenController {
   ) {}
 
   async handle(req: Request, res: Response): Promise<void> {
-    const { refreshToken } = req?.cookies;
+    const { refreshToken } = req.cookies;
 
-    const newAccessToken = await this._tokenUseCase.refreshAccessToken(
-      refreshToken
-    );
+    const newAccessToken = await this._tokenUseCase.refreshAccessToken(refreshToken);
 
-    sendResponse(
-      res,
-      JWT_MESSAGES.TOKEN_REFRESH_SUCCESS,
-      { newAccessToken },
-      StatusCodes.OK,
-    );
+    // set new accessToken cookie — refreshToken cookie unchanged
+    res.cookie("accessToken", newAccessToken, {
+      httpOnly: true,
+      sameSite: "none",
+      secure: true,
+      maxAge: 15 * 60 * 1000,
+    });
+
+    sendResponse(res, JWT_MESSAGES.TOKEN_REFRESH_SUCCESS, null, StatusCodes.OK);
   }
 }

@@ -16,4 +16,5 @@ export const SEAT_MESSAGES = {
 INVALID_LAYOUT_CONFIG: (layout: string) => `Invalid layout configuration: ${layout}`,
 SEAT_TYPE_NOT_FOUND_FOR_CLASS: (cabinClass: string) => `Seat type not found for class: ${cabinClass}`,
 NO_SEATS_GENERATED: "No seats generated. Check your layout configuration.",
+ SEATS_GENERATED: (count: number) => `Successfully generated ${count} seats.`,
 } as const;

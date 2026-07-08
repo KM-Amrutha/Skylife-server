@@ -287,5 +287,50 @@ export class BookingRepository
         revenue: s.revenue,
       })),
     };
-  }
+  };
+  async findConfirmedBookingByFlightSeatId(flightSeatId: string): Promise<IBooking | null> {
+  const docs = await BookingModel.aggregate([
+    {
+      $match: {
+        status: "confirmed",
+        "passengers.segments.flightSeatId": flightSeatId,
+        "passengers.segments.status": "active",
+      },
+    },
+    { $project: this.baseProjection() },
+    { $limit: 1 },
+  ]);
+  if (!docs[0]) return null;
+  return { ...docs[0], id: docs[0]._id.toString() };
+}
+
+async cancelPassengerSegment(
+  bookingId: string,
+  passengerId: string,
+  flightSeatId: string,
+  refundAmount: number
+): Promise<IBooking | null> {
+  const updated = await BookingModel.findOneAndUpdate(
+    {
+      _id: this.parseId(bookingId),
+      "passengers.passengerId": passengerId,
+    },
+    {
+      $set: {
+        "passengers.$[passenger].segments.$[segment].status": "cancelled",
+        "passengers.$[passenger].segments.$[segment].cancelledAt": new Date(),
+        "passengers.$[passenger].refundAmount": refundAmount,
+      },
+    },
+    {
+      arrayFilters: [
+        { "passenger.passengerId": passengerId },
+        { "segment.flightSeatId": flightSeatId },
+      ],
+      new: true,
+    }
+  ).exec();
+  if (!updated) return null;
+  return this.getBookingById(updated.id.toString());
+}
 }

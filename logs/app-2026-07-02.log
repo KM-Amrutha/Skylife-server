@@ -1,0 +1,75 @@
+02-07-2026 00:08:18 [[32MINFO[39M]: POST /auth/user/sign-up 200 404 - 4430.976 ms
+02-07-2026 00:31:56 [[32MINFO[39M]: POST /auth/user/sign-up 200 404 - 4582.768 ms
+02-07-2026 16:32:44 [[32MINFO[39M]: POST /auth/user/sign-up 200 404 - 4553.016 ms
+02-07-2026 16:33:18 [[31MERROR[39M]: [/auth/otp/verify] The OTP you entered is either invalid or has expired.: The OTP you entered is either invalid or has expired.
+Error: The OTP you entered is either invalid or has expired.
+    at OtpUseCase.<anonymous> (C:\Users\amrut\Desktop\airticketbooking\back-end\src\application\usecases\auth\otp.usecase.ts:38:13)
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\Users\amrut\Desktop\airticketbooking\back-end\src\application\usecases\auth\otp.usecase.ts:17:58)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+02-07-2026 16:33:18 [[32MINFO[39M]: POST /auth/otp/verify 400 108 - 28.402 ms
+02-07-2026 16:33:50 [[32MINFO[39M]: POST /auth/otp/verify 200 107 - 195.015 ms
+02-07-2026 16:35:08 [[32MINFO[39M]: POST /auth/sign-in 200 306 - 260.761 ms
+02-07-2026 16:35:52 [[32MINFO[39M]: GET /user/bookings?page=1&limit=4 304 - - 139.062 ms
+02-07-2026 16:35:52 [[32MINFO[39M]: GET /user/bookings?page=1&limit=4 304 - - 98.932 ms
+02-07-2026 16:35:58 [[32MINFO[39M]: GET /user/wallet 200 256 - 247.404 ms
+02-07-2026 16:35:58 [[32MINFO[39M]: GET /user/wallet 304 - - 89.914 ms
+02-07-2026 16:36:45 [[32MINFO[39M]: PATCH /auth/password/change 200 83 - 352.862 ms
+02-07-2026 16:36:55 [[32MINFO[39M]: POST /auth/sign-out/ 200 137 - 4.586 ms
+02-07-2026 16:37:17 [[32MINFO[39M]: PATCH /auth/password-reset 200 88 - 3356.318 ms
+02-07-2026 16:42:02 [[32MINFO[39M]: PATCH /auth/password-reset 200 88 - 3667.155 ms
+02-07-2026 16:45:16 [[32MINFO[39M]: PATCH /auth/password-reset 200 88 - 3524.843 ms
+02-07-2026 16:45:54 [[32MINFO[39M]: POST /auth/password-reset/42c74815719f0744159afb23a56a1281ce1f698268beb6f58ed303bf75ce900c 200 139 - 263.495 ms
+02-07-2026 16:46:06 [[32MINFO[39M]: POST /auth/sign-in 200 306 - 215.081 ms
+02-07-2026 18:52:37 [[32MINFO[39M]: POST /auth/sign-in 200 314 - 408.330 ms
+02-07-2026 18:52:38 [[32MINFO[39M]: GET /admin/dashboard 200 266 - 95.191 ms
+02-07-2026 18:52:38 [[32MINFO[39M]: GET /admin/dashboard 304 - - 60.567 ms
+02-07-2026 18:52:38 [[32MINFO[39M]: GET /admin/dashboard 304 - - 48.597 ms
+02-07-2026 18:52:38 [[32MINFO[39M]: GET /admin/dashboard 304 - - 49.439 ms
+02-07-2026 18:53:27 [[32MINFO[39M]: GET /admin/dashboard 304 - - 57.526 ms
+02-07-2026 18:53:27 [[32MINFO[39M]: GET /admin/dashboard 304 - - 50.258 ms
+02-07-2026 18:53:27 [[32MINFO[39M]: GET /admin/dashboard 304 - - 57.898 ms
+02-07-2026 18:53:27 [[32MINFO[39M]: GET /admin/dashboard 304 - - 51.487 ms
+02-07-2026 18:53:31 [[32MINFO[39M]: GET /admin/dashboard 304 - - 48.683 ms
+02-07-2026 18:53:31 [[32MINFO[39M]: GET /admin/dashboard 304 - - 50.609 ms
+02-07-2026 18:53:31 [[32MINFO[39M]: GET /admin/dashboard 304 - - 48.912 ms
+02-07-2026 18:53:31 [[32MINFO[39M]: GET /admin/dashboard 304 - - 49.436 ms
+02-07-2026 18:53:33 [[32MINFO[39M]: GET /admin/users?page=1&limit=3 200 1069 - 150.465 ms
+02-07-2026 18:53:33 [[32MINFO[39M]: GET /admin/users?page=1&limit=3 304 - - 94.555 ms
+02-07-2026 18:53:35 [[32MINFO[39M]: GET /admin/dashboard 304 - - 48.664 ms
+02-07-2026 18:53:35 [[32MINFO[39M]: GET /admin/dashboard 304 - - 61.834 ms
+02-07-2026 18:53:35 [[32MINFO[39M]: GET /admin/users?page=1&limit=3 304 - - 96.871 ms
+02-07-2026 18:53:35 [[32MINFO[39M]: GET /admin/users?page=1&limit=3 304 - - 89.901 ms
+02-07-2026 18:54:19 [[32MINFO[39M]: POST /auth/sign-in 200 1148 - 368.040 ms
+02-07-2026 18:54:35 [[32MINFO[39M]: GET /provider/profile 400 73 - 178.040 ms
+02-07-2026 18:54:35 [[32MINFO[39M]: GET /provider/profile 400 73 - 92.789 ms
+02-07-2026 19:29:56 [[31MERROR[39M]: [/provider/profile] No access token provided. Please include a valid access token in your request.: No access token provided. Please include a valid access token in your request.
+Error: No access token provided. Please include a valid access token in your request.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:16:10
+    at Generator.next (<anonymous>)
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:4:12)
+    at authenticate (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:11:5)
+    at Layer.handleRequest (C:\Users\amrut\Desktop\airticketbooking\back-end\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\amrut\Desktop\airticketbooking\back-end\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\amrut\Desktop\airticketbooking\back-end\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\amrut\Desktop\airticketbooking\back-end\node_modules\router\index.js:435:11)
+02-07-2026 19:29:56 [[32MINFO[39M]: GET /provider/profile 401 133 - 306.658 ms
+02-07-2026 19:29:56 [[31MERROR[39M]: [/provider/profile] No access token provided. Please include a valid access token in your request.: No access token provided. Please include a valid access token in your request.
+Error: No access token provided. Please include a valid access token in your request.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:16:10
+    at Generator.next (<anonymous>)
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:4:12)
+    at authenticate (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:11:5)
+    at Layer.handleRequest (C:\Users\amrut\Desktop\airticketbooking\back-end\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\amrut\Desktop\airticketbooking\back-end\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\amrut\Desktop\airticketbooking\back-end\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\amrut\Desktop\airticketbooking\back-end\node_modules\router\index.js:435:11)
+02-07-2026 19:29:56 [[32MINFO[39M]: GET /provider/profile 401 133 - 5.684 ms
+02-07-2026 19:29:56 [[32MINFO[39M]: POST /auth/refresh-token 200 143 - 142.565 ms
+02-07-2026 19:29:56 [[32MINFO[39M]: POST /auth/refresh-token 200 143 - 38.872 ms
+02-07-2026 19:29:57 [[32MINFO[39M]: GET /provider/profile 200 1136 - 703.732 ms
+02-07-2026 19:29:57 [[32MINFO[39M]: GET /provider/profile 304 - - 90.213 ms

@@ -8,8 +8,10 @@ import {
     TYPES_FLIGHT_CONTROLLERS,
     TYPES_USER_CONTROLLERS,
     TYPES_BOOKING_CONTROLLERS,
+    TYPES_WALLET_CONTROLLERS,
     TYPES_OFFER_CONTROLLERS,
     TYPES_FOOD_CONTROLLERS,
+
 
 } from "@di/types-controllers"
 
@@ -23,6 +25,7 @@ import { TYPES_AUTH_USECASES,
          TYPES_BOOKING_USECASES,
          TYPES_OFFER_USECASES,
          TYPES_FOOD_USECASES,
+         TYPES_WALLET_USECASES
         } 
          from "@di/types-usecases";
 import { TYPES_SERVICES } from "di/types-services"
@@ -32,7 +35,6 @@ import { TYPES_REPOSITORIES,
       TYPES_BOOKING_REPOSITORIES }   from "di/types-repositories"
 
 import {
-OtpRepository,
 UserRepository,
 ProviderRepository,
 PasswordResetRepository,
@@ -112,6 +114,8 @@ SeatLockController,
 BookingDetailsController,
 GetBookingSummaryController,
 GetAdminWalletController,
+ToggleSeatBlockController,
+GetAircraftSeatsController,
 
 InitiateBookingController,
 RetryPaymentController, 
@@ -122,10 +126,15 @@ GetProviderBookingsController,
 GetAdminBookingsController, 
 GetTicketController,
 CancelPassengerController,
-GetUserWalletController,
-GetProviderWalletController,
 SetProviderCommissionController,
 GetProviderBookingByIdController,
+
+GetUserWalletController,
+GetProviderWalletController,
+PayWithWalletController,
+AddMoneyToWalletController,
+AddMoneyToProviderWalletController,
+
 
 GetEligibleOffersController,
 CreateOfferController,
@@ -142,7 +151,6 @@ GetFoodsByAircraftController,
 FoodStatusChangeController,
 
 IUserRepository,
-IOtpRepository,
 IProviderRepository,
 IPasswordResetRepository,
 
@@ -176,6 +184,7 @@ IStripeService,
 IUserWalletCreditService,
 IProviderWalletService,
 ITicketGenerationService,
+IBookingConfirmationService,
 
 
 
@@ -198,6 +207,8 @@ StripeService,
 UserWalletCreditService,
 ProviderWalletService,
 TicketGenerationService,
+BookingConfirmationService,
+
 } from "@di/file-imports-index";
 
 import {
@@ -225,6 +236,8 @@ UpdateUserStatusUseCase,
 GetAdminDashboardUseCase,
 SetProviderCommissionUseCase,
 GetAdminWalletUseCase,
+ToggleSeatBlockUseCase,
+GetAircraftSeatsUseCase,
 
 GetUserProfileUseCase,
 UpdateUserProfileUseCase,
@@ -274,6 +287,9 @@ CancelPassengerUseCase,
 GetUserWalletUseCase,
 GetProviderWalletUseCase,
 GetProviderBookingByIdUseCase,
+PayWithWalletUseCase,
+AddMoneyToProviderWalletUseCase,
+AddMoneyToWalletUseCase,
 
 GetEligibleOffersUseCase,
 CreateOfferUseCase,
@@ -313,6 +329,8 @@ IGetAllUsersUseCase,
 IUpdateUserStatusUseCase,
 IGetAdminDashboardUseCase,
 ISetProviderCommissionUseCase,
+IToggleSeatBlockUseCase,
+IGetAircraftSeatsUseCase,
 
 
 
@@ -360,9 +378,12 @@ IGetAdminBookingsUseCase,
 IGetTicketUseCase,
 ICancelPassengerUseCase,
 IGetUserWalletUseCase,
+IGetProviderBookingByIdUseCase,
 IGetProviderWalletUseCase,
 IGetAdminWalletUseCase,
-IGetProviderBookingByIdUseCase,
+IAddMoneyToProviderWalletUseCase,
+IAddMoneyToWalletUseCase,
+IPayWithWalletUseCase,
 
 ICreateOfferUseCase,
 IGetProviderOffersUseCase,
@@ -378,18 +399,12 @@ IGetFoodsByProviderUseCase,
 IFoodStatusChangeUseCase,
 IDeleteFoodUseCase
 
-
-
-
-
-
 } from "@di/file-imports-index";
 
 const container = new Container();
 
 // Bind Repositories
 container.bind<IUserRepository>(TYPES_REPOSITORIES.UserRepository).to(UserRepository);
-container.bind<IOtpRepository>(TYPES_REPOSITORIES.OtpRepository).to(OtpRepository);
 container.bind<IProviderRepository>(TYPES_REPOSITORIES.ProviderRepository).to(ProviderRepository);
 container.bind<IPasswordResetRepository>(TYPES_REPOSITORIES.PasswordResetRepository).to(PasswordResetRepository);
 
@@ -424,7 +439,7 @@ container.bind<IStripeService>(TYPES_SERVICES.StripeService).to(StripeService);
 container.bind<IUserWalletCreditService>(TYPES_SERVICES.UserWalletCreditService).to(UserWalletCreditService);
 container.bind<IProviderWalletService>(TYPES_SERVICES.ProviderWalletService).to(ProviderWalletService);
 container.bind<ITicketGenerationService>(TYPES_SERVICES.TicketGenerationService).to(TicketGenerationService);
-
+container.bind<IBookingConfirmationService>(TYPES_SERVICES.BookingConfirmationService).to(BookingConfirmationService);
 
 // Bind UseCases
 container.bind<ICreateUserUseCase>(TYPES_AUTH_USECASES.CreateUserUseCase).to(CreateUserUseCase);
@@ -456,6 +471,9 @@ container.bind<IUpdateUserProfileUseCase>(TYPES_USER_USECASES.UpdateUserProfileU
 container.bind<IGetAdminDashboardUseCase>(TYPES_ADMIN_USECASES.GetAdminDashboardUseCase).to(GetAdminDashboardUseCase);
 container.bind<ISetProviderCommissionUseCase>(TYPES_ADMIN_USECASES.SetProviderCommissionUseCase).to(SetProviderCommissionUseCase);
 container.bind<IGetAdminWalletUseCase>(TYPES_ADMIN_USECASES.GetAdminWalletUseCase).to(GetAdminWalletUseCase);
+container.bind<IToggleSeatBlockUseCase>(TYPES_AIRCRAFT_USECASES.ToggleSeatBlockUseCase).to(ToggleSeatBlockUseCase);
+container.bind<IGetAircraftSeatsUseCase>(TYPES_AIRCRAFT_USECASES.GetAircraftSeatsUseCase).to(GetAircraftSeatsUseCase);
+
 
 container.bind<ICreateAircraftUseCase>(TYPES_AIRCRAFT_USECASES.CreateAircraftUseCase).to(CreateAircraftUseCase);
 container.bind<IUpdateAircraftUseCase>(TYPES_AIRCRAFT_USECASES.UpdateAircraftUseCase).to(UpdateAircraftUseCase);
@@ -502,9 +520,13 @@ container.bind<IGetProviderBookingsUseCase>(TYPES_BOOKING_USECASES.GetProviderBo
 container.bind<IGetAdminBookingsUseCase>(TYPES_BOOKING_USECASES.GetAdminBookingsUseCase).to(GetAdminBookingsUseCase);
 container.bind<IGetTicketUseCase>(TYPES_BOOKING_USECASES.GetTicketUseCase).to(GetTicketUseCase);
 container.bind<ICancelPassengerUseCase>(TYPES_BOOKING_USECASES.CancelPassengerUseCase).to(CancelPassengerUseCase);
-container.bind<IGetUserWalletUseCase>(TYPES_BOOKING_USECASES.GetUserWalletUseCase).to(GetUserWalletUseCase);
-container.bind<IGetProviderWalletUseCase>(TYPES_BOOKING_USECASES.GetProviderWalletUseCase).to(GetProviderWalletUseCase);
 container.bind<IGetProviderBookingByIdUseCase>(TYPES_BOOKING_USECASES.GetProviderBookingByIdUseCase).to(GetProviderBookingByIdUseCase);
+
+container.bind<IGetUserWalletUseCase>(TYPES_WALLET_USECASES.GetUserWalletUseCase).to(GetUserWalletUseCase);
+container.bind<IGetProviderWalletUseCase>(TYPES_WALLET_USECASES.GetProviderWalletUseCase).to(GetProviderWalletUseCase);
+container.bind<IAddMoneyToProviderWalletUseCase>(TYPES_WALLET_USECASES.AddMoneyToProviderWalletUseCase).to(AddMoneyToProviderWalletUseCase);
+container.bind<IAddMoneyToWalletUseCase>(TYPES_WALLET_USECASES.AddMoneyToWalletUseCase).to(AddMoneyToWalletUseCase);
+container.bind<IPayWithWalletUseCase>(TYPES_WALLET_USECASES.PayWithWalletUseCase).to(PayWithWalletUseCase);
 
 container.bind<ICreateOfferUseCase>(TYPES_OFFER_USECASES.CreateOfferUseCase).to(CreateOfferUseCase);
 container.bind<IGetEligibleOffersUseCase>(TYPES_OFFER_USECASES.GetEligibleOffersUseCase).to(GetEligibleOffersUseCase);
@@ -556,7 +578,8 @@ container.bind(TYPES_AIRCRAFT_CONTROLLERS.CreateSeatLayoutController).to(CreateS
 container.bind(TYPES_AIRCRAFT_CONTROLLERS.GenerateSeatsController).to(GenerateSeatsController); 
 container.bind(TYPES_AIRCRAFT_CONTROLLERS.GetSeatLayoutsController).to(GetSeatLayoutsController);
 container.bind(TYPES_AIRCRAFT_CONTROLLERS.DeleteSeatLayoutController).to(DeleteSeatLayoutController)
-
+container.bind(TYPES_AIRCRAFT_CONTROLLERS.ToggleSeatBlockController).to(ToggleSeatBlockController);
+container.bind(TYPES_AIRCRAFT_CONTROLLERS.GetAircraftSeatsController).to(GetAircraftSeatsController);
 container.bind(TYPES_FLIGHT_CONTROLLERS.CreateFlightController).to(CreateFlightController);
 container.bind(TYPES_FLIGHT_CONTROLLERS.GetProviderFlightsController).to(GetProviderFlightsController);
 container.bind(TYPES_FLIGHT_CONTROLLERS.PendingFlightsForApprovalController).to(PendingFlightsForApprovalController);
@@ -589,9 +612,13 @@ container.bind(TYPES_BOOKING_CONTROLLERS.GetProviderBookingsController).to(GetPr
 container.bind(TYPES_BOOKING_CONTROLLERS.GetAdminBookingsController).to(GetAdminBookingsController);
 container.bind(TYPES_BOOKING_CONTROLLERS.GetTicketController).to(GetTicketController);
 container.bind(TYPES_BOOKING_CONTROLLERS.CancelPassengerController).to(CancelPassengerController);
-container.bind(TYPES_BOOKING_CONTROLLERS.GetUserWalletController).to(GetUserWalletController);
-container.bind(TYPES_BOOKING_CONTROLLERS.GetProviderWalletController).to(GetProviderWalletController);
 container.bind(TYPES_BOOKING_CONTROLLERS.GetProviderBookingByIdController).to(GetProviderBookingByIdController);
+
+container.bind(TYPES_WALLET_CONTROLLERS.GetUserWalletController).to(GetUserWalletController);
+container.bind(TYPES_WALLET_CONTROLLERS.GetProviderWalletController).to(GetProviderWalletController);
+container.bind(TYPES_WALLET_CONTROLLERS.PayWithWalletController).to(PayWithWalletController);
+container.bind(TYPES_WALLET_CONTROLLERS.AddMoneyToWalletController).to(AddMoneyToWalletController);
+container.bind(TYPES_WALLET_CONTROLLERS.AddMoneyToProviderWalletController).to(AddMoneyToProviderWalletController);
 
 container.bind(TYPES_OFFER_CONTROLLERS.CreateOfferController).to(CreateOfferController);
 container.bind(TYPES_OFFER_CONTROLLERS.DeleteOfferController).to(DeleteOfferController);

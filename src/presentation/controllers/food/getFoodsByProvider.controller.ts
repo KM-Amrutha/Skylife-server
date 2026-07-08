@@ -18,12 +18,13 @@ export class GetFoodsByProviderController {
     const providerId = req.user!.id;
     const { page, limit } = parseQueryParams(req.query);
 
+
     const result = await this._getFoodsByProviderUseCase.execute(
       providerId,
       page,
       limit
     );
-
+console.log("result is: ", result)
     sendResponse(res, FOOD_MESSAGES.FOOD_RETRIEVED, result, StatusCodes.OK);
   }
 }

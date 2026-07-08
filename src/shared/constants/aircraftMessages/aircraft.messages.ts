@@ -3,6 +3,7 @@ export const AIRCRAFT_MESSAGES = {
   CREATION_FAILED: 'Failed to create aircraft. Please try again later.',
   UPDATED: 'Aircraft details have been successfully updated.',
   UPDATE_FAILED: 'Failed to update aircraft details. Please try again.',
+  ID_REQUIRED: 'Aircraft ID is required.',
   NOT_FOUND: 'The aircraft you are looking for does not exist.',
   DELETED: 'Aircraft has been successfully removed from your fleet.',
   DELETE_FAILED: 'Failed to delete aircraft. Please try again.',
@@ -39,4 +40,5 @@ INVALID_STATUS_VALUE: (valid: string[]) =>
   `Invalid status. Must be one of: ${valid.join(", ")}`,
 CONFIGURE_FORBIDDEN: "You don't have permission to configure this aircraft",
 GENERATE_SEATS_FORBIDDEN: "You don't have permission to generate seats for this aircraft",
+AIRCRAFT_SEATS_RETRIEVED: "Aircraft seats retrieved",
 } as const;

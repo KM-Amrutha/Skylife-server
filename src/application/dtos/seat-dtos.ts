@@ -96,3 +96,27 @@ export interface SeatTypeDTO {
   createdAt: Date;             
   updatedAt: Date;                   
 }
+export interface AircraftSeatDTO {
+  id: string;
+  aircraftId: string;
+  seatNumber: string;
+  rowNumber: number;
+  columnPosition: string;
+  section: string;
+  position: string;
+  cabinClass: string;
+  isExitRow: boolean;
+  isBlocked: boolean;
+  blockReason?: string;
+  features: string[];
+}
+
+export interface ToggleSeatBlockResponseDTO {
+  seatId: string;
+  seatNumber: string;
+  isBlocked: boolean;
+  affectedFlightSeats: number;
+  refundIssued: boolean;
+  refundAmount?: number;
+  userId?: string;
+}

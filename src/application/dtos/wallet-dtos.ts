@@ -2,7 +2,7 @@
 
 export interface UserWalletTransactionResponseDTO {
   transactionId: string;
-  type: "credit";
+  type: "credit"|"debit";
   amount: number;
   description: string;
   bookingId?: string;
@@ -21,7 +21,7 @@ export interface UserWalletResponseDTO {
 
 export interface ProviderWalletTransactionResponseDTO {
   transactionId: string;
-  type: "credit";
+  type: "credit"|"debit";
   amount: number;
   description: string;
   bookingId?: string;
@@ -53,7 +53,7 @@ export interface AdminDashboardStatsDTO {
 }
 export interface AdminWalletTransactionResponseDTO {
   transactionId: string;
-  type: "credit";
+  type: "credit"|"debit";
   amount: number;
   description: string;
   bookingId?: string;
@@ -89,4 +89,25 @@ export interface CancelPassengerResponseDTO {
   passengerId: string;
   refundAmount: number;
   walletBalance: number;
+}
+
+export interface AddMoneyDTO {
+  amount: number;
+}
+
+export interface AddMoneyResponseDTO {
+  balance: number;
+  transactionId: string;
+  amount: number;
+}
+
+export interface PayWithWalletDTO {
+  sessionId: string;
+  offerId?: string;
+}
+
+export interface PayWithWalletResponseDTO {
+  bookingId: string;
+  amountDeducted: number;
+  remainingBalance: number;
 }

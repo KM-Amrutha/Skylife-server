@@ -60,5 +60,23 @@ export class UserWalletRepository
     const wallet = await this.getWalletByUserId(userId);
     if (!wallet) throw new Error("Failed to retrieve wallet after credit");
     return wallet;
-  }
+  };
+  async debitWallet(
+  userId: string,
+  transaction: IWalletTransaction,
+  amount: number
+): Promise<IWallet> {
+  await WalletModel.findOneAndUpdate(
+    { userId: this.parseId(userId) },
+    {
+      $inc: { balance: -amount },
+      $push: { transactions: transaction },
+    },
+    { upsert: true, new: true }
+  ).exec();
+
+  const wallet = await this.getWalletByUserId(userId);
+  if (!wallet) throw new Error("Failed to retrieve wallet after debit");
+  return wallet;
+}
 }

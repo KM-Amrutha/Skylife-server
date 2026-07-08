@@ -57,6 +57,8 @@ export const TYPES_AIRCRAFT_USECASES = {
   GetAllSeatTypesUseCase: Symbol.for("GetAllSeatTypesUseCase"),
   GetSeatLayoutsByAircraftUseCase: Symbol.for("GetSeatLayoutsByAircraftUseCase"),
   DeleteSeatLayoutUseCase: Symbol.for("DeleteSeatLayoutUseCase"),
+  ToggleSeatBlockUseCase: Symbol.for("ToggleSeatBlockUseCase"),
+  GetAircraftSeatsUseCase: Symbol.for("GetAircraftSeatsUseCase"),
 }
 export const TYPES_FLIGHT_USECASES = {
   CreateFlightUseCase: Symbol.for("CreateFlightUseCase"),
@@ -96,13 +98,15 @@ GetProviderBookingsUseCase: Symbol.for("GetProviderBookingsUseCase"),
 GetAdminBookingsUseCase: Symbol.for("GetAdminBookingsUseCase"),
 GetTicketUseCase: Symbol.for("GetTicketUseCase"),
 CancelPassengerUseCase: Symbol.for("CancelPassengerUseCase"), 
-GetUserWalletUseCase: Symbol.for("GetUserWalletUseCase"),
-GetProviderWalletUseCase: Symbol.for("GetProviderWalletUseCase"), 
 GetProviderBookingByIdUseCase: Symbol.for("GetProviderBookingByIdUseCase"),
+}
 
-
-
-
+export const TYPES_WALLET_USECASES = {
+  GetUserWalletUseCase: Symbol.for("GetUserWalletUseCase"),
+  GetProviderWalletUseCase: Symbol.for("GetProviderWalletUseCase"),
+  AddMoneyToProviderWalletUseCase: Symbol.for("AddMoneyToProviderWalletUseCase"),
+  AddMoneyToWalletUseCase: Symbol.for("AddMoneyToWalletUseCase"),
+  PayWithWalletUseCase: Symbol.for("PayWithWalletUseCase"),
 }
 
 export const TYPES_OFFER_USECASES = {

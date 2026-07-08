@@ -66,9 +66,6 @@ export class GetBookingByIdUseCase implements IGetBookingByIdUseCase {
         uniqueAircraftIds.map((id) => this._aircraftRepository.getAircraftById(id))
       ),
     ]);
-    console.log('resolvedFlights aircraftIds:', resolvedFlights.map(f => f.aircraftId));
-console.log('aircrafts fetched:', aircrafts);
-
     return BookingMapper.toBookingResponseDTOWithFlights(
       booking,
       flights,

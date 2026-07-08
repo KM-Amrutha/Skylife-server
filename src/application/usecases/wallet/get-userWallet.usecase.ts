@@ -1,6 +1,6 @@
 import { inject, injectable } from "inversify";
 import { IUserWalletRepository } from "@domain/interfaces/IUserWalletRepository";
-import { IGetUserWalletUseCase } from "@application/interfaces/usecase/booking/IGet-userWalletUsecase";
+import { IGetUserWalletUseCase } from "@application/interfaces/usecase/wallet/IGet-userWalletUsecase";
 import { UserWalletResponseDTO } from "@application/dtos/wallet-dtos";
 import { UserWalletMapper } from "@application/mappers/userWalletMapper";
 import { NotFoundError } from "@presentation/middlewares/error.middleware";

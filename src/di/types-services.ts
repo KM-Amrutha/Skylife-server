@@ -13,7 +13,8 @@ export const TYPES_SERVICES = {
         StripeService: Symbol.for("StripeService"),
         UserWalletCreditService: Symbol.for("UserWalletCreditService"),
         ProviderWalletService: Symbol.for("ProviderWalletService"),
-        TicketGenerationService:Symbol.for("TicketGenerationService")
+        TicketGenerationService:Symbol.for("TicketGenerationService"),
+        BookingConfirmationService:Symbol.for("BookingConfirmationService"),
 
 
     

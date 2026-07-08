@@ -76,4 +76,6 @@ export interface IBookingRepository extends IBaseRepository<IBooking> {
     revenue: number;
   }[];
 }>;
+findConfirmedBookingByFlightSeatId(flightSeatId: string): Promise<IBooking | null>;
+cancelPassengerSegment(bookingId: string, passengerId: string, flightSeatId: string, refundAmount: number): Promise<IBooking | null>;
 }

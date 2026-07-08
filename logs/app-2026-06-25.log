@@ -1,0 +1,1036 @@
+25-06-2026 11:06:58 [[32MINFO[39M]: POST /auth/sign-in 200 1360 - 564.924 ms
+25-06-2026 11:07:09 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=4 304 - - 440.452 ms
+25-06-2026 11:07:09 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=4 304 - - 211.171 ms
+25-06-2026 11:07:15 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=4 304 - - 304.888 ms
+25-06-2026 11:07:16 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=4 304 - - 196.899 ms
+25-06-2026 11:13:47 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=4 304 - - 530.237 ms
+25-06-2026 11:13:47 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=4 304 - - 200.590 ms
+25-06-2026 11:15:16 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=4 304 - - 213.382 ms
+25-06-2026 11:15:49 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=4 304 - - 233.735 ms
+25-06-2026 11:16:12 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=4 304 - - 278.062 ms
+25-06-2026 11:18:29 [[31MERROR[39M]: [/provider/aircrafts?page=1&limit=4] No access token provided. Please include a valid access token in your request.: No access token provided. Please include a valid access token in your request.
+Error: No access token provided. Please include a valid access token in your request.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:37:10
+    at Generator.throw (<anonymous>)
+    at rejected (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:6:65)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+25-06-2026 11:18:29 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=4 401 133 - 123.114 ms
+25-06-2026 11:18:29 [[31MERROR[39M]: [/provider/aircrafts?page=1&limit=4] No access token provided. Please include a valid access token in your request.: No access token provided. Please include a valid access token in your request.
+Error: No access token provided. Please include a valid access token in your request.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:37:10
+    at Generator.throw (<anonymous>)
+    at rejected (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:6:65)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+25-06-2026 11:18:29 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=4 401 133 - 11.192 ms
+25-06-2026 11:18:29 [[32MINFO[39M]: POST /auth/refresh-token 200 355 - 50.603 ms
+25-06-2026 11:18:29 [[32MINFO[39M]: POST /auth/refresh-token 200 355 - 6.684 ms
+25-06-2026 11:18:29 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=4 304 - - 203.907 ms
+25-06-2026 11:18:30 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=4 304 - - 193.369 ms
+25-06-2026 11:19:46 [[32MINFO[39M]: POST /auth/sign-in 200 522 - 347.844 ms
+25-06-2026 11:19:46 [[32MINFO[39M]: GET /admin/dashboard 200 266 - 130.396 ms
+25-06-2026 11:19:46 [[32MINFO[39M]: GET /admin/dashboard 304 - - 78.263 ms
+25-06-2026 11:19:49 [[32MINFO[39M]: GET /admin/providers?page=1&limit=3 200 3326 - 185.777 ms
+25-06-2026 11:19:49 [[32MINFO[39M]: GET /admin/providers?page=1&limit=3 304 - - 115.650 ms
+25-06-2026 11:19:59 [[32MINFO[39M]: GET /admin/users?page=1&limit=3 200 1178 - 149.809 ms
+25-06-2026 11:19:59 [[32MINFO[39M]: GET /admin/users?page=1&limit=3 304 - - 95.906 ms
+25-06-2026 11:20:14 [[32MINFO[39M]: GET /admin/providers?page=1&limit=3 304 - - 142.693 ms
+25-06-2026 11:20:14 [[32MINFO[39M]: GET /admin/providers?page=1&limit=3 304 - - 108.767 ms
+25-06-2026 11:20:23 [[32MINFO[39M]: GET /admin/providers?page=2&limit=3 200 1205 - 107.347 ms
+25-06-2026 11:20:44 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=4 304 - - 506.636 ms
+25-06-2026 11:20:44 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=4 304 - - 190.076 ms
+25-06-2026 11:20:46 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=4 304 - - 217.566 ms
+25-06-2026 11:20:47 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=4 304 - - 197.754 ms
+25-06-2026 11:21:03 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=4 304 - - 338.845 ms
+25-06-2026 11:21:04 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=4 304 - - 186.099 ms
+25-06-2026 11:21:29 [[32MINFO[39M]: GET /admin/providers?page=1&limit=3 304 - - 106.968 ms
+25-06-2026 11:26:28 [[32MINFO[39M]: GET /admin/providers/pending 304 - - 1488.763 ms
+25-06-2026 11:26:29 [[32MINFO[39M]: GET /admin/providers/pending 304 - - 59.674 ms
+25-06-2026 11:26:30 [[32MINFO[39M]: GET /provider/profile 304 - - 519.289 ms
+25-06-2026 11:26:30 [[32MINFO[39M]: GET /provider/profile 304 - - 124.813 ms
+25-06-2026 11:26:32 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=4 304 - - 412.285 ms
+25-06-2026 11:26:32 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=4 304 - - 200.934 ms
+25-06-2026 11:26:51 [[32MINFO[39M]: POST /auth/sign-in 200 522 - 327.438 ms
+25-06-2026 11:26:51 [[32MINFO[39M]: GET /admin/dashboard 304 - - 395.844 ms
+25-06-2026 11:26:51 [[32MINFO[39M]: GET /admin/dashboard 304 - - 55.879 ms
+25-06-2026 11:26:53 [[32MINFO[39M]: GET /admin/providers?page=1&limit=3 304 - - 142.820 ms
+25-06-2026 11:26:53 [[32MINFO[39M]: GET /admin/providers?page=1&limit=3 304 - - 101.704 ms
+25-06-2026 11:26:54 [[32MINFO[39M]: GET /admin/users?page=1&limit=3 304 - - 116.792 ms
+25-06-2026 11:26:54 [[32MINFO[39M]: GET /admin/users?page=1&limit=3 304 - - 105.591 ms
+25-06-2026 11:26:57 [[32MINFO[39M]: GET /admin/providers?page=1&limit=3 304 - - 100.512 ms
+25-06-2026 11:26:57 [[32MINFO[39M]: GET /admin/providers?page=1&limit=3 304 - - 111.434 ms
+25-06-2026 11:32:13 [[31MERROR[39M]: [/provider/aircrafts?page=1&limit=4] No access token provided. Please include a valid access token in your request.: No access token provided. Please include a valid access token in your request.
+Error: No access token provided. Please include a valid access token in your request.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:37:10
+    at Generator.throw (<anonymous>)
+    at rejected (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:6:65)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+25-06-2026 11:32:13 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=4 401 133 - 272.810 ms
+25-06-2026 11:32:13 [[31MERROR[39M]: [/provider/aircrafts?page=1&limit=4] No access token provided. Please include a valid access token in your request.: No access token provided. Please include a valid access token in your request.
+Error: No access token provided. Please include a valid access token in your request.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:37:10
+    at Generator.throw (<anonymous>)
+    at rejected (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:6:65)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+25-06-2026 11:32:13 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=4 401 133 - 6.567 ms
+25-06-2026 11:32:13 [[32MINFO[39M]: POST /auth/refresh-token 200 355 - 19.145 ms
+25-06-2026 11:32:13 [[32MINFO[39M]: POST /auth/refresh-token 200 355 - 5.160 ms
+25-06-2026 11:32:14 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=4 304 - - 247.752 ms
+25-06-2026 11:32:14 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=4 304 - - 231.899 ms
+25-06-2026 11:32:36 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=4 304 - - 216.856 ms
+25-06-2026 11:32:36 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=4 304 - - 199.815 ms
+25-06-2026 11:38:42 [[31MERROR[39M]: [/provider/profile] No access token provided. Please include a valid access token in your request.: No access token provided. Please include a valid access token in your request.
+Error: No access token provided. Please include a valid access token in your request.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:37:10
+    at Generator.throw (<anonymous>)
+    at rejected (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:6:65)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+25-06-2026 11:38:42 [[32MINFO[39M]: GET /provider/profile 401 133 - 23385.163 ms
+25-06-2026 11:38:47 [[32MINFO[39M]: GET /provider/profile 304 - - 2322.722 ms
+25-06-2026 11:39:26 [[32MINFO[39M]: POST /auth/sign-in 200 1360 - 480.706 ms
+25-06-2026 11:39:29 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=4 304 - - 232.220 ms
+25-06-2026 11:39:29 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=4 304 - - 231.143 ms
+25-06-2026 11:40:15 [[32MINFO[39M]: GET /provider/profile 304 - - 250.390 ms
+25-06-2026 11:40:16 [[32MINFO[39M]: GET /provider/profile 304 - - 150.424 ms
+25-06-2026 11:40:17 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=3 200 2261 - 1072.083 ms
+25-06-2026 11:40:17 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=3 304 - - 222.348 ms
+25-06-2026 11:40:23 [[32MINFO[39M]: GET /provider/aircrafts?page=2&limit=3 200 842 - 212.889 ms
+25-06-2026 11:40:26 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=3 304 - - 327.497 ms
+25-06-2026 11:44:31 [[32MINFO[39M]: GET /provider/bookings?page=1&limit=10 304 - - 323.535 ms
+25-06-2026 11:44:31 [[32MINFO[39M]: GET /provider/bookings?page=1&limit=10 304 - - 126.743 ms
+25-06-2026 11:46:38 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=4 304 - - 207.208 ms
+25-06-2026 11:46:39 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=4 304 - - 196.965 ms
+25-06-2026 11:46:43 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=4 304 - - 189.256 ms
+25-06-2026 11:46:43 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=4 304 - - 189.782 ms
+25-06-2026 11:47:31 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=3 304 - - 193.423 ms
+25-06-2026 11:47:32 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=3 304 - - 195.233 ms
+25-06-2026 11:47:50 [[32MINFO[39M]: GET /provider/profile 304 - - 221.544 ms
+25-06-2026 11:47:50 [[32MINFO[39M]: GET /provider/profile 304 - - 97.039 ms
+25-06-2026 11:47:50 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=3 304 - - 196.256 ms
+25-06-2026 11:47:51 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=3 304 - - 189.044 ms
+25-06-2026 11:54:40 [[31MERROR[39M]: [/provider/profile] No access token provided. Please include a valid access token in your request.: No access token provided. Please include a valid access token in your request.
+Error: No access token provided. Please include a valid access token in your request.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:37:10
+    at Generator.throw (<anonymous>)
+    at rejected (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:6:65)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+25-06-2026 11:54:40 [[32MINFO[39M]: GET /provider/profile 401 133 - 170.630 ms
+25-06-2026 11:54:40 [[31MERROR[39M]: [/provider/profile] No access token provided. Please include a valid access token in your request.: No access token provided. Please include a valid access token in your request.
+Error: No access token provided. Please include a valid access token in your request.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:37:10
+    at Generator.throw (<anonymous>)
+    at rejected (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:6:65)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+25-06-2026 11:54:40 [[32MINFO[39M]: GET /provider/profile 401 133 - 3.427 ms
+25-06-2026 11:54:40 [[32MINFO[39M]: POST /auth/refresh-token 200 355 - 41.938 ms
+25-06-2026 11:54:40 [[32MINFO[39M]: POST /auth/refresh-token 200 355 - 5.765 ms
+25-06-2026 11:54:41 [[32MINFO[39M]: GET /provider/profile 304 - - 1054.261 ms
+25-06-2026 11:54:42 [[32MINFO[39M]: GET /provider/profile 304 - - 207.212 ms
+25-06-2026 11:54:43 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=3 304 - - 1385.512 ms
+25-06-2026 11:54:43 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=3 304 - - 182.961 ms
+25-06-2026 11:55:18 [[32MINFO[39M]: GET /provider/bookings?page=1&limit=10 304 - - 119.011 ms
+25-06-2026 11:55:18 [[32MINFO[39M]: GET /provider/bookings?page=1&limit=10 304 - - 97.172 ms
+25-06-2026 12:01:56 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=4 304 - - 376.082 ms
+25-06-2026 12:01:57 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=4 304 - - 192.634 ms
+25-06-2026 12:01:59 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=3 304 - - 213.908 ms
+25-06-2026 12:01:59 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=3 304 - - 203.372 ms
+25-06-2026 12:02:08 [[32MINFO[39M]: GET /provider/aircrafts?page=2&limit=3 304 - - 208.266 ms
+25-06-2026 12:02:23 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=3 304 - - 187.257 ms
+25-06-2026 12:12:39 [[31MERROR[39M]: [/provider/aircrafts?page=2&limit=3] No access token provided. Please include a valid access token in your request.: No access token provided. Please include a valid access token in your request.
+Error: No access token provided. Please include a valid access token in your request.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:37:10
+    at Generator.throw (<anonymous>)
+    at rejected (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:6:65)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+25-06-2026 12:12:39 [[32MINFO[39M]: GET /provider/aircrafts?page=2&limit=3 401 133 - 75.870 ms
+25-06-2026 12:12:39 [[32MINFO[39M]: POST /auth/refresh-token 200 355 - 13.176 ms
+25-06-2026 12:12:39 [[32MINFO[39M]: GET /provider/aircrafts?page=2&limit=3 304 - - 209.493 ms
+25-06-2026 12:12:42 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=3 304 - - 187.594 ms
+25-06-2026 12:21:00 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=3 304 - - 257.372 ms
+25-06-2026 12:21:00 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=3 304 - - 198.726 ms
+25-06-2026 12:22:47 [[31MERROR[39M]: [/provider/aircraft/69ef6f89d0f60af8d9b6c7e4] No access token provided. Please include a valid access token in your request.: No access token provided. Please include a valid access token in your request.
+Error: No access token provided. Please include a valid access token in your request.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:37:10
+    at Generator.throw (<anonymous>)
+    at rejected (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:6:65)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+25-06-2026 12:22:47 [[32MINFO[39M]: PUT /provider/aircraft/69ef6f89d0f60af8d9b6c7e4 401 133 - 67.379 ms
+25-06-2026 12:22:47 [[32MINFO[39M]: POST /auth/refresh-token 200 355 - 7.556 ms
+25-06-2026 12:22:48 [[32MINFO[39M]: PUT /provider/aircraft/69ef6f89d0f60af8d9b6c7e4 400 139 - 504.242 ms
+25-06-2026 12:36:23 [[31MERROR[39M]: [/admin/providers/pending] No access token provided. Please include a valid access token in your request.: No access token provided. Please include a valid access token in your request.
+Error: No access token provided. Please include a valid access token in your request.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\admin.middleware.ts:28:10
+    at Generator.throw (<anonymous>)
+    at rejected (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\admin.middleware.ts:6:65)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+25-06-2026 12:36:23 [[32MINFO[39M]: GET /admin/providers/pending 401 133 - 364.554 ms
+25-06-2026 12:36:23 [[31MERROR[39M]: [/admin/providers/pending] No access token provided. Please include a valid access token in your request.: No access token provided. Please include a valid access token in your request.
+Error: No access token provided. Please include a valid access token in your request.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\admin.middleware.ts:28:10
+    at Generator.throw (<anonymous>)
+    at rejected (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\admin.middleware.ts:6:65)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+25-06-2026 12:36:23 [[32MINFO[39M]: GET /admin/providers/pending 401 133 - 7.508 ms
+25-06-2026 12:36:23 [[32MINFO[39M]: POST /auth/refresh-token 200 351 - 31.570 ms
+25-06-2026 12:36:23 [[32MINFO[39M]: POST /auth/refresh-token 200 351 - 9.233 ms
+25-06-2026 12:36:23 [[32MINFO[39M]: GET /admin/providers/pending 304 - - 166.426 ms
+25-06-2026 12:36:23 [[32MINFO[39M]: GET /admin/providers/pending 304 - - 46.707 ms
+25-06-2026 12:36:49 [[32MINFO[39M]: POST /auth/sign-in 200 1360 - 365.513 ms
+25-06-2026 12:38:37 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=3 200 2261 - 410.810 ms
+25-06-2026 12:38:37 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=3 304 - - 192.509 ms
+25-06-2026 12:43:34 [[31MERROR[39M]: [/provider/profile] No access token provided. Please include a valid access token in your request.: No access token provided. Please include a valid access token in your request.
+Error: No access token provided. Please include a valid access token in your request.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:37:10
+    at Generator.throw (<anonymous>)
+    at rejected (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:6:65)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+25-06-2026 12:43:34 [[32MINFO[39M]: GET /provider/profile 401 133 - 30210.265 ms
+25-06-2026 12:43:34 [[32MINFO[39M]: POST /auth/refresh-token 200 355 - 9.648 ms
+25-06-2026 13:18:13 [[32MINFO[39M]: GET /provider/profile - - - - ms
+25-06-2026 13:18:13 [[31MERROR[39M]: [/provider/profile] No access token provided. Please include a valid access token in your request.: No access token provided. Please include a valid access token in your request.
+Error: No access token provided. Please include a valid access token in your request.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:37:10
+    at Generator.throw (<anonymous>)
+    at rejected (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:6:65)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at runNextTicks (node:internal/process/task_queues:69:3)
+    at listOnTimeout (node:internal/timers:549:9)
+    at processTimers (node:internal/timers:523:7)
+25-06-2026 13:18:13 [[31MERROR[39M]: [/provider/profile] No access token provided. Please include a valid access token in your request.: No access token provided. Please include a valid access token in your request.
+Error: No access token provided. Please include a valid access token in your request.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:37:10
+    at Generator.throw (<anonymous>)
+    at rejected (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:6:65)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at runNextTicks (node:internal/process/task_queues:69:3)
+    at listOnTimeout (node:internal/timers:549:9)
+    at processTimers (node:internal/timers:523:7)
+25-06-2026 13:18:13 [[32MINFO[39M]: GET /provider/profile 401 133 - 2078995.050 ms
+25-06-2026 15:09:47 [[32MINFO[39M]: POST /auth/sign-in 200 1360 - 780.252 ms
+25-06-2026 15:10:41 [[32MINFO[39M]: GET /provider/flights?page=1&limit=4 200 4031 - 498.586 ms
+25-06-2026 15:10:41 [[32MINFO[39M]: GET /provider/flights?page=1&limit=4 304 - - 193.265 ms
+25-06-2026 15:17:47 [[32MINFO[39M]: GET /provider/flights?page=1&limit=4 304 - - 286.500 ms
+25-06-2026 15:22:06 [[31MERROR[39M]: [/provider/flights?page=1&limit=4] No access token provided. Please include a valid access token in your request.: No access token provided. Please include a valid access token in your request.
+Error: No access token provided. Please include a valid access token in your request.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:37:10
+    at Generator.throw (<anonymous>)
+    at rejected (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:6:65)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+25-06-2026 15:22:06 [[32MINFO[39M]: GET /provider/flights?page=1&limit=4 401 133 - 86.989 ms
+25-06-2026 15:22:06 [[31MERROR[39M]: [/provider/flights?page=1&limit=4] No access token provided. Please include a valid access token in your request.: No access token provided. Please include a valid access token in your request.
+Error: No access token provided. Please include a valid access token in your request.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:37:10
+    at Generator.throw (<anonymous>)
+    at rejected (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:6:65)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+25-06-2026 15:22:06 [[32MINFO[39M]: GET /provider/flights?page=1&limit=4 401 133 - 8.949 ms
+25-06-2026 15:22:06 [[32MINFO[39M]: POST /auth/refresh-token 200 355 - 23.353 ms
+25-06-2026 15:22:06 [[32MINFO[39M]: POST /auth/refresh-token 200 355 - 4.646 ms
+25-06-2026 15:22:07 [[32MINFO[39M]: GET /provider/flights?page=1&limit=4 304 - - 207.228 ms
+25-06-2026 15:22:07 [[32MINFO[39M]: GET /provider/flights?page=1&limit=4 304 - - 166.549 ms
+25-06-2026 15:22:41 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=3 304 - - 357.120 ms
+25-06-2026 15:22:42 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=3 304 - - 188.610 ms
+25-06-2026 15:30:34 [[32MINFO[39M]: GET /provider/profile 304 - - 762.701 ms
+25-06-2026 15:30:34 [[32MINFO[39M]: GET /provider/profile 304 - - 115.472 ms
+25-06-2026 15:30:35 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=3 304 - - 470.256 ms
+25-06-2026 15:30:35 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=3 304 - - 252.603 ms
+25-06-2026 15:31:29 [[32MINFO[39M]: GET /provider/flights?page=1&limit=4 304 - - 417.417 ms
+25-06-2026 15:31:29 [[32MINFO[39M]: GET /provider/flights?page=1&limit=4 304 - - 143.300 ms
+25-06-2026 15:32:11 [[31MERROR[39M]: [/provider/flights?page=2&limit=4] No access token provided. Please include a valid access token in your request.: No access token provided. Please include a valid access token in your request.
+Error: No access token provided. Please include a valid access token in your request.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:37:10
+    at Generator.throw (<anonymous>)
+    at rejected (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:6:65)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+25-06-2026 15:32:11 [[32MINFO[39M]: GET /provider/flights?page=2&limit=4 401 133 - 33.708 ms
+25-06-2026 15:32:11 [[32MINFO[39M]: POST /auth/refresh-token 200 355 - 60.524 ms
+25-06-2026 15:32:11 [[32MINFO[39M]: GET /provider/flights?page=2&limit=4 200 3078 - 148.130 ms
+25-06-2026 15:32:25 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=3 304 - - 297.961 ms
+25-06-2026 15:32:25 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=3 304 - - 211.921 ms
+25-06-2026 15:32:37 [[32MINFO[39M]: GET /provider/flights?page=1&limit=4 304 - - 330.803 ms
+25-06-2026 15:32:37 [[32MINFO[39M]: GET /provider/flights?page=1&limit=4 304 - - 175.789 ms
+25-06-2026 15:32:49 [[32MINFO[39M]: GET /provider/flights/6a1dcce5a3334da0a70f3d3c/seats 200 14615 - 347.279 ms
+25-06-2026 15:32:54 [[32MINFO[39M]: GET /provider/flights/6a1dcce5a3334da0a70f3d3c 200 1128 - 178.829 ms
+25-06-2026 15:32:54 [[32MINFO[39M]: GET /provider/flights/6a1dcce5a3334da0a70f3d3c 304 - - 112.097 ms
+25-06-2026 15:33:03 [[32MINFO[39M]: GET /provider/flights?page=1&limit=4 304 - - 278.372 ms
+25-06-2026 15:33:03 [[32MINFO[39M]: GET /provider/foods?page=1&limit=4 200 1527 - 171.141 ms
+25-06-2026 15:33:04 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=3 304 - - 713.384 ms
+25-06-2026 15:33:04 [[32MINFO[39M]: GET /provider/flights?page=1&limit=4 304 - - 573.069 ms
+25-06-2026 15:33:04 [[32MINFO[39M]: GET /provider/foods?page=1&limit=4 304 - - 479.864 ms
+25-06-2026 15:33:04 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=3 304 - - 298.403 ms
+25-06-2026 15:33:04 [[32MINFO[39M]: GET /provider/flights?page=1&limit=4 304 - - 255.553 ms
+25-06-2026 15:33:04 [[32MINFO[39M]: GET /provider/flights?page=1&limit=4 304 - - 154.583 ms
+25-06-2026 15:33:06 [[32MINFO[39M]: GET /provider/flights?page=1&limit=4 304 - - 292.868 ms
+25-06-2026 15:33:06 [[32MINFO[39M]: GET /provider/flights?page=1&limit=4 304 - - 143.615 ms
+25-06-2026 15:36:38 [[32MINFO[39M]: GET /provider/flights/6a1dcce5a3334da0a70f3d3c/seats 304 - - 430.205 ms
+25-06-2026 15:36:47 [[32MINFO[39M]: GET /provider/flights?page=2&limit=4 304 - - 195.126 ms
+25-06-2026 15:36:55 [[32MINFO[39M]: GET /provider/flights?page=1&limit=4 304 - - 153.949 ms
+25-06-2026 15:36:59 [[32MINFO[39M]: GET /provider/flights?page=2&limit=4 304 - - 146.239 ms
+25-06-2026 15:55:37 [[31MERROR[39M]: [/provider/profile] No access token provided. Please include a valid access token in your request.: No access token provided. Please include a valid access token in your request.
+Error: No access token provided. Please include a valid access token in your request.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:37:10
+    at Generator.throw (<anonymous>)
+    at rejected (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:6:65)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+25-06-2026 15:55:37 [[32MINFO[39M]: GET /provider/profile 401 133 - 103.883 ms
+25-06-2026 15:55:37 [[31MERROR[39M]: [/provider/profile] No access token provided. Please include a valid access token in your request.: No access token provided. Please include a valid access token in your request.
+Error: No access token provided. Please include a valid access token in your request.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:37:10
+    at Generator.throw (<anonymous>)
+    at rejected (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:6:65)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+25-06-2026 15:55:37 [[32MINFO[39M]: GET /provider/profile 401 133 - 6.278 ms
+25-06-2026 15:55:38 [[32MINFO[39M]: POST /auth/refresh-token 200 355 - 28.086 ms
+25-06-2026 15:55:38 [[32MINFO[39M]: POST /auth/refresh-token 200 355 - 3.353 ms
+25-06-2026 15:55:38 [[32MINFO[39M]: GET /provider/profile 304 - - 147.288 ms
+25-06-2026 15:55:38 [[32MINFO[39M]: GET /provider/profile 304 - - 92.698 ms
+25-06-2026 16:05:36 [[32MINFO[39M]: GET /provider/profile 304 - - 1854.352 ms
+25-06-2026 16:05:36 [[32MINFO[39M]: GET /provider/profile 304 - - 324.372 ms
+25-06-2026 16:48:57 [[31MERROR[39M]: [/provider/profile] No access token provided. Please include a valid access token in your request.: No access token provided. Please include a valid access token in your request.
+Error: No access token provided. Please include a valid access token in your request.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:37:10
+    at Generator.throw (<anonymous>)
+    at rejected (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:6:65)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+25-06-2026 16:48:57 [[32MINFO[39M]: GET /provider/profile 401 133 - 229.394 ms
+25-06-2026 16:48:57 [[31MERROR[39M]: [/provider/profile] No access token provided. Please include a valid access token in your request.: No access token provided. Please include a valid access token in your request.
+Error: No access token provided. Please include a valid access token in your request.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:37:10
+    at Generator.throw (<anonymous>)
+    at rejected (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:6:65)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+25-06-2026 16:48:57 [[32MINFO[39M]: GET /provider/profile 401 133 - 9.345 ms
+25-06-2026 16:48:57 [[32MINFO[39M]: POST /auth/refresh-token 200 355 - 47.841 ms
+25-06-2026 16:48:57 [[32MINFO[39M]: POST /auth/refresh-token 200 355 - 15.154 ms
+25-06-2026 16:48:58 [[32MINFO[39M]: GET /provider/profile 304 - - 825.049 ms
+25-06-2026 16:48:58 [[32MINFO[39M]: GET /provider/profile 304 - - 111.488 ms
+25-06-2026 16:49:07 [[32MINFO[39M]: GET /provider/profile 304 - - 130.981 ms
+25-06-2026 16:49:08 [[32MINFO[39M]: GET /provider/profile 304 - - 128.697 ms
+25-06-2026 17:16:45 [[31MERROR[39M]: [/provider/profile] No access token provided. Please include a valid access token in your request.: No access token provided. Please include a valid access token in your request.
+Error: No access token provided. Please include a valid access token in your request.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:37:10
+    at Generator.throw (<anonymous>)
+    at rejected (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:6:65)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+25-06-2026 17:16:45 [[32MINFO[39M]: GET /provider/profile 401 133 - 267.300 ms
+25-06-2026 17:16:45 [[31MERROR[39M]: [/provider/profile] No access token provided. Please include a valid access token in your request.: No access token provided. Please include a valid access token in your request.
+Error: No access token provided. Please include a valid access token in your request.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:37:10
+    at Generator.throw (<anonymous>)
+    at rejected (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:6:65)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+25-06-2026 17:16:45 [[32MINFO[39M]: GET /provider/profile 401 133 - 14.404 ms
+25-06-2026 17:16:46 [[32MINFO[39M]: POST /auth/refresh-token 200 355 - 46.774 ms
+25-06-2026 17:16:47 [[32MINFO[39M]: POST /auth/refresh-token 200 355 - 9.774 ms
+25-06-2026 17:16:47 [[32MINFO[39M]: GET /provider/profile 304 - - 569.352 ms
+25-06-2026 17:16:47 [[32MINFO[39M]: GET /provider/profile 304 - - 126.263 ms
+25-06-2026 17:20:09 [[32MINFO[39M]: GET /provider/profile 304 - - 396.439 ms
+25-06-2026 17:20:09 [[32MINFO[39M]: GET /provider/profile 304 - - 100.636 ms
+25-06-2026 17:20:12 [[32MINFO[39M]: GET /provider/profile 304 - - 102.342 ms
+25-06-2026 17:20:13 [[32MINFO[39M]: GET /provider/profile 304 - - 92.064 ms
+25-06-2026 17:20:18 [[32MINFO[39M]: GET /provider/profile 304 - - 95.107 ms
+25-06-2026 17:20:19 [[32MINFO[39M]: GET /provider/profile 304 - - 136.653 ms
+25-06-2026 17:23:20 [[32MINFO[39M]: GET /provider/profile 304 - - 391.441 ms
+25-06-2026 17:23:20 [[32MINFO[39M]: GET /provider/profile 304 - - 96.389 ms
+25-06-2026 17:24:02 [[32MINFO[39M]: GET /provider/profile 304 - - 100.495 ms
+25-06-2026 17:24:02 [[32MINFO[39M]: GET /provider/profile 304 - - 94.442 ms
+25-06-2026 17:24:07 [[32MINFO[39M]: GET /provider/profile 304 - - 97.388 ms
+25-06-2026 17:24:07 [[32MINFO[39M]: GET /provider/profile 304 - - 96.169 ms
+25-06-2026 17:29:56 [[31MERROR[39M]: [/provider/profile] No access token provided. Please include a valid access token in your request.: No access token provided. Please include a valid access token in your request.
+Error: No access token provided. Please include a valid access token in your request.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:37:10
+    at Generator.throw (<anonymous>)
+    at rejected (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:6:65)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+25-06-2026 17:29:56 [[32MINFO[39M]: GET /provider/profile 401 133 - 222.544 ms
+25-06-2026 17:29:56 [[31MERROR[39M]: [/provider/profile] No access token provided. Please include a valid access token in your request.: No access token provided. Please include a valid access token in your request.
+Error: No access token provided. Please include a valid access token in your request.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:37:10
+    at Generator.throw (<anonymous>)
+    at rejected (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:6:65)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+25-06-2026 17:29:56 [[32MINFO[39M]: GET /provider/profile 401 133 - 7.201 ms
+25-06-2026 17:29:57 [[32MINFO[39M]: POST /auth/refresh-token 200 355 - 45.592 ms
+25-06-2026 17:29:57 [[32MINFO[39M]: POST /auth/refresh-token 200 355 - 4.410 ms
+25-06-2026 17:29:59 [[31MERROR[39M]: [/provider/profile] No access token provided. Please include a valid access token in your request.: No access token provided. Please include a valid access token in your request.
+Error: No access token provided. Please include a valid access token in your request.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:37:10
+    at Generator.throw (<anonymous>)
+    at rejected (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:6:65)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+25-06-2026 17:29:59 [[32MINFO[39M]: GET /provider/profile 401 133 - 5.326 ms
+25-06-2026 17:29:59 [[31MERROR[39M]: [/provider/profile] No access token provided. Please include a valid access token in your request.: No access token provided. Please include a valid access token in your request.
+Error: No access token provided. Please include a valid access token in your request.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:37:10
+    at Generator.throw (<anonymous>)
+    at rejected (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:6:65)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+25-06-2026 17:29:59 [[32MINFO[39M]: GET /provider/profile 401 133 - 7.711 ms
+25-06-2026 17:30:00 [[32MINFO[39M]: POST /auth/refresh-token 200 355 - 4.530 ms
+25-06-2026 17:30:00 [[32MINFO[39M]: POST /auth/refresh-token 200 355 - 2.688 ms
+25-06-2026 17:30:00 [[32MINFO[39M]: GET /provider/profile 304 - - 102.809 ms
+25-06-2026 17:30:00 [[32MINFO[39M]: GET /provider/profile 304 - - 84.940 ms
+25-06-2026 17:30:19 [[32MINFO[39M]: GET /provider/profile 304 - - 122.328 ms
+25-06-2026 17:30:19 [[32MINFO[39M]: GET /provider/profile 304 - - 116.087 ms
+25-06-2026 17:30:23 [[32MINFO[39M]: GET /provider/profile 304 - - 99.071 ms
+25-06-2026 17:30:23 [[32MINFO[39M]: GET /provider/profile 304 - - 98.084 ms
+25-06-2026 17:30:36 [[32MINFO[39M]: GET /provider/profile 304 - - 123.819 ms
+25-06-2026 17:30:36 [[32MINFO[39M]: GET /provider/profile 304 - - 98.922 ms
+25-06-2026 17:31:34 [[32MINFO[39M]: GET /provider/profile 304 - - 189.530 ms
+25-06-2026 17:31:34 [[32MINFO[39M]: GET /provider/profile 304 - - 105.383 ms
+25-06-2026 17:31:38 [[32MINFO[39M]: GET /provider/profile 304 - - 131.697 ms
+25-06-2026 17:31:38 [[32MINFO[39M]: GET /provider/profile 304 - - 94.715 ms
+25-06-2026 17:31:46 [[32MINFO[39M]: GET /provider/profile 304 - - 104.978 ms
+25-06-2026 17:31:46 [[32MINFO[39M]: GET /provider/profile 304 - - 99.546 ms
+25-06-2026 17:34:46 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=3 304 - - 678.674 ms
+25-06-2026 17:34:46 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=3 304 - - 196.139 ms
+25-06-2026 17:35:17 [[32MINFO[39M]: GET /provider/profile 304 - - 118.088 ms
+25-06-2026 17:35:17 [[32MINFO[39M]: GET /provider/profile 304 - - 94.507 ms
+25-06-2026 17:35:23 [[32MINFO[39M]: GET /provider/profile 304 - - 96.886 ms
+25-06-2026 17:35:23 [[32MINFO[39M]: GET /provider/profile 304 - - 96.672 ms
+25-06-2026 17:35:43 [[32MINFO[39M]: GET /provider/profile 304 - - 123.830 ms
+25-06-2026 17:35:43 [[32MINFO[39M]: GET /provider/profile 304 - - 98.390 ms
+25-06-2026 17:38:06 [[32MINFO[39M]: GET /provider/profile 304 - - 963.869 ms
+25-06-2026 17:38:06 [[32MINFO[39M]: GET /provider/profile 304 - - 112.795 ms
+25-06-2026 17:38:32 [[32MINFO[39M]: GET /provider/flights?page=1&limit=4 304 - - 271.774 ms
+25-06-2026 17:38:32 [[32MINFO[39M]: GET /provider/flights?page=1&limit=4 304 - - 172.552 ms
+25-06-2026 17:38:35 [[32MINFO[39M]: GET /provider/flights/6a1dcce5a3334da0a70f3d3c 200 1128 - 179.706 ms
+25-06-2026 17:38:35 [[32MINFO[39M]: GET /provider/flights/6a1dcce5a3334da0a70f3d3c 304 - - 111.861 ms
+25-06-2026 17:41:57 [[31MERROR[39M]: [/provider/flights/6a1dcce5a3334da0a70f3d3c] No access token provided. Please include a valid access token in your request.: No access token provided. Please include a valid access token in your request.
+Error: No access token provided. Please include a valid access token in your request.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:37:10
+    at Generator.throw (<anonymous>)
+    at rejected (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:6:65)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+25-06-2026 17:41:57 [[32MINFO[39M]: GET /provider/flights/6a1dcce5a3334da0a70f3d3c 401 133 - 74.863 ms
+25-06-2026 17:41:57 [[31MERROR[39M]: [/provider/flights/6a1dcce5a3334da0a70f3d3c] No access token provided. Please include a valid access token in your request.: No access token provided. Please include a valid access token in your request.
+Error: No access token provided. Please include a valid access token in your request.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:37:10
+    at Generator.throw (<anonymous>)
+    at rejected (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:6:65)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+25-06-2026 17:41:57 [[32MINFO[39M]: GET /provider/flights/6a1dcce5a3334da0a70f3d3c 401 133 - 7.080 ms
+25-06-2026 17:41:57 [[32MINFO[39M]: POST /auth/refresh-token 200 355 - 33.808 ms
+25-06-2026 17:41:57 [[32MINFO[39M]: POST /auth/refresh-token 200 355 - 6.241 ms
+25-06-2026 17:41:57 [[32MINFO[39M]: GET /provider/flights/6a1dcce5a3334da0a70f3d3c 304 - - 187.370 ms
+25-06-2026 17:41:57 [[32MINFO[39M]: GET /provider/flights/6a1dcce5a3334da0a70f3d3c 304 - - 107.316 ms
+25-06-2026 17:42:30 [[32MINFO[39M]: GET /provider/flights?page=1&limit=4 304 - - 152.295 ms
+25-06-2026 17:42:30 [[32MINFO[39M]: GET /provider/flights?page=1&limit=4 304 - - 192.127 ms
+25-06-2026 17:42:31 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=3 304 - - 210.642 ms
+25-06-2026 17:42:32 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=3 304 - - 181.928 ms
+25-06-2026 17:42:34 [[32MINFO[39M]: GET /provider/flights?page=1&limit=4 304 - - 144.382 ms
+25-06-2026 17:42:34 [[32MINFO[39M]: GET /provider/flights?page=1&limit=4 304 - - 150.260 ms
+25-06-2026 17:43:12 [[32MINFO[39M]: GET /provider/profile 304 - - 140.434 ms
+25-06-2026 17:43:12 [[32MINFO[39M]: GET /provider/profile 304 - - 139.737 ms
+25-06-2026 17:43:12 [[32MINFO[39M]: GET /provider/flights?page=1&limit=4 304 - - 163.026 ms
+25-06-2026 17:43:12 [[32MINFO[39M]: GET /provider/flights?page=1&limit=4 304 - - 161.408 ms
+25-06-2026 17:45:24 [[32MINFO[39M]: GET /provider/profile 304 - - 157.078 ms
+25-06-2026 17:45:24 [[32MINFO[39M]: GET /provider/profile 304 - - 100.533 ms
+25-06-2026 17:45:25 [[32MINFO[39M]: GET /provider/flights?page=1&limit=4 304 - - 146.054 ms
+25-06-2026 17:45:25 [[32MINFO[39M]: GET /provider/flights?page=1&limit=4 304 - - 166.332 ms
+25-06-2026 17:46:08 [[32MINFO[39M]: GET /provider/profile 304 - - 117.033 ms
+25-06-2026 17:46:08 [[32MINFO[39M]: GET /provider/profile 304 - - 113.759 ms
+25-06-2026 17:46:09 [[32MINFO[39M]: GET /provider/flights?page=1&limit=4 304 - - 184.170 ms
+25-06-2026 17:46:09 [[32MINFO[39M]: GET /provider/flights?page=1&limit=4 304 - - 164.923 ms
+25-06-2026 17:49:19 [[32MINFO[39M]: GET /provider/profile 304 - - 193.630 ms
+25-06-2026 17:49:19 [[32MINFO[39M]: GET /provider/profile 304 - - 105.641 ms
+25-06-2026 17:49:20 [[32MINFO[39M]: GET /provider/flights?page=1&limit=4 304 - - 201.860 ms
+25-06-2026 17:49:20 [[32MINFO[39M]: GET /provider/flights?page=1&limit=4 304 - - 164.013 ms
+25-06-2026 17:49:27 [[32MINFO[39M]: GET /provider/flights/6a1dcce5a3334da0a70f3d3c/seats 304 - - 325.810 ms
+25-06-2026 17:49:52 [[32MINFO[39M]: GET /provider/profile 304 - - 134.263 ms
+25-06-2026 17:49:53 [[32MINFO[39M]: GET /provider/profile 304 - - 123.598 ms
+25-06-2026 17:49:53 [[32MINFO[39M]: GET /provider/flights?page=1&limit=4 304 - - 180.270 ms
+25-06-2026 17:49:53 [[32MINFO[39M]: GET /provider/flights?page=1&limit=4 304 - - 163.744 ms
+25-06-2026 17:54:01 [[31MERROR[39M]: [/provider/profile] No access token provided. Please include a valid access token in your request.: No access token provided. Please include a valid access token in your request.
+Error: No access token provided. Please include a valid access token in your request.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:37:10
+    at Generator.throw (<anonymous>)
+    at rejected (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:6:65)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+25-06-2026 17:54:01 [[32MINFO[39M]: GET /provider/profile 401 133 - 136.292 ms
+25-06-2026 17:54:01 [[31MERROR[39M]: [/provider/profile] No access token provided. Please include a valid access token in your request.: No access token provided. Please include a valid access token in your request.
+Error: No access token provided. Please include a valid access token in your request.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:37:10
+    at Generator.throw (<anonymous>)
+    at rejected (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:6:65)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+25-06-2026 17:54:01 [[32MINFO[39M]: GET /provider/profile 401 133 - 7.209 ms
+25-06-2026 17:54:02 [[32MINFO[39M]: POST /auth/refresh-token 200 355 - 39.160 ms
+25-06-2026 17:54:02 [[32MINFO[39M]: POST /auth/refresh-token 200 355 - 7.469 ms
+25-06-2026 17:54:02 [[32MINFO[39M]: GET /provider/profile 304 - - 335.562 ms
+25-06-2026 17:54:03 [[32MINFO[39M]: GET /provider/profile 304 - - 124.532 ms
+25-06-2026 17:54:03 [[32MINFO[39M]: GET /provider/flights?page=1&limit=4 304 - - 250.523 ms
+25-06-2026 17:54:03 [[32MINFO[39M]: GET /provider/flights?page=1&limit=4 304 - - 170.292 ms
+25-06-2026 17:54:09 [[32MINFO[39M]: GET /provider/flights/6a1dcce5a3334da0a70f3d3c/seats 304 - - 263.955 ms
+25-06-2026 17:54:34 [[32MINFO[39M]: GET /provider/profile 304 - - 119.176 ms
+25-06-2026 17:54:34 [[32MINFO[39M]: GET /provider/profile 304 - - 125.782 ms
+25-06-2026 17:54:34 [[32MINFO[39M]: GET /provider/flights?page=1&limit=4 304 - - 166.502 ms
+25-06-2026 17:54:34 [[32MINFO[39M]: GET /provider/flights?page=1&limit=4 304 - - 215.396 ms
+25-06-2026 17:54:37 [[32MINFO[39M]: GET /provider/flights/6a1dcce5a3334da0a70f3d3c/seats 304 - - 154.779 ms
+25-06-2026 17:57:10 [[32MINFO[39M]: GET /provider/profile 304 - - 217.059 ms
+25-06-2026 17:57:10 [[32MINFO[39M]: GET /provider/profile 304 - - 97.367 ms
+25-06-2026 17:57:10 [[32MINFO[39M]: GET /provider/flights?page=1&limit=4 304 - - 187.328 ms
+25-06-2026 17:57:10 [[32MINFO[39M]: GET /provider/flights?page=1&limit=4 304 - - 149.718 ms
+25-06-2026 17:57:13 [[32MINFO[39M]: GET /provider/flights/6a1dcce5a3334da0a70f3d3c/seats 304 - - 387.706 ms
+25-06-2026 17:57:37 [[32MINFO[39M]: GET /provider/profile 304 - - 128.346 ms
+25-06-2026 17:57:37 [[32MINFO[39M]: GET /provider/profile 304 - - 118.055 ms
+25-06-2026 17:57:37 [[32MINFO[39M]: GET /provider/flights?page=1&limit=4 304 - - 193.178 ms
+25-06-2026 17:57:38 [[32MINFO[39M]: GET /provider/flights?page=1&limit=4 304 - - 173.647 ms
+25-06-2026 17:57:40 [[32MINFO[39M]: GET /provider/flights/6a1dcce5a3334da0a70f3d3c/seats 304 - - 158.508 ms
+25-06-2026 18:01:36 [[32MINFO[39M]: GET /provider/profile 304 - - 231.620 ms
+25-06-2026 18:01:36 [[32MINFO[39M]: GET /provider/profile 304 - - 96.941 ms
+25-06-2026 18:01:37 [[32MINFO[39M]: GET /provider/flights?page=1&limit=4 304 - - 192.089 ms
+25-06-2026 18:01:37 [[32MINFO[39M]: GET /provider/flights?page=1&limit=4 304 - - 151.690 ms
+25-06-2026 18:01:57 [[32MINFO[39M]: GET /provider/flights/6a1dcce5a3334da0a70f3d3c/seats 304 - - 245.724 ms
+25-06-2026 18:03:37 [[32MINFO[39M]: GET /provider/foods?page=1&limit=4 200 1527 - 193.635 ms
+25-06-2026 18:03:37 [[32MINFO[39M]: GET /provider/foods?page=1&limit=4 304 - - 101.529 ms
+25-06-2026 18:22:10 [[31MERROR[39M]: [/provider/aircrafts?page=1&limit=4] No access token provided. Please include a valid access token in your request.: No access token provided. Please include a valid access token in your request.
+Error: No access token provided. Please include a valid access token in your request.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:37:10
+    at Generator.throw (<anonymous>)
+    at rejected (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:6:65)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+25-06-2026 18:22:10 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=4 401 133 - 223.102 ms
+25-06-2026 18:22:10 [[31MERROR[39M]: [/provider/aircrafts?page=1&limit=4] No access token provided. Please include a valid access token in your request.: No access token provided. Please include a valid access token in your request.
+Error: No access token provided. Please include a valid access token in your request.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:37:10
+    at Generator.throw (<anonymous>)
+    at rejected (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:6:65)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+25-06-2026 18:22:10 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=4 401 133 - 7.225 ms
+25-06-2026 18:22:10 [[32MINFO[39M]: POST /auth/refresh-token 200 355 - 22.609 ms
+25-06-2026 18:22:10 [[32MINFO[39M]: POST /auth/refresh-token 200 355 - 6.099 ms
+25-06-2026 18:22:10 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=4 304 - - 677.817 ms
+25-06-2026 18:22:11 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=4 304 - - 200.748 ms
+25-06-2026 18:22:20 [[32MINFO[39M]: GET /provider/foods?page=1&limit=4 304 - - 117.525 ms
+25-06-2026 18:22:21 [[32MINFO[39M]: GET /provider/foods?page=1&limit=4 304 - - 92.432 ms
+25-06-2026 18:33:09 [[31MERROR[39M]: [/provider/offers?page=1&limit=4] No access token provided. Please include a valid access token in your request.: No access token provided. Please include a valid access token in your request.
+Error: No access token provided. Please include a valid access token in your request.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:37:10
+    at Generator.throw (<anonymous>)
+    at rejected (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:6:65)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+25-06-2026 18:33:09 [[32MINFO[39M]: GET /provider/offers?page=1&limit=4 401 133 - 394.298 ms
+25-06-2026 18:33:09 [[31MERROR[39M]: [/provider/offers?page=1&limit=4] No access token provided. Please include a valid access token in your request.: No access token provided. Please include a valid access token in your request.
+Error: No access token provided. Please include a valid access token in your request.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:37:10
+    at Generator.throw (<anonymous>)
+    at rejected (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:6:65)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+25-06-2026 18:33:09 [[32MINFO[39M]: GET /provider/offers?page=1&limit=4 401 133 - 10.071 ms
+25-06-2026 18:33:09 [[32MINFO[39M]: POST /auth/refresh-token 200 355 - 63.764 ms
+25-06-2026 18:33:09 [[32MINFO[39M]: POST /auth/refresh-token 200 355 - 38.329 ms
+25-06-2026 18:33:10 [[32MINFO[39M]: GET /provider/offers?page=1&limit=4 304 - - 475.375 ms
+25-06-2026 18:33:10 [[32MINFO[39M]: GET /provider/offers?page=1&limit=4 304 - - 265.569 ms
+25-06-2026 18:33:11 [[32MINFO[39M]: GET /provider/bookings?page=1&limit=10 304 - - 911.667 ms
+25-06-2026 18:33:11 [[32MINFO[39M]: GET /provider/bookings?page=1&limit=10 304 - - 108.867 ms
+25-06-2026 18:33:15 [[32MINFO[39M]: GET /provider/wallet 304 - - 184.683 ms
+25-06-2026 18:33:15 [[32MINFO[39M]: GET /provider/wallet 304 - - 98.665 ms
+25-06-2026 18:33:20 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=4 304 - - 285.990 ms
+25-06-2026 18:33:20 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=4 304 - - 208.404 ms
+25-06-2026 18:33:21 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=3 304 - - 200.428 ms
+25-06-2026 18:33:21 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=3 304 - - 198.558 ms
+25-06-2026 18:34:08 [[32MINFO[39M]: GET /provider/bookings?page=1&limit=10 304 - - 352.474 ms
+25-06-2026 18:34:08 [[32MINFO[39M]: GET /provider/bookings?page=1&limit=10 304 - - 93.882 ms
+25-06-2026 18:34:11 [[32MINFO[39M]: GET /provider/bookings/6a2862dd5f0f160609ed538f 304 - - 170.143 ms
+25-06-2026 18:34:11 [[32MINFO[39M]: GET /provider/bookings/6a2862dd5f0f160609ed538f 304 - - 94.833 ms
+25-06-2026 18:34:18 [[32MINFO[39M]: GET /provider/wallet 304 - - 112.594 ms
+25-06-2026 18:34:18 [[32MINFO[39M]: GET /provider/wallet 304 - - 92.401 ms
+25-06-2026 18:34:20 [[32MINFO[39M]: GET /provider/flights?page=1&limit=4 304 - - 200.619 ms
+25-06-2026 18:34:20 [[32MINFO[39M]: GET /provider/flights?page=1&limit=4 304 - - 145.561 ms
+25-06-2026 18:34:38 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=3 304 - - 419.231 ms
+25-06-2026 18:34:38 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=3 304 - - 193.372 ms
+25-06-2026 18:36:15 [[32MINFO[39M]: POST /auth/sign-in 200 522 - 449.546 ms
+25-06-2026 18:36:16 [[32MINFO[39M]: GET /admin/dashboard 304 - - 588.589 ms
+25-06-2026 18:36:16 [[32MINFO[39M]: GET /admin/dashboard 304 - - 55.291 ms
+25-06-2026 18:36:22 [[32MINFO[39M]: GET /admin/users?page=1&limit=3 304 - - 197.750 ms
+25-06-2026 18:36:22 [[32MINFO[39M]: GET /admin/users?page=1&limit=3 304 - - 95.381 ms
+25-06-2026 18:36:35 [[32MINFO[39M]: GET /admin/providers?page=1&limit=3 304 - - 181.426 ms
+25-06-2026 18:36:35 [[32MINFO[39M]: GET /admin/providers?page=1&limit=3 304 - - 111.364 ms
+25-06-2026 18:36:37 [[32MINFO[39M]: GET /admin/wallet 200 370 - 82.955 ms
+25-06-2026 18:36:37 [[32MINFO[39M]: GET /admin/wallet 304 - - 45.314 ms
+25-06-2026 18:36:40 [[32MINFO[39M]: GET /admin/users?page=1&limit=3 304 - - 93.793 ms
+25-06-2026 18:36:40 [[32MINFO[39M]: GET /admin/users?page=1&limit=3 304 - - 89.182 ms
+25-06-2026 18:36:46 [[32MINFO[39M]: GET /admin/providers?page=1&limit=3 304 - - 623.634 ms
+25-06-2026 18:36:46 [[32MINFO[39M]: GET /admin/providers?page=1&limit=3 304 - - 317.369 ms
+25-06-2026 18:36:51 [[32MINFO[39M]: GET /admin/flights?page=1&limit=4 200 4640 - 158.865 ms
+25-06-2026 18:36:51 [[32MINFO[39M]: GET /admin/flights?page=1&limit=4 304 - - 110.006 ms
+25-06-2026 18:36:57 [[32MINFO[39M]: GET /admin/flights?page=2&limit=4 304 - - 1745.707 ms
+25-06-2026 18:37:00 [[32MINFO[39M]: GET /admin/flights/pending-approval 304 - - 59.212 ms
+25-06-2026 18:37:00 [[32MINFO[39M]: GET /admin/flights/pending-approval 304 - - 47.612 ms
+25-06-2026 18:37:04 [[32MINFO[39M]: GET /admin/flights?page=1&limit=4 304 - - 1920.772 ms
+25-06-2026 18:37:06 [[32MINFO[39M]: GET /admin/flights?page=1&limit=4 304 - - 1834.367 ms
+25-06-2026 18:37:17 [[32MINFO[39M]: GET /admin/providers/pending 304 - - 6207.279 ms
+25-06-2026 18:37:17 [[32MINFO[39M]: GET /admin/providers/pending 304 - - 53.398 ms
+25-06-2026 18:45:55 [[31MERROR[39M]: [/provider/foods?page=1&limit=4] No access token provided. Please include a valid access token in your request.: No access token provided. Please include a valid access token in your request.
+Error: No access token provided. Please include a valid access token in your request.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:37:10
+    at Generator.throw (<anonymous>)
+    at rejected (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:6:65)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+25-06-2026 18:45:55 [[32MINFO[39M]: GET /provider/foods?page=1&limit=4 401 133 - 236.664 ms
+25-06-2026 18:45:55 [[31MERROR[39M]: [/provider/foods?page=1&limit=4] No access token provided. Please include a valid access token in your request.: No access token provided. Please include a valid access token in your request.
+Error: No access token provided. Please include a valid access token in your request.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:37:10
+    at Generator.throw (<anonymous>)
+    at rejected (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:6:65)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+25-06-2026 18:45:55 [[32MINFO[39M]: GET /provider/foods?page=1&limit=4 401 133 - 5.329 ms
+25-06-2026 18:45:55 [[32MINFO[39M]: POST /auth/refresh-token 200 355 - 48.252 ms
+25-06-2026 18:45:55 [[32MINFO[39M]: POST /auth/refresh-token 200 355 - 9.935 ms
+25-06-2026 18:45:56 [[32MINFO[39M]: GET /provider/foods?page=1&limit=4 304 - - 304.758 ms
+25-06-2026 18:45:56 [[32MINFO[39M]: GET /provider/foods?page=1&limit=4 304 - - 119.048 ms
+25-06-2026 18:45:57 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=4 304 - - 319.136 ms
+25-06-2026 18:45:58 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=4 304 - - 208.857 ms
+25-06-2026 18:46:24 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=4 304 - - 191.783 ms
+25-06-2026 18:46:24 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=4 304 - - 198.473 ms
+25-06-2026 18:48:57 [[32MINFO[39M]: GET /provider/flights?page=1&limit=4 304 - - 490.811 ms
+25-06-2026 18:48:57 [[32MINFO[39M]: GET /provider/flights?page=1&limit=4 304 - - 138.304 ms
+25-06-2026 18:49:01 [[32MINFO[39M]: GET /provider/foods?page=1&limit=4 304 - - 127.247 ms
+25-06-2026 18:49:01 [[32MINFO[39M]: GET /provider/foods?page=1&limit=4 304 - - 92.748 ms
+25-06-2026 18:49:05 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=4 304 - - 186.749 ms
+25-06-2026 18:49:05 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=4 304 - - 166.540 ms
+25-06-2026 18:49:28 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=4 304 - - 167.085 ms
+25-06-2026 18:49:28 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=4 304 - - 177.159 ms
+25-06-2026 18:50:33 [[32MINFO[39M]: GET /provider/profile 304 - - 170.471 ms
+25-06-2026 18:50:33 [[32MINFO[39M]: GET /provider/profile 304 - - 79.105 ms
+25-06-2026 18:50:34 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=4 304 - - 199.669 ms
+25-06-2026 18:50:34 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=4 304 - - 166.346 ms
+25-06-2026 18:51:58 [[32MINFO[39M]: GET /provider/foods?page=1&limit=4 304 - - 430.047 ms
+25-06-2026 18:51:59 [[32MINFO[39M]: GET /provider/foods?page=1&limit=4 304 - - 96.767 ms
+25-06-2026 18:52:01 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=4 304 - - 236.823 ms
+25-06-2026 18:52:01 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=4 304 - - 198.443 ms
+25-06-2026 18:56:57 [[31MERROR[39M]: [/provider/offers?page=1&limit=4] No access token provided. Please include a valid access token in your request.: No access token provided. Please include a valid access token in your request.
+Error: No access token provided. Please include a valid access token in your request.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:37:10
+    at Generator.throw (<anonymous>)
+    at rejected (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:6:65)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+25-06-2026 18:56:57 [[32MINFO[39M]: GET /provider/offers?page=1&limit=4 401 133 - 255.098 ms
+25-06-2026 18:56:57 [[31MERROR[39M]: [/provider/offers?page=1&limit=4] No access token provided. Please include a valid access token in your request.: No access token provided. Please include a valid access token in your request.
+Error: No access token provided. Please include a valid access token in your request.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:37:10
+    at Generator.throw (<anonymous>)
+    at rejected (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:6:65)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+25-06-2026 18:56:57 [[32MINFO[39M]: GET /provider/offers?page=1&limit=4 401 133 - 4.858 ms
+25-06-2026 18:56:57 [[32MINFO[39M]: POST /auth/refresh-token 200 355 - 26.970 ms
+25-06-2026 18:56:57 [[32MINFO[39M]: POST /auth/refresh-token 200 355 - 5.938 ms
+25-06-2026 18:56:57 [[32MINFO[39M]: GET /provider/offers?page=1&limit=4 304 - - 305.996 ms
+25-06-2026 18:56:57 [[32MINFO[39M]: GET /provider/offers?page=1&limit=4 304 - - 90.509 ms
+25-06-2026 18:58:30 [[32MINFO[39M]: GET /provider/foods?page=1&limit=4 304 - - 370.748 ms
+25-06-2026 18:58:30 [[32MINFO[39M]: GET /provider/foods?page=1&limit=4 304 - - 93.454 ms
+25-06-2026 19:16:48 [[31MERROR[39M]: [/provider/foods?page=1&limit=4] No access token provided. Please include a valid access token in your request.: No access token provided. Please include a valid access token in your request.
+Error: No access token provided. Please include a valid access token in your request.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:37:10
+    at Generator.throw (<anonymous>)
+    at rejected (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:6:65)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+25-06-2026 19:16:48 [[32MINFO[39M]: GET /provider/foods?page=1&limit=4 401 133 - 310.897 ms
+25-06-2026 19:16:48 [[31MERROR[39M]: [/provider/foods?page=1&limit=4] No access token provided. Please include a valid access token in your request.: No access token provided. Please include a valid access token in your request.
+Error: No access token provided. Please include a valid access token in your request.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:37:10
+    at Generator.throw (<anonymous>)
+    at rejected (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:6:65)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+25-06-2026 19:16:48 [[32MINFO[39M]: GET /provider/foods?page=1&limit=4 401 133 - 30.663 ms
+25-06-2026 19:16:48 [[32MINFO[39M]: POST /auth/refresh-token 200 355 - 34.224 ms
+25-06-2026 19:16:48 [[32MINFO[39M]: POST /auth/refresh-token 200 355 - 4.104 ms
+25-06-2026 19:16:49 [[32MINFO[39M]: GET /provider/foods?page=1&limit=4 304 - - 711.696 ms
+25-06-2026 19:16:49 [[32MINFO[39M]: GET /provider/foods?page=1&limit=4 304 - - 89.254 ms
+25-06-2026 19:16:55 [[32MINFO[39M]: GET /provider/foods?page=1&limit=4 304 - - 160.829 ms
+25-06-2026 19:16:55 [[32MINFO[39M]: GET /provider/foods?page=1&limit=4 304 - - 91.568 ms
+25-06-2026 19:16:57 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=4 304 - - 262.489 ms
+25-06-2026 19:16:57 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=4 304 - - 169.599 ms
+25-06-2026 19:17:07 [[32MINFO[39M]: GET /provider/foods?page=1&limit=4 304 - - 125.796 ms
+25-06-2026 19:17:07 [[32MINFO[39M]: GET /provider/foods?page=1&limit=4 304 - - 83.755 ms
+25-06-2026 19:27:37 [[31MERROR[39M]: [/provider/foods?page=1&limit=4] No access token provided. Please include a valid access token in your request.: No access token provided. Please include a valid access token in your request.
+Error: No access token provided. Please include a valid access token in your request.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:37:10
+    at Generator.throw (<anonymous>)
+    at rejected (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:6:65)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+25-06-2026 19:27:37 [[32MINFO[39M]: GET /provider/foods?page=1&limit=4 401 133 - 222.202 ms
+25-06-2026 19:27:37 [[31MERROR[39M]: [/provider/foods?page=1&limit=4] No access token provided. Please include a valid access token in your request.: No access token provided. Please include a valid access token in your request.
+Error: No access token provided. Please include a valid access token in your request.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:37:10
+    at Generator.throw (<anonymous>)
+    at rejected (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:6:65)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+25-06-2026 19:27:37 [[32MINFO[39M]: GET /provider/foods?page=1&limit=4 401 133 - 6.158 ms
+25-06-2026 19:27:37 [[32MINFO[39M]: POST /auth/refresh-token 200 355 - 24.481 ms
+25-06-2026 19:27:37 [[32MINFO[39M]: POST /auth/refresh-token 200 355 - 4.878 ms
+25-06-2026 19:27:37 [[32MINFO[39M]: GET /provider/foods?page=1&limit=4 304 - - 349.846 ms
+25-06-2026 19:27:37 [[32MINFO[39M]: GET /provider/foods?page=1&limit=4 304 - - 92.614 ms
+25-06-2026 19:28:10 [[32MINFO[39M]: GET /provider/offers?page=1&limit=4 304 - - 261.637 ms
+25-06-2026 19:28:11 [[32MINFO[39M]: GET /provider/offers?page=1&limit=4 304 - - 91.008 ms
+25-06-2026 19:28:19 [[32MINFO[39M]: GET /provider/foods?page=1&limit=4 304 - - 106.110 ms
+25-06-2026 19:28:19 [[32MINFO[39M]: GET /provider/foods?page=1&limit=4 304 - - 104.943 ms
+25-06-2026 19:28:46 [[32MINFO[39M]: GET /provider/foods?page=1&limit=4 304 - - 171.446 ms
+25-06-2026 19:28:46 [[32MINFO[39M]: GET /provider/foods?page=1&limit=4 304 - - 153.402 ms
+25-06-2026 19:28:52 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=3 304 - - 302.517 ms
+25-06-2026 19:28:53 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=3 304 - - 214.489 ms
+25-06-2026 19:33:27 [[32MINFO[39M]: GET /provider/foods?page=1&limit=4 304 - - 504.664 ms
+25-06-2026 19:33:27 [[32MINFO[39M]: GET /provider/foods?page=1&limit=4 304 - - 88.444 ms
+25-06-2026 19:37:13 [[32MINFO[39M]: GET /provider/foods?page=1&limit=4 304 - - 327.170 ms
+25-06-2026 19:37:55 [[31MERROR[39M]: [/provider/foods/6a109f881a558fee17bf1e20/status] No access token provided. Please include a valid access token in your request.: No access token provided. Please include a valid access token in your request.
+Error: No access token provided. Please include a valid access token in your request.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:37:10
+    at Generator.throw (<anonymous>)
+    at rejected (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:6:65)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+25-06-2026 19:37:55 [[32MINFO[39M]: PATCH /provider/foods/6a109f881a558fee17bf1e20/status 401 133 - 26.162 ms
+25-06-2026 19:37:55 [[32MINFO[39M]: POST /auth/refresh-token 200 355 - 18.824 ms
+25-06-2026 19:37:55 [[32MINFO[39M]: PATCH /provider/foods/6a109f881a558fee17bf1e20/status 200 527 - 556.069 ms
+25-06-2026 19:37:58 [[32MINFO[39M]: PATCH /provider/foods/6a109f881a558fee17bf1e20/status 200 526 - 199.787 ms
+25-06-2026 19:38:11 [[32MINFO[39M]: GET /provider/foods?page=1&limit=4 200 1527 - 121.004 ms
+25-06-2026 19:38:11 [[32MINFO[39M]: GET /provider/foods?page=1&limit=4 304 - - 130.086 ms
+25-06-2026 19:38:33 [[32MINFO[39M]: GET /provider/flights?page=1&limit=4 304 - - 257.124 ms
+25-06-2026 19:38:33 [[32MINFO[39M]: GET /provider/flights?page=1&limit=4 304 - - 130.728 ms
+25-06-2026 19:38:40 [[32MINFO[39M]: GET /provider/foods?page=1&limit=4 304 - - 97.144 ms
+25-06-2026 19:38:40 [[32MINFO[39M]: GET /provider/foods?page=1&limit=4 304 - - 92.247 ms
+25-06-2026 19:38:46 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=3 304 - - 203.731 ms
+25-06-2026 19:38:46 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=3 304 - - 173.688 ms
+25-06-2026 19:38:57 [[32MINFO[39M]: GET /provider/bookings?page=1&limit=10 304 - - 162.700 ms
+25-06-2026 19:38:57 [[32MINFO[39M]: GET /provider/bookings?page=1&limit=10 304 - - 113.095 ms
+25-06-2026 19:39:00 [[32MINFO[39M]: GET /provider/offers?page=1&limit=4 304 - - 168.623 ms
+25-06-2026 19:39:00 [[32MINFO[39M]: GET /provider/offers?page=1&limit=4 304 - - 87.264 ms
+25-06-2026 19:39:01 [[32MINFO[39M]: GET /provider/flights?page=1&limit=4 304 - - 155.207 ms
+25-06-2026 19:39:01 [[32MINFO[39M]: GET /provider/flights?page=1&limit=4 304 - - 147.343 ms
+25-06-2026 19:39:05 [[32MINFO[39M]: GET /provider/foods?page=1&limit=4 304 - - 112.978 ms
+25-06-2026 19:39:05 [[32MINFO[39M]: GET /provider/foods?page=1&limit=4 304 - - 98.221 ms
+25-06-2026 19:39:19 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=4 304 - - 181.583 ms
+25-06-2026 19:39:19 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=4 304 - - 159.892 ms
+25-06-2026 19:39:52 [[32MINFO[39M]: POST /provider/foods 201 426 - 445.186 ms
+25-06-2026 19:39:53 [[32MINFO[39M]: GET /provider/foods?page=1&limit=4 200 1896 - 110.793 ms
+25-06-2026 19:39:53 [[32MINFO[39M]: GET /provider/foods?page=1&limit=4 304 - - 427.065 ms
+25-06-2026 19:41:19 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=4 304 - - 602.284 ms
+25-06-2026 19:41:19 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=4 304 - - 187.866 ms
+25-06-2026 19:42:53 [[32MINFO[39M]: POST /provider/foods 201 521 - 1315.606 ms
+25-06-2026 19:42:53 [[32MINFO[39M]: GET /provider/foods?page=1&limit=4 200 1904 - 95.731 ms
+25-06-2026 19:42:53 [[32MINFO[39M]: GET /provider/foods?page=1&limit=4 304 - - 93.017 ms
+25-06-2026 19:43:40 [[32MINFO[39M]: GET /provider/offers?page=1&limit=4 304 - - 437.167 ms
+25-06-2026 19:43:40 [[32MINFO[39M]: GET /provider/offers?page=1&limit=4 304 - - 241.739 ms
+25-06-2026 19:43:47 [[32MINFO[39M]: GET /provider/bookings?page=1&limit=10 304 - - 98.084 ms
+25-06-2026 19:43:47 [[32MINFO[39M]: GET /provider/bookings?page=1&limit=10 304 - - 120.196 ms
+25-06-2026 19:43:51 [[32MINFO[39M]: GET /provider/flights?page=1&limit=4 304 - - 162.104 ms
+25-06-2026 19:43:52 [[32MINFO[39M]: GET /provider/flights?page=1&limit=4 304 - - 134.254 ms
+25-06-2026 19:45:16 [[32MINFO[39M]: GET /provider/foods?page=1&limit=4 304 - - 118.498 ms
+25-06-2026 19:45:16 [[32MINFO[39M]: GET /provider/foods?page=1&limit=4 304 - - 106.230 ms
+25-06-2026 19:46:20 [[32MINFO[39M]: GET /provider/foods?page=1&limit=3 200 1442 - 475.805 ms
+25-06-2026 19:53:39 [[31MERROR[39M]: [/provider/foods?page=1&limit=3] No access token provided. Please include a valid access token in your request.: No access token provided. Please include a valid access token in your request.
+Error: No access token provided. Please include a valid access token in your request.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:37:10
+    at Generator.throw (<anonymous>)
+    at rejected (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:6:65)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+25-06-2026 19:53:40 [[32MINFO[39M]: GET /provider/foods?page=1&limit=3 401 133 - 402.253 ms
+25-06-2026 19:53:40 [[31MERROR[39M]: [/provider/foods?page=1&limit=3] No access token provided. Please include a valid access token in your request.: No access token provided. Please include a valid access token in your request.
+Error: No access token provided. Please include a valid access token in your request.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:37:10
+    at Generator.throw (<anonymous>)
+    at rejected (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:6:65)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+25-06-2026 19:53:40 [[32MINFO[39M]: GET /provider/foods?page=1&limit=3 401 133 - 13.419 ms
+25-06-2026 19:54:04 [[31MERROR[39M]: [/provider/profile] No access token provided. Please include a valid access token in your request.: No access token provided. Please include a valid access token in your request.
+Error: No access token provided. Please include a valid access token in your request.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:37:10
+    at Generator.throw (<anonymous>)
+    at rejected (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:6:65)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+25-06-2026 19:54:04 [[32MINFO[39M]: GET /provider/profile 401 133 - 36.811 ms
+25-06-2026 19:54:04 [[31MERROR[39M]: [/provider/profile] No access token provided. Please include a valid access token in your request.: No access token provided. Please include a valid access token in your request.
+Error: No access token provided. Please include a valid access token in your request.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:37:10
+    at Generator.throw (<anonymous>)
+    at rejected (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:6:65)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+25-06-2026 19:54:04 [[32MINFO[39M]: GET /provider/profile 401 133 - 9.657 ms
+25-06-2026 19:54:04 [[32MINFO[39M]: POST /auth/refresh-token 200 355 - 64.319 ms
+25-06-2026 19:54:04 [[32MINFO[39M]: POST /auth/refresh-token 200 355 - 9.316 ms
+25-06-2026 19:54:05 [[32MINFO[39M]: GET /provider/profile 304 - - 267.972 ms
+25-06-2026 19:54:05 [[32MINFO[39M]: GET /provider/profile 304 - - 236.027 ms
+25-06-2026 19:54:05 [[32MINFO[39M]: GET /provider/foods?page=1&limit=3 200 1442 - 671.856 ms
+25-06-2026 19:54:05 [[32MINFO[39M]: GET /provider/foods?page=1&limit=3 304 - - 121.114 ms
+25-06-2026 19:57:23 [[32MINFO[39M]: GET /provider/profile 304 - - 453.228 ms
+25-06-2026 19:57:23 [[32MINFO[39M]: GET /provider/profile 304 - - 187.903 ms
+25-06-2026 19:57:23 [[32MINFO[39M]: GET /provider/foods?page=1&limit=3 304 - - 202.997 ms
+25-06-2026 19:57:23 [[32MINFO[39M]: GET /provider/foods?page=1&limit=3 304 - - 94.339 ms
+25-06-2026 19:58:27 [[32MINFO[39M]: GET /provider/foods?page=1&limit=3 304 - - 508.029 ms
+25-06-2026 19:58:27 [[32MINFO[39M]: GET /provider/foods?page=1&limit=3 304 - - 106.112 ms
+25-06-2026 19:59:02 [[32MINFO[39M]: GET /provider/profile 304 - - 327.204 ms
+25-06-2026 19:59:02 [[32MINFO[39M]: GET /provider/profile 304 - - 89.993 ms
+25-06-2026 19:59:03 [[32MINFO[39M]: GET /provider/foods?page=1&limit=3 304 - - 153.630 ms
+25-06-2026 19:59:03 [[32MINFO[39M]: GET /provider/foods?page=1&limit=3 304 - - 93.208 ms
+25-06-2026 19:59:27 [[32MINFO[39M]: GET /provider/foods?page=1&limit=3 304 - - 306.811 ms
+25-06-2026 19:59:27 [[32MINFO[39M]: GET /provider/foods?page=1&limit=3 304 - - 105.174 ms
+25-06-2026 19:59:37 [[32MINFO[39M]: GET /provider/foods?page=1&limit=3 304 - - 100.683 ms
+25-06-2026 19:59:37 [[32MINFO[39M]: GET /provider/foods?page=1&limit=3 304 - - 90.230 ms
+25-06-2026 19:59:44 [[32MINFO[39M]: GET /provider/profile 304 - - 93.789 ms
+25-06-2026 19:59:44 [[32MINFO[39M]: GET /provider/profile 304 - - 111.203 ms
+25-06-2026 19:59:44 [[32MINFO[39M]: GET /provider/foods?page=1&limit=3 304 - - 100.060 ms
+25-06-2026 19:59:44 [[32MINFO[39M]: GET /provider/foods?page=1&limit=3 304 - - 95.698 ms
+25-06-2026 20:00:29 [[32MINFO[39M]: GET /provider/foods?page=1&limit=3 304 - - 464.904 ms
+25-06-2026 20:00:53 [[32MINFO[39M]: GET /provider/offers?page=1&limit=4 304 - - 261.012 ms
+25-06-2026 20:00:53 [[32MINFO[39M]: GET /provider/offers?page=1&limit=4 304 - - 119.652 ms
+25-06-2026 20:01:03 [[32MINFO[39M]: GET /provider/offers?page=1&limit=4 304 - - 101.513 ms
+25-06-2026 20:01:03 [[32MINFO[39M]: GET /provider/offers?page=1&limit=4 304 - - 90.873 ms
+25-06-2026 20:05:07 [[31MERROR[39M]: [/provider/foods?page=1&limit=3] No access token provided. Please include a valid access token in your request.: No access token provided. Please include a valid access token in your request.
+Error: No access token provided. Please include a valid access token in your request.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:37:10
+    at Generator.throw (<anonymous>)
+    at rejected (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:6:65)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+25-06-2026 20:05:07 [[32MINFO[39M]: GET /provider/foods?page=1&limit=3 401 133 - 128.586 ms
+25-06-2026 20:05:07 [[31MERROR[39M]: [/provider/foods?page=1&limit=3] No access token provided. Please include a valid access token in your request.: No access token provided. Please include a valid access token in your request.
+Error: No access token provided. Please include a valid access token in your request.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:37:10
+    at Generator.throw (<anonymous>)
+    at rejected (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:6:65)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+25-06-2026 20:05:07 [[32MINFO[39M]: GET /provider/foods?page=1&limit=3 401 133 - 27.586 ms
+25-06-2026 20:05:07 [[32MINFO[39M]: POST /auth/refresh-token 200 355 - 28.774 ms
+25-06-2026 20:05:07 [[32MINFO[39M]: POST /auth/refresh-token 200 355 - 5.111 ms
+25-06-2026 20:05:08 [[32MINFO[39M]: GET /provider/foods?page=1&limit=3 304 - - 145.501 ms
+25-06-2026 20:05:08 [[32MINFO[39M]: GET /provider/foods?page=1&limit=3 304 - - 116.031 ms
+25-06-2026 20:05:10 [[32MINFO[39M]: GET /provider/offers?page=1&limit=4 304 - - 127.807 ms
+25-06-2026 20:05:10 [[32MINFO[39M]: GET /provider/offers?page=1&limit=4 304 - - 87.033 ms
+25-06-2026 20:05:32 [[32MINFO[39M]: GET /provider/offers?page=1&limit=4 304 - - 119.745 ms
+25-06-2026 20:05:32 [[32MINFO[39M]: GET /provider/offers?page=1&limit=4 304 - - 87.720 ms
+25-06-2026 20:07:26 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=4 304 - - 477.040 ms
+25-06-2026 20:07:26 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=4 304 - - 249.966 ms
+25-06-2026 20:07:39 [[32MINFO[39M]: GET /provider/offers?page=1&limit=4 304 - - 105.025 ms
+25-06-2026 20:07:39 [[32MINFO[39M]: GET /provider/offers?page=1&limit=4 304 - - 92.707 ms
+25-06-2026 20:08:27 [[32MINFO[39M]: GET /provider/foods?page=1&limit=3 304 - - 127.035 ms
+25-06-2026 20:08:27 [[32MINFO[39M]: GET /provider/foods?page=1&limit=3 304 - - 140.459 ms
+25-06-2026 20:08:28 [[32MINFO[39M]: GET /provider/offers?page=1&limit=4 304 - - 104.862 ms
+25-06-2026 20:08:29 [[32MINFO[39M]: GET /provider/offers?page=1&limit=4 304 - - 90.308 ms
+25-06-2026 20:09:16 [[32MINFO[39M]: GET /provider/foods?page=1&limit=3 304 - - 670.870 ms
+25-06-2026 20:09:16 [[32MINFO[39M]: GET /provider/foods?page=1&limit=3 304 - - 92.157 ms
+25-06-2026 20:13:20 [[32MINFO[39M]: GET /provider/offers?page=1&limit=4 304 - - 486.186 ms
+25-06-2026 20:13:20 [[32MINFO[39M]: GET /provider/offers?page=1&limit=4 304 - - 90.692 ms
+25-06-2026 20:13:40 [[32MINFO[39M]: GET /provider/offers?page=1&limit=4 304 - - 183.490 ms
+25-06-2026 20:13:40 [[32MINFO[39M]: GET /provider/offers?page=1&limit=4 304 - - 125.026 ms
+25-06-2026 20:13:43 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=4 304 - - 206.966 ms
+25-06-2026 20:13:44 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=4 304 - - 202.494 ms
+25-06-2026 20:14:03 [[32MINFO[39M]: GET /provider/foods?page=1&limit=3 304 - - 139.224 ms
+25-06-2026 20:14:03 [[32MINFO[39M]: GET /provider/foods?page=1&limit=3 304 - - 87.059 ms
+25-06-2026 20:14:05 [[32MINFO[39M]: GET /provider/offers?page=1&limit=4 304 - - 179.270 ms
+25-06-2026 20:14:05 [[32MINFO[39M]: GET /provider/offers?page=1&limit=4 304 - - 116.527 ms
+25-06-2026 20:14:18 [[32MINFO[39M]: GET /provider/wallet 304 - - 155.922 ms
+25-06-2026 20:14:18 [[32MINFO[39M]: GET /provider/wallet 304 - - 100.636 ms
+25-06-2026 20:14:56 [[32MINFO[39M]: POST /auth/sign-out/ 200 137 - 51.721 ms
+25-06-2026 20:14:57 [[32MINFO[39M]: GET /provider/profile 304 - - 136.096 ms
+25-06-2026 20:15:19 [[32MINFO[39M]: POST /auth/sign-in 200 758 - 507.355 ms
+25-06-2026 20:15:24 [[32MINFO[39M]: GET /user/destinations/search?q=c 400 96 - 73.032 ms
+25-06-2026 20:15:25 [[32MINFO[39M]: GET /user/destinations/search?q=co 304 - - 1057.805 ms
+25-06-2026 20:15:25 [[32MINFO[39M]: GET /user/destinations/search?q=cok 304 - - 966.888 ms
+25-06-2026 20:15:29 [[32MINFO[39M]: GET /user/destinations/search?q=cokc 200 87 - 359.386 ms
+25-06-2026 20:15:29 [[32MINFO[39M]: GET /user/destinations/search?q=cokco 200 87 - 73.113 ms
+25-06-2026 20:15:29 [[32MINFO[39M]: GET /user/destinations/search?q=cokcok 200 87 - 68.578 ms
+25-06-2026 20:15:30 [[32MINFO[39M]: GET /user/destinations/search?q=cokco 304 - - 66.408 ms
+25-06-2026 20:15:30 [[32MINFO[39M]: GET /user/destinations/search?q=cokc 304 - - 51.335 ms
+25-06-2026 20:15:31 [[32MINFO[39M]: GET /user/destinations/search?q=cok 304 - - 52.275 ms
+25-06-2026 20:15:31 [[32MINFO[39M]: GET /user/destinations/search?q=c 400 96 - 4.213 ms
+25-06-2026 20:15:31 [[32MINFO[39M]: GET /user/destinations/search?q=co 304 - - 51.839 ms
+25-06-2026 20:15:32 [[32MINFO[39M]: GET /user/destinations/search?q=c 400 96 - 1.709 ms
+25-06-2026 20:15:38 [[32MINFO[39M]: GET /user/destinations/search?q=co 304 - - 5662.032 ms
+25-06-2026 20:15:38 [[32MINFO[39M]: GET /user/destinations/search?q=cok 304 - - 4994.635 ms
+25-06-2026 20:15:41 [[32MINFO[39M]: GET /user/destinations/search?q=co 304 - - 2439.432 ms
+25-06-2026 20:15:41 [[32MINFO[39M]: GET /user/destinations/search?q=cok 304 - - 101.470 ms
+25-06-2026 20:17:00 [[32MINFO[39M]: GET /user/destinations/search?q=d 400 96 - 3.905 ms
+25-06-2026 20:17:01 [[32MINFO[39M]: GET /user/destinations/search?q=dx 304 - - 51.861 ms
+25-06-2026 20:17:01 [[32MINFO[39M]: GET /user/destinations/search?q=dxb 304 - - 55.641 ms
+25-06-2026 20:17:11 [[32MINFO[39M]: GET /user/flights/search?from=COK&to=DXB&departureDate=2026-06-30&passengers=1&tripType=one-way&page=1&limit=6 200 2720 - 2021.854 ms
+25-06-2026 20:17:15 [[32MINFO[39M]: POST /user/bookings/segment 200 996 - 483.576 ms
+25-06-2026 20:17:16 [[32MINFO[39M]: GET /user/bookings/09ac66de-3386-4370-8a59-03330cd88e9c/segment 200 990 - 146.681 ms
+25-06-2026 20:17:16 [[32MINFO[39M]: GET /user/bookings/09ac66de-3386-4370-8a59-03330cd88e9c/segment 304 - - 56.047 ms
+25-06-2026 20:17:44 [[32MINFO[39M]: GET /user/bookings/09ac66de-3386-4370-8a59-03330cd88e9c/seats-map 200 14890 - 381.253 ms
+25-06-2026 20:17:44 [[32MINFO[39M]: GET /user/bookings/09ac66de-3386-4370-8a59-03330cd88e9c/seats-map 304 - - 221.755 ms
+25-06-2026 20:17:44 [[32MINFO[39M]: GET /user/aircrafts/69edb8c0341960e915459eae/foods 200 580 - 714.771 ms
+25-06-2026 20:17:45 [[32MINFO[39M]: GET /user/aircrafts/69edb8c0341960e915459eae/foods 304 - - 145.971 ms
+25-06-2026 20:17:55 [[32MINFO[39M]: GET /user/bookings/09ac66de-3386-4370-8a59-03330cd88e9c/segment 304 - - 129.225 ms
+25-06-2026 20:17:55 [[32MINFO[39M]: GET /user/bookings/09ac66de-3386-4370-8a59-03330cd88e9c/segment 304 - - 87.246 ms
+25-06-2026 20:37:03 [[31MERROR[39M]: [/user/profile] No access token provided. Please include a valid access token in your request.: No access token provided. Please include a valid access token in your request.
+Error: No access token provided. Please include a valid access token in your request.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:37:10
+    at Generator.throw (<anonymous>)
+    at rejected (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:6:65)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+25-06-2026 20:37:03 [[32MINFO[39M]: GET /user/profile 401 133 - 269.570 ms
+25-06-2026 20:37:03 [[31MERROR[39M]: [/user/profile] No access token provided. Please include a valid access token in your request.: No access token provided. Please include a valid access token in your request.
+Error: No access token provided. Please include a valid access token in your request.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:37:10
+    at Generator.throw (<anonymous>)
+    at rejected (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:6:65)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+25-06-2026 20:37:03 [[32MINFO[39M]: GET /user/profile 401 133 - 7.728 ms
+25-06-2026 20:37:04 [[32MINFO[39M]: POST /auth/refresh-token 200 349 - 48.583 ms
+25-06-2026 20:37:04 [[32MINFO[39M]: POST /auth/refresh-token 200 349 - 5.501 ms
+25-06-2026 20:37:05 [[32MINFO[39M]: GET /user/profile 304 - - 527.404 ms
+25-06-2026 20:37:05 [[32MINFO[39M]: GET /user/profile 304 - - 90.252 ms
+25-06-2026 21:27:33 [[31MERROR[39M]: [/user/profile] No access token provided. Please include a valid access token in your request.: No access token provided. Please include a valid access token in your request.
+Error: No access token provided. Please include a valid access token in your request.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:37:10
+    at Generator.throw (<anonymous>)
+    at rejected (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:6:65)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+25-06-2026 21:27:33 [[32MINFO[39M]: GET /user/profile 401 133 - 312.721 ms
+25-06-2026 21:27:33 [[31MERROR[39M]: [/user/profile] No access token provided. Please include a valid access token in your request.: No access token provided. Please include a valid access token in your request.
+Error: No access token provided. Please include a valid access token in your request.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:37:10
+    at Generator.throw (<anonymous>)
+    at rejected (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:6:65)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+25-06-2026 21:27:33 [[32MINFO[39M]: GET /user/profile 401 133 - 5.323 ms
+25-06-2026 21:27:33 [[32MINFO[39M]: POST /auth/refresh-token 200 349 - 37.702 ms
+25-06-2026 21:27:33 [[32MINFO[39M]: POST /auth/refresh-token 200 349 - 6.616 ms
+25-06-2026 21:27:33 [[32MINFO[39M]: GET /user/profile 304 - - 177.530 ms
+25-06-2026 21:27:34 [[32MINFO[39M]: GET /user/profile 304 - - 106.863 ms
+25-06-2026 21:49:27 [[32MINFO[39M]: POST /auth/sign-in 200 1360 - 879.395 ms
+25-06-2026 21:49:30 [[32MINFO[39M]: GET /provider/foods?page=1&limit=3 304 - - 295.996 ms
+25-06-2026 21:49:30 [[32MINFO[39M]: GET /provider/foods?page=1&limit=3 304 - - 184.175 ms
+25-06-2026 22:05:05 [[31MERROR[39M]: [/provider/profile] No access token provided. Please include a valid access token in your request.: No access token provided. Please include a valid access token in your request.
+Error: No access token provided. Please include a valid access token in your request.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:37:10
+    at Generator.throw (<anonymous>)
+    at rejected (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:6:65)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+25-06-2026 22:05:05 [[32MINFO[39M]: GET /provider/profile 401 133 - 136.035 ms
+25-06-2026 22:05:05 [[31MERROR[39M]: [/provider/profile] No access token provided. Please include a valid access token in your request.: No access token provided. Please include a valid access token in your request.
+Error: No access token provided. Please include a valid access token in your request.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:37:10
+    at Generator.throw (<anonymous>)
+    at rejected (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:6:65)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+25-06-2026 22:05:05 [[32MINFO[39M]: GET /provider/profile 401 133 - 11.667 ms
+25-06-2026 22:05:05 [[32MINFO[39M]: POST /auth/refresh-token 200 355 - 16.691 ms
+25-06-2026 22:05:05 [[32MINFO[39M]: POST /auth/refresh-token 200 355 - 6.526 ms
+25-06-2026 22:05:05 [[32MINFO[39M]: GET /provider/profile 304 - - 117.495 ms
+25-06-2026 22:05:05 [[32MINFO[39M]: GET /provider/profile 304 - - 118.886 ms
+25-06-2026 22:05:05 [[32MINFO[39M]: GET /provider/foods?page=1&limit=3 304 - - 128.924 ms
+25-06-2026 22:05:06 [[32MINFO[39M]: GET /provider/foods?page=1&limit=3 304 - - 93.807 ms
+25-06-2026 22:30:36 [[31MERROR[39M]: [/provider/profile] No access token provided. Please include a valid access token in your request.: No access token provided. Please include a valid access token in your request.
+Error: No access token provided. Please include a valid access token in your request.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:37:10
+    at Generator.throw (<anonymous>)
+    at rejected (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:6:65)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+25-06-2026 22:30:36 [[32MINFO[39M]: GET /provider/profile 401 133 - 339.293 ms
+25-06-2026 22:30:36 [[31MERROR[39M]: [/provider/profile] No access token provided. Please include a valid access token in your request.: No access token provided. Please include a valid access token in your request.
+Error: No access token provided. Please include a valid access token in your request.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:37:10
+    at Generator.throw (<anonymous>)
+    at rejected (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:6:65)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+25-06-2026 22:30:36 [[32MINFO[39M]: GET /provider/profile 401 133 - 39.151 ms
+25-06-2026 22:30:36 [[32MINFO[39M]: POST /auth/refresh-token 200 355 - 128.852 ms
+25-06-2026 22:30:37 [[32MINFO[39M]: POST /auth/refresh-token 200 355 - 130.872 ms
+25-06-2026 22:30:37 [[32MINFO[39M]: GET /provider/profile 304 - - 1318.956 ms
+25-06-2026 22:30:37 [[32MINFO[39M]: GET /provider/profile 304 - - 155.232 ms
+25-06-2026 22:30:38 [[32MINFO[39M]: GET /provider/foods?page=1&limit=3 304 - - 234.661 ms
+25-06-2026 22:30:38 [[32MINFO[39M]: GET /provider/foods?page=1&limit=3 304 - - 109.203 ms
+25-06-2026 22:40:06 [[32MINFO[39M]: GET /provider/profile 304 - - 1484.569 ms
+25-06-2026 22:40:06 [[32MINFO[39M]: GET /provider/profile 304 - - 113.543 ms
+25-06-2026 22:40:17 [[32MINFO[39M]: GET /provider/foods?page=1&limit=3 304 - - 3191.461 ms
+25-06-2026 22:40:17 [[32MINFO[39M]: GET /provider/foods?page=1&limit=3 304 - - 112.763 ms
+25-06-2026 22:46:29 [[31MERROR[39M]: [/provider/profile] No access token provided. Please include a valid access token in your request.: No access token provided. Please include a valid access token in your request.
+Error: No access token provided. Please include a valid access token in your request.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:37:10
+    at Generator.throw (<anonymous>)
+    at rejected (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:6:65)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+25-06-2026 22:46:29 [[32MINFO[39M]: GET /provider/profile 401 133 - 615.235 ms
+25-06-2026 22:46:29 [[31MERROR[39M]: [/provider/profile] No access token provided. Please include a valid access token in your request.: No access token provided. Please include a valid access token in your request.
+Error: No access token provided. Please include a valid access token in your request.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:37:10
+    at Generator.throw (<anonymous>)
+    at rejected (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:6:65)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+25-06-2026 22:46:29 [[32MINFO[39M]: GET /provider/profile 401 133 - 11.091 ms
+25-06-2026 22:46:30 [[32MINFO[39M]: POST /auth/refresh-token 200 355 - 74.949 ms
+25-06-2026 22:46:30 [[32MINFO[39M]: POST /auth/refresh-token 200 355 - 10.741 ms
+25-06-2026 22:46:31 [[32MINFO[39M]: GET /provider/profile 304 - - 770.636 ms
+25-06-2026 22:46:31 [[32MINFO[39M]: GET /provider/profile 304 - - 93.294 ms
+25-06-2026 22:46:31 [[32MINFO[39M]: GET /provider/foods?page=1&limit=3 304 - - 127.193 ms
+25-06-2026 22:46:32 [[32MINFO[39M]: GET /provider/foods?page=1&limit=3 304 - - 148.385 ms
+25-06-2026 22:47:26 [[32MINFO[39M]: GET /provider/foods?page=2&limit=3 200 1058 - 497.656 ms
+25-06-2026 22:47:32 [[32MINFO[39M]: GET /provider/offers?page=1&limit=4 304 - - 468.406 ms
+25-06-2026 22:47:33 [[32MINFO[39M]: GET /provider/offers?page=1&limit=4 304 - - 99.980 ms
+25-06-2026 22:47:50 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=4 304 - - 509.332 ms
+25-06-2026 22:47:50 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=4 304 - - 179.382 ms
+25-06-2026 22:47:56 [[32MINFO[39M]: GET /provider/foods?page=1&limit=3 304 - - 105.810 ms
+25-06-2026 22:47:56 [[32MINFO[39M]: GET /provider/foods?page=1&limit=3 304 - - 95.255 ms
+25-06-2026 22:48:13 [[32MINFO[39M]: GET /provider/foods?page=1&limit=3 304 - - 148.895 ms
+25-06-2026 22:48:13 [[32MINFO[39M]: GET /provider/foods?page=1&limit=3 304 - - 154.787 ms
+25-06-2026 22:48:41 [[32MINFO[39M]: GET /provider/offers?page=1&limit=4 304 - - 107.761 ms
+25-06-2026 22:48:42 [[32MINFO[39M]: GET /provider/offers?page=1&limit=4 304 - - 88.559 ms
+25-06-2026 22:48:54 [[32MINFO[39M]: GET /provider/offers?page=1&limit=4 304 - - 103.218 ms
+25-06-2026 22:48:54 [[32MINFO[39M]: GET /provider/offers?page=1&limit=4 304 - - 151.414 ms
+25-06-2026 22:49:01 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=4 304 - - 191.150 ms
+25-06-2026 22:49:01 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=4 304 - - 185.743 ms
+25-06-2026 22:54:34 [[32MINFO[39M]: GET /provider/profile 304 - - 537.149 ms
+25-06-2026 22:54:35 [[32MINFO[39M]: GET /provider/profile 304 - - 161.661 ms
+25-06-2026 22:54:35 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=4 304 - - 324.060 ms
+25-06-2026 22:54:35 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=4 304 - - 190.349 ms
+25-06-2026 22:54:48 [[32MINFO[39M]: GET /provider/profile 304 - - 119.343 ms
+25-06-2026 22:54:48 [[32MINFO[39M]: GET /provider/profile 304 - - 187.080 ms
+25-06-2026 22:54:48 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=4 304 - - 214.947 ms
+25-06-2026 22:54:48 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=4 304 - - 176.858 ms
+25-06-2026 22:55:08 [[32MINFO[39M]: GET /provider/offers?page=1&limit=4 304 - - 203.328 ms
+25-06-2026 22:55:09 [[32MINFO[39M]: GET /provider/offers?page=1&limit=4 304 - - 107.461 ms
+25-06-2026 23:07:30 [[31MERROR[39M]: [/provider/profile] No access token provided. Please include a valid access token in your request.: No access token provided. Please include a valid access token in your request.
+Error: No access token provided. Please include a valid access token in your request.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:37:10
+    at Generator.throw (<anonymous>)
+    at rejected (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:6:65)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+25-06-2026 23:07:30 [[32MINFO[39M]: GET /provider/profile 401 133 - 389.720 ms
+25-06-2026 23:07:30 [[31MERROR[39M]: [/provider/profile] No access token provided. Please include a valid access token in your request.: No access token provided. Please include a valid access token in your request.
+Error: No access token provided. Please include a valid access token in your request.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:37:10
+    at Generator.throw (<anonymous>)
+    at rejected (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:6:65)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+25-06-2026 23:07:30 [[32MINFO[39M]: GET /provider/profile 401 133 - 12.633 ms
+25-06-2026 23:07:38 [[32MINFO[39M]: POST /auth/refresh-token 200 355 - 7531.840 ms
+25-06-2026 23:07:43 [[32MINFO[39M]: POST /auth/refresh-token 200 355 - 1893.221 ms
+25-06-2026 23:07:45 [[32MINFO[39M]: GET /provider/profile 304 - - 945.805 ms
+25-06-2026 23:07:45 [[32MINFO[39M]: GET /provider/profile 304 - - 109.989 ms
+25-06-2026 23:07:45 [[32MINFO[39M]: GET /provider/offers?page=1&limit=4 304 - - 117.927 ms
+25-06-2026 23:07:45 [[32MINFO[39M]: GET /provider/offers?page=1&limit=4 304 - - 88.037 ms
+25-06-2026 23:30:29 [[31MERROR[39M]: [/provider/profile] No access token provided. Please include a valid access token in your request.: No access token provided. Please include a valid access token in your request.
+Error: No access token provided. Please include a valid access token in your request.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:37:10
+    at Generator.throw (<anonymous>)
+    at rejected (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:6:65)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+25-06-2026 23:30:29 [[32MINFO[39M]: GET /provider/profile 401 133 - 381.149 ms
+25-06-2026 23:30:29 [[31MERROR[39M]: [/provider/profile] No access token provided. Please include a valid access token in your request.: No access token provided. Please include a valid access token in your request.
+Error: No access token provided. Please include a valid access token in your request.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:37:10
+    at Generator.throw (<anonymous>)
+    at rejected (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:6:65)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+25-06-2026 23:30:29 [[32MINFO[39M]: GET /provider/profile 401 133 - 16.240 ms
+25-06-2026 23:30:30 [[32MINFO[39M]: POST /auth/refresh-token 200 355 - 81.025 ms
+25-06-2026 23:30:30 [[32MINFO[39M]: POST /auth/refresh-token 200 355 - 11.662 ms
+25-06-2026 23:30:32 [[32MINFO[39M]: GET /provider/profile 304 - - 583.380 ms
+25-06-2026 23:30:32 [[32MINFO[39M]: GET /provider/profile 304 - - 89.604 ms
+25-06-2026 23:30:32 [[32MINFO[39M]: GET /provider/offers?page=1&limit=4 304 - - 131.812 ms
+25-06-2026 23:30:32 [[32MINFO[39M]: GET /provider/offers?page=1&limit=4 304 - - 114.881 ms
+25-06-2026 23:33:31 [[32MINFO[39M]: GET /provider/profile 304 - - 543.131 ms
+25-06-2026 23:33:31 [[32MINFO[39M]: GET /provider/profile 304 - - 334.230 ms
+25-06-2026 23:33:32 [[32MINFO[39M]: GET /provider/offers?page=1&limit=4 304 - - 618.653 ms
+25-06-2026 23:33:32 [[32MINFO[39M]: GET /provider/offers?page=1&limit=4 304 - - 91.175 ms
+25-06-2026 23:33:46 [[32MINFO[39M]: GET /provider/foods?page=1&limit=3 304 - - 165.036 ms
+25-06-2026 23:33:46 [[32MINFO[39M]: GET /provider/foods?page=1&limit=3 304 - - 159.907 ms
+25-06-2026 23:33:51 [[32MINFO[39M]: GET /provider/offers?page=1&limit=4 304 - - 125.687 ms
+25-06-2026 23:33:52 [[32MINFO[39M]: GET /provider/offers?page=1&limit=4 304 - - 113.892 ms
+25-06-2026 23:34:00 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=4 304 - - 250.329 ms
+25-06-2026 23:34:00 [[32MINFO[39M]: GET /provider/aircrafts?page=1&limit=4 304 - - 197.485 ms
+25-06-2026 23:34:03 [[32MINFO[39M]: GET /provider/offers?page=1&limit=4 304 - - 92.660 ms
+25-06-2026 23:34:03 [[32MINFO[39M]: GET /provider/offers?page=1&limit=4 304 - - 91.067 ms
+25-06-2026 23:34:07 [[32MINFO[39M]: GET /provider/offers?page=1&limit=4 304 - - 105.646 ms
+25-06-2026 23:34:07 [[32MINFO[39M]: GET /provider/offers?page=1&limit=4 304 - - 203.403 ms
+25-06-2026 23:34:14 [[32MINFO[39M]: GET /provider/bookings?page=1&limit=10 304 - - 287.523 ms
+25-06-2026 23:34:14 [[32MINFO[39M]: GET /provider/bookings?page=1&limit=10 304 - - 98.864 ms

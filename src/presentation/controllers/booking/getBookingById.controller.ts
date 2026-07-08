@@ -16,7 +16,6 @@ export class GetBookingByIdController {
   async handle(req: Request, res: Response): Promise<void> {
     const userId = req.user!.id;
     const { bookingId } = req.params;
-    console.log('controller booking id is: ',bookingId)
     if(!bookingId) {
         throw new Error(BOOKING_MESSAGES.BOOKING_ID_REQUIRED);
     }

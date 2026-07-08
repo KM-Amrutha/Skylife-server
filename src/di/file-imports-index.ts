@@ -1,7 +1,6 @@
 
 // Repository Interfaces
 export {IUserRepository} from "@domain/interfaces/IUserRepository"
-export {IOtpRepository} from "@domain/interfaces/IOtpRepository";
 export {IProviderRepository} from "@domain/interfaces/IProviderRepository";
 export {IPasswordResetRepository} from "@domain/interfaces/IPasswordResetTokenRepository";
 export {IAircraftRepository} from "@domain/interfaces/IAircraftRepository";
@@ -22,7 +21,6 @@ export {IAdminWalletRepository} from "@domain/interfaces/IAdminWalletRepository"
 //   Repositories
 export {UserRepository} from "@infrastructure/databases/repositories/user.repository";
 export {ProviderRepository} from "@infrastructure/databases/repositories/provider.repository";
-export {OtpRepository} from "@infrastructure/databases/repositories/otp.repository";
 export {PasswordResetRepository} from "@infrastructure/databases/repositories/passwordResetToken.repository";
 export {AircraftRepository} from "@infrastructure/databases/repositories/aircraft.repository";
 export {DestinationRepository} from "@infrastructure/databases/repositories/destination.repository";
@@ -54,6 +52,7 @@ export {StripeService} from "@infrastructure/services/payment/stripe.service";
 export {UserWalletCreditService} from "@infrastructure/services/payment/userWalletCredit.service";
 export {ProviderWalletService} from "@infrastructure/services/payment/providerWallet.service";
 export {TicketGenerationService} from "@infrastructure/services/payment/ticketGeneration.service";
+export {BookingConfirmationService} from "@infrastructure/services/booking/bookingConfirmation.service";
 
 // service Interfaces
 export {IAuthService} from "@application/interfaces/service/auth/IAuth.service";
@@ -69,6 +68,7 @@ export {IStripeService} from "@application/interfaces/service/payment/IStripe.se
 export {IUserWalletCreditService} from "@application/interfaces/service/payment/IUserWalletCredit.service";
 export {IProviderWalletService} from "@application/interfaces/service/payment/IProviderWallet.service";
 export {ITicketGenerationService} from "@application/interfaces/service/payment/ITicketGeneration.service";
+export {IBookingConfirmationService} from "@application/interfaces/service/booking/IBookingConfirmation.service";
 
 //   Authentication UseCases
 
@@ -119,8 +119,10 @@ export {UpdateAircraftLocationUseCase} from "@application/usecases/aircraft/upda
 export {CreateSeatLayoutUseCase} from "@application/usecases/aircraft/create-seatLayout.usecase";
 export {GenerateSeatsUseCase} from "@application/usecases/aircraft/generate-seats.usecase";
 export {GetAllSeatTypesUseCase} from "@application/usecases/aircraft/getall-seatTypes.usecase";
-export {GetSeatLayoutsByAircraftUseCase} from "@application/usecases/aircraft/getSeatLayoutByAircraft.usecase"
-export {DeleteSeatLayoutUseCase} from "@application/usecases/aircraft/delete-seatLayout.usecase"
+export {GetSeatLayoutsByAircraftUseCase} from "@application/usecases/aircraft/getSeatLayoutByAircraft.usecase";
+export {DeleteSeatLayoutUseCase} from "@application/usecases/aircraft/delete-seatLayout.usecase";
+export {ToggleSeatBlockUseCase} from "@application/usecases/aircraft/toggle-seatBlock.usecase";
+export {GetAircraftSeatsUseCase} from "@application/usecases/aircraft/get-aircraftSeats.usecase";
 
 // Flight UseCases
 export {CreateFlightUseCase} from "@application/usecases/flight/create-flight.usecase";
@@ -155,10 +157,15 @@ export {GetProviderBookingsUseCase} from "@application/usecases/booking/get-prov
 export {GetAdminBookingsUseCase} from "@application/usecases/booking/get-adminBookings.usecase";
 export {GetTicketUseCase} from "@application/usecases/booking/get-ticket.usecase";
 export {CancelPassengerUseCase} from "@application/usecases/booking/cancel-passenger.usecase";
-export {GetUserWalletUseCase} from "@application/usecases/booking/get-userWallet.usecase";
-export {GetProviderWalletUseCase} from "@application/usecases/booking/get-providerWallet.usecase";
+
 export {GetProviderBookingByIdUseCase} from "@application/usecases/booking/get-providerBookingById.usecase";
 
+// Wallet UseCases
+export {GetUserWalletUseCase} from "@application/usecases/wallet/get-userWallet.usecase";
+export {GetProviderWalletUseCase} from "@application/usecases/wallet/get-providerWallet.usecase";
+export {AddMoneyToProviderWalletUseCase} from "@application/usecases/wallet/add-moneyToProviderWallet.usecase";
+export {AddMoneyToWalletUseCase} from "@application/usecases/wallet/add-moneyToWallet.usecase";
+export {PayWithWalletUseCase} from "@application/usecases/wallet/pay-withWallet.usecase";
 
 // Offer Usecases
 
@@ -177,105 +184,6 @@ export {GetFoodsByProviderUseCase} from "@application/usecases/food/getFoods-byP
 export {GetFoodsByAircraftUseCase} from "@application/usecases/food/getFoods-byAircraft.usecase";
 export {UpdateFoodUseCase} from "@application/usecases/food/update-food.usecase";
 
-
-//   Authentication Controllers 
-
-export {SignUpUserController} from "@presentation/controllers/auth/sign-up-user.constroller";
-export {SignUpProviderController} from "@presentation/controllers/auth/sign-up-provider.controller";
-export {OtpController} from "@presentation/controllers/auth/otp.controller";
-export {SignInController} from "@presentation/controllers/auth/sign-in.controller";
-export {SignOutController} from"@presentation/controllers/auth/sign-out.controller";
-export {RefreshAccessTokenController} from "@presentation/controllers/auth/refresh-access-token.controller";
-export {ForgotPasswordController} from "@presentation/controllers/auth/forget-password.controller";
-export {PasswordResetLinkController} from "presentation/controllers/auth/genereate-password-link.controller";
-export {GoogleAuthController} from "@presentation/controllers/auth/google-auth.controller"; 
-export {ChangePasswordController} from "@presentation/controllers/auth/change-password.controller"
-
-// Admin Controllers
-
-export {ProviderVerificationController} from "@presentation/controllers/admin/provider-verification.controller";
-export {GetAllProvidersController} from "@presentation/controllers/admin/get-allProvider.controller";
-export {UpdateProviderStatusController} from "@presentation/controllers/admin/update-providerStatus.controller";
-export {GetAllUsersController} from "@presentation/controllers/admin/get-allUsers.controller";
-export {UpdateUserStatusController} from "@presentation/controllers/admin/update-userStatus.controller";
-export {GetAdminDashboardController} from "@presentation/controllers/admin/get-adminDashboard.controller";
-export {SetProviderCommissionController} from "@presentation/controllers/admin/set-providerCommission.controller";
-export {GetAdminWalletController} from "@presentation/controllers/admin/get-adminWallet.controllers";
- 
-// Provider Controllers
-export {CompleteProviderProfileController} from "@presentation/controllers/provider/completeProviderProfile.controller";
-export {GetProviderProfileController} from "@presentation/controllers/provider/getProviderProfile.controller";
-
-export {GetUserProfileController} from "@presentation/controllers/user/getUserProfile.controller";
-export {UpdateUserProfileController} from "@presentation/controllers/user/updateUserProfile.controller";
-
-
-// Aircraft Controllers
-export {CreateAircraftController} from "@presentation/controllers/provider/createAircraft.controller";
-export {GetProviderAircraftsController} from "@presentation/controllers/provider/getProviderAircraft.controller";
-export {UpdateAircraftController} from "@presentation/controllers/provider/updateAircraft.controller";
-export {DeleteAircraftController} from "@presentation/controllers/provider/deleteAircraft.controller";
-export {SearchDestinationsController} from "@presentation/controllers/provider/searchDestinations.controller"; 
-export {GetAllSeatTypesController} from "@presentation/controllers/provider/getAllSeatTypes.controller";
-export {CreateSeatLayoutController} from "@presentation/controllers/provider/createSeatLayout.controller";
-export {GenerateSeatsController} from "@presentation/controllers/provider/generateSeats.controller";    
-export {GetSeatLayoutsController}  from "@presentation/controllers/provider/getSeatLayout.controller";
-export {DeleteSeatLayoutController} from "@presentation/controllers/provider/deleteSeatLayout.controller"
-
-// Flight Controllers
-export {CreateFlightController} from "@presentation/controllers/flight/createFlight.controller";
-export {GetProviderFlightsController} from "@presentation/controllers/flight/getProviderFlights.controller";
-export {PendingFlightsForApprovalController} from "@presentation/controllers/flight/pendingFlightsForApproval.controller";
-export {ApproveFlightController} from "@presentation/controllers/flight/approveFlights.controller";
-export {AvailableAircraftsForScheduleController} from "@presentation/controllers/flight/availableAircraftsForSchedule.controller";    
-export {UpdateFlightController} from "@presentation/controllers/flight/updateFlight.controller";
-export {GetFlightByIdController} from "@presentation/controllers/flight/getFlightById.controller";
-export {SearchFlightsController} from "@presentation/controllers/flight/searchFlights.controller";  
-export {DeleteFlightController} from "@presentation/controllers/flight/deleteFlight.controller";
-export {GetFlightSeatsController} from "@presentation/controllers/flight/getFlightSeat.controller";
-export {GetFlightSeatsForUserController} from "@presentation/controllers/flight/getFlightSeatUser.controller";
-export {CreateRecurringFlightController} from "@presentation/controllers/flight/createRecurringFlight.controller";
-export {RejectSingleFlightController} from "@presentation/controllers/flight/rejectSingleFlight.controller";
-export {GetAllFlightsForAdminController} from "@presentation/controllers/flight/getAllFlightsForAdmin.controller";  
-
-// Booking Controllers
-export {AddFlightToSegmentController} from "@presentation/controllers/booking/addFlightToSegment.controller";   
-export {GetBookingSegmentController} from "@presentation/controllers/booking/getBookingSegment.controller";
-export {UpdateBookingSegmentController} from "@presentation/controllers/booking/updateBookingSegment.controller";
-export {GetBookingSeatsMapController} from "@presentation/controllers/booking/getBookingSeatsMap.controller";
-export {SeatLockController} from "@presentation/controllers/booking/seatLock.controller";
-export {BookingDetailsController} from "@presentation/controllers/booking/bookingDetails.controller";
-export {GetBookingSummaryController} from "@presentation/controllers/booking/getBookingSummary.controller";
-
-export {InitiateBookingController} from "@presentation/controllers/booking/initiateBooking.controller"; 
-export {RetryPaymentController} from "@presentation/controllers/booking/retryPayment.controller";
-export {HandleWebhookController} from "@presentation/controllers/booking/handleWebhook.controller";
-export {GetBookingByIdController} from "@presentation/controllers/booking/getBookingById.controller";
-export {GetUserBookingsController} from "@presentation/controllers/booking/getUserBookings.controller";
-export {GetProviderBookingsController} from "@presentation/controllers/booking/getProviderBookings.controller";   
-export {GetAdminBookingsController} from "@presentation/controllers/booking/getAdminBookings.controller"; 
-export {GetTicketController} from "@presentation/controllers/booking/getTicket.controller";
-export {CancelPassengerController} from "@presentation/controllers/booking/cancelPassenger.controller"; 
-export {GetUserWalletController} from "@presentation/controllers/booking/getUserWallet.controller";
-export {GetProviderWalletController} from "@presentation/controllers/booking/getProviderWallet.controller";
-export {GetProviderBookingByIdController} from "@presentation/controllers/booking/getProviderBookingById.controller";
-
-// Offer controller
-
-export {CreateOfferController} from "@presentation/controllers/offer/createOffer.controller";
-export {GetProviderOffersController} from "@presentation/controllers/offer/getProviderOffers.controller";
-export {UpdateOfferController} from "@presentation/controllers/offer/updateOffer.controller";
-export {DeleteOfferController} from "@presentation/controllers/offer/deleteOffer.controller";
-export {OfferStatusChangeController} from "@presentation/controllers/offer/offersStatusChange.controller";
-export {GetEligibleOffersController} from "@presentation/controllers/offer/getEligibleOffers.controller";
-
-// food controller
-export {CreateFoodController} from "@presentation/controllers/food/createFood.controller";
-export {UpdateFoodController} from "@presentation/controllers/food/updateFood.controller";
-export {DeleteFoodController} from "@presentation/controllers/food/deleteFood.controller";
-export {GetFoodsByProviderController} from "@presentation/controllers/food/getFoodsByProvider.controller";
-export {GetFoodsByAircraftController} from "@presentation/controllers/food/getFoodsByAricraft.controller";
-export {FoodStatusChangeController} from "presentation/controllers/food/foodStatusChange.controller";
 
 
 
@@ -304,6 +212,8 @@ export {IUpdateUserStatusUseCase} from "@application/interfaces/usecase/admin/IU
 export {IGetAdminDashboardUseCase} from "application/interfaces/usecase/admin/IGetAdminDashboard.usecase";
 export {ISetProviderCommissionUseCase} from "application/interfaces/usecase/admin/ISet-providerCommisionUsecase";
 export {IGetAdminWalletUseCase} from "@application/interfaces/usecase/admin/IGet-adminWalletUsecase";
+export {IToggleSeatBlockUseCase} from "@application/interfaces/usecase/aircraft/IToggle-seatBlockUsecase";
+export {IGetAircraftSeatsUseCase} from "@application/interfaces/usecase/aircraft/IGet-AricraftSeatsUsecase";
 
 export {ICompleteProviderProfileUseCase} from "@application/interfaces/usecase/provider/ICompleteProvider-profile.usecase";
 export {IGetProviderProfileUseCase} from "@application/interfaces/usecase/provider/IGetProviderProfile.usecase";
@@ -354,9 +264,16 @@ export {IGetProviderBookingsUseCase} from "@application/interfaces/usecase/booki
 export {IGetAdminBookingsUseCase} from "@application/interfaces/usecase/booking/IGet-adminBookingsUsecase"; 
 export {IGetTicketUseCase} from "@application/interfaces/usecase/booking/IGet-ticketUsecase";
 export {ICancelPassengerUseCase} from "@application/interfaces/usecase/booking/ICancel-passengerUsecase";
-export {IGetUserWalletUseCase} from "@application/interfaces/usecase/booking/IGet-userWalletUsecase";
-export {IGetProviderWalletUseCase} from "@application/interfaces/usecase/booking/IGet-providerWalletUsecase";
 export {IGetProviderBookingByIdUseCase} from "@application/interfaces/usecase/booking/IGet-ProviderBookingByIdUsecase";
+
+//wallet Interface
+
+export {IGetUserWalletUseCase} from "@application/interfaces/usecase/wallet/IGet-userWalletUsecase";
+export {IGetProviderWalletUseCase} from "@application/interfaces/usecase/wallet/IGet-providerWalletUsecase";
+export {IAddMoneyToProviderWalletUseCase} from "@application/interfaces/usecase/wallet/IAdd-moneyToProviderWalletUsecase";
+export {IAddMoneyToWalletUseCase} from "@application/interfaces/usecase/wallet/IAdd-moneyToWalletUsecase";
+export {IPayWithWalletUseCase} from "@application/interfaces/usecase/wallet/IPay-withWalletUsecase";    
+
 
 // Offer Interfaces
 
@@ -376,3 +293,111 @@ export {IGetFoodsByAircraftUseCase} from "@application/interfaces/usecase/food/I
 export {IGetFoodsByProviderUseCase} from "@application/interfaces/usecase/food/IGetFood-byProviderUsecase";
 export {IFoodStatusChangeUseCase} from "@application/interfaces/usecase/food/IFoodStatus-changeUsecase";
 export {IDeleteFoodUseCase} from "@application/interfaces/usecase/food/IDelete-foodUsecase";
+
+
+//   Authentication Controllers 
+
+export {SignUpUserController} from "@presentation/controllers/auth/sign-up-user.constroller";
+export {SignUpProviderController} from "@presentation/controllers/auth/sign-up-provider.controller";
+export {OtpController} from "@presentation/controllers/auth/otp.controller";
+export {SignInController} from "@presentation/controllers/auth/sign-in.controller";
+export {SignOutController} from"@presentation/controllers/auth/sign-out.controller";
+export {RefreshAccessTokenController} from "@presentation/controllers/auth/refresh-access-token.controller";
+export {ForgotPasswordController} from "@presentation/controllers/auth/forget-password.controller";
+export {PasswordResetLinkController} from "presentation/controllers/auth/genereate-password-link.controller";
+export {GoogleAuthController} from "@presentation/controllers/auth/google-auth.controller"; 
+export {ChangePasswordController} from "@presentation/controllers/auth/change-password.controller"
+
+// Admin Controllers
+
+export {ProviderVerificationController} from "@presentation/controllers/admin/provider-verification.controller";
+export {GetAllProvidersController} from "@presentation/controllers/admin/get-allProvider.controller";
+export {UpdateProviderStatusController} from "@presentation/controllers/admin/update-providerStatus.controller";
+export {GetAllUsersController} from "@presentation/controllers/admin/get-allUsers.controller";
+export {UpdateUserStatusController} from "@presentation/controllers/admin/update-userStatus.controller";
+export {GetAdminDashboardController} from "@presentation/controllers/admin/get-adminDashboard.controller";
+export {SetProviderCommissionController} from "@presentation/controllers/admin/set-providerCommission.controller";
+export {GetAdminWalletController} from "@presentation/controllers/admin/get-adminWallet.controllers";
+ 
+// Provider Controllers
+export {CompleteProviderProfileController} from "@presentation/controllers/provider/completeProviderProfile.controller";
+export {GetProviderProfileController} from "@presentation/controllers/provider/getProviderProfile.controller";
+
+export {GetUserProfileController} from "@presentation/controllers/user/getUserProfile.controller";
+export {UpdateUserProfileController} from "@presentation/controllers/user/updateUserProfile.controller";
+
+
+// Aircraft Controllers
+export {CreateAircraftController} from "@presentation/controllers/provider/createAircraft.controller";
+export {GetProviderAircraftsController} from "@presentation/controllers/provider/getProviderAircraft.controller";
+export {UpdateAircraftController} from "@presentation/controllers/provider/updateAircraft.controller";
+export {DeleteAircraftController} from "@presentation/controllers/provider/deleteAircraft.controller";
+export {SearchDestinationsController} from "@presentation/controllers/provider/searchDestinations.controller"; 
+export {GetAllSeatTypesController} from "@presentation/controllers/provider/getAllSeatTypes.controller";
+export {CreateSeatLayoutController} from "@presentation/controllers/provider/createSeatLayout.controller";
+export {GenerateSeatsController} from "@presentation/controllers/provider/generateSeats.controller";    
+export {GetSeatLayoutsController}  from "@presentation/controllers/provider/getSeatLayout.controller";
+export {DeleteSeatLayoutController} from "@presentation/controllers/provider/deleteSeatLayout.controller";
+export {ToggleSeatBlockController} from "@presentation/controllers/provider/toggleSeatBlock.controller";
+export {GetAircraftSeatsController} from "@presentation/controllers/provider/getAircraftSeats.controller";
+
+// Flight Controllers
+export {CreateFlightController} from "@presentation/controllers/flight/createFlight.controller";
+export {GetProviderFlightsController} from "@presentation/controllers/flight/getProviderFlights.controller";
+export {PendingFlightsForApprovalController} from "@presentation/controllers/flight/pendingFlightsForApproval.controller";
+export {ApproveFlightController} from "@presentation/controllers/flight/approveFlights.controller";
+export {AvailableAircraftsForScheduleController} from "@presentation/controllers/flight/availableAircraftsForSchedule.controller";    
+export {UpdateFlightController} from "@presentation/controllers/flight/updateFlight.controller";
+export {GetFlightByIdController} from "@presentation/controllers/flight/getFlightById.controller";
+export {SearchFlightsController} from "@presentation/controllers/flight/searchFlights.controller";  
+export {DeleteFlightController} from "@presentation/controllers/flight/deleteFlight.controller";
+export {GetFlightSeatsController} from "@presentation/controllers/flight/getFlightSeat.controller";
+export {GetFlightSeatsForUserController} from "@presentation/controllers/flight/getFlightSeatUser.controller";
+export {CreateRecurringFlightController} from "@presentation/controllers/flight/createRecurringFlight.controller";
+export {RejectSingleFlightController} from "@presentation/controllers/flight/rejectSingleFlight.controller";
+export {GetAllFlightsForAdminController} from "@presentation/controllers/flight/getAllFlightsForAdmin.controller";  
+
+// Booking Controllers
+export {AddFlightToSegmentController} from "@presentation/controllers/booking/addFlightToSegment.controller";   
+export {GetBookingSegmentController} from "@presentation/controllers/booking/getBookingSegment.controller";
+export {UpdateBookingSegmentController} from "@presentation/controllers/booking/updateBookingSegment.controller";
+export {GetBookingSeatsMapController} from "@presentation/controllers/booking/getBookingSeatsMap.controller";
+export {SeatLockController} from "@presentation/controllers/booking/seatLock.controller";
+export {BookingDetailsController} from "@presentation/controllers/booking/bookingDetails.controller";
+export {GetBookingSummaryController} from "@presentation/controllers/booking/getBookingSummary.controller";
+
+export {InitiateBookingController} from "@presentation/controllers/booking/initiateBooking.controller"; 
+export {RetryPaymentController} from "@presentation/controllers/booking/retryPayment.controller";
+export {HandleWebhookController} from "@presentation/controllers/booking/handleWebhook.controller";
+export {GetBookingByIdController} from "@presentation/controllers/booking/getBookingById.controller";
+export {GetUserBookingsController} from "@presentation/controllers/booking/getUserBookings.controller";
+export {GetProviderBookingsController} from "@presentation/controllers/booking/getProviderBookings.controller";   
+export {GetAdminBookingsController} from "@presentation/controllers/booking/getAdminBookings.controller"; 
+export {GetTicketController} from "@presentation/controllers/booking/getTicket.controller";
+export {CancelPassengerController} from "@presentation/controllers/booking/cancelPassenger.controller"; 
+export {GetProviderBookingByIdController} from "@presentation/controllers/booking/getProviderBookingById.controller";
+
+// Wallet Controllers
+export {GetUserWalletController} from "@presentation/controllers/wallet/getUserWallet.controller";
+export {GetProviderWalletController} from "@presentation/controllers/wallet/getProviderWallet.controller";
+export {AddMoneyToProviderWalletController} from "@presentation/controllers/wallet/addMoneyToProviderWallet.controller";
+export {AddMoneyToWalletController} from "@presentation/controllers/wallet/addMoneyToWallet.controller";
+export {PayWithWalletController} from "@presentation/controllers/wallet/payWithWallet.controller";
+
+// Offer controller
+
+export {CreateOfferController} from "@presentation/controllers/offer/createOffer.controller";
+export {GetProviderOffersController} from "@presentation/controllers/offer/getProviderOffers.controller";
+export {UpdateOfferController} from "@presentation/controllers/offer/updateOffer.controller";
+export {DeleteOfferController} from "@presentation/controllers/offer/deleteOffer.controller";
+export {OfferStatusChangeController} from "@presentation/controllers/offer/offersStatusChange.controller";
+export {GetEligibleOffersController} from "@presentation/controllers/offer/getEligibleOffers.controller";
+
+// food controller
+export {CreateFoodController} from "@presentation/controllers/food/createFood.controller";
+export {UpdateFoodController} from "@presentation/controllers/food/updateFood.controller";
+export {DeleteFoodController} from "@presentation/controllers/food/deleteFood.controller";
+export {GetFoodsByProviderController} from "@presentation/controllers/food/getFoodsByProvider.controller";
+export {GetFoodsByAircraftController} from "@presentation/controllers/food/getFoodsByAricraft.controller";
+export {FoodStatusChangeController} from "presentation/controllers/food/foodStatusChange.controller";
+

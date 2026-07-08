@@ -2,6 +2,7 @@ import { inject, injectable } from "inversify";
 import crypto from "crypto";
 import { IBooking } from "@domain/entities/booking.entity";
 import {
+  IProviderWallet,
   IProviderWalletTransaction,
 } from "@domain/entities/providerWallet.entity";
 import { IProviderWalletRepository } from "@domain/interfaces/IProviderWalletRepository";
@@ -83,5 +84,41 @@ export class ProviderWalletService
         amount
       );
     }
-  }
+  };
+  async debitSeatBlock(
+  providerId: string,
+  bookingId: string,
+  flightSeatId: string,
+  amount: number
+): Promise<void> {
+  let wallet = await this._providerWalletRepository.getWalletByProviderId(providerId);
+  if (!wallet) wallet = await this._providerWalletRepository.createWallet(providerId);
+
+  const transaction: IProviderWalletTransaction = {
+    transactionId: crypto.randomUUID(),
+    type: "debit",
+    amount,
+    description: WALLET_MESSAGES.SEAT_BLOCK_DEBIT,
+    bookingId,
+    createdAt: new Date(),
+  };
+
+  await this._providerWalletRepository.debitWallet(providerId, transaction, amount);
+}
+
+async creditTopUp(providerId: string, amount: number): Promise<{ wallet: IProviderWallet; transactionId: string }> {
+  let wallet = await this._providerWalletRepository.getWalletByProviderId(providerId);
+  if (!wallet) wallet = await this._providerWalletRepository.createWallet(providerId);
+
+  const transaction: IProviderWalletTransaction = {
+    transactionId: crypto.randomUUID(),
+    type: "credit",
+    amount,
+    description: WALLET_MESSAGES.PROVIDER_TOPUP,
+    createdAt: new Date(),
+  };
+
+  const updatedWallet = await this._providerWalletRepository.creditWallet(providerId, transaction, amount);
+  return { wallet: updatedWallet, transactionId: transaction.transactionId };
+}
 }

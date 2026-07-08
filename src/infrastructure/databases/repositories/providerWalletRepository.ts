@@ -60,5 +60,23 @@ export class ProviderWalletRepository
     const wallet = await this.getWalletByProviderId(providerId);
     if (!wallet) throw new Error("Failed to retrieve provider wallet after credit");
     return wallet;
-  }
+  };
+  async debitWallet(
+  providerId: string,
+  transaction: IProviderWalletTransaction,
+  amount: number
+): Promise<IProviderWallet> {
+  await ProviderWalletModel.findOneAndUpdate(
+    { providerId: this.parseId(providerId) },
+    {
+      $inc: { balance: -amount },
+      $push: { transactions: transaction },
+    },
+    { upsert: true, new: true }
+  ).exec();
+
+  const wallet = await this.getWalletByProviderId(providerId);
+  if (!wallet) throw new Error("Failed to retrieve provider wallet after debit");
+  return wallet;
+}
 }

@@ -24,14 +24,23 @@ app.post(
 );
 
 // ── global middleware ───────────────────────────────────────────────────────
-const allowedOrigins = process.env.CLIENT_ORIGINS;
+const allowedOrigins = process.env.CLIENT_ORIGINS?.split(",").map(o => o.trim()) ?? [];
+
 app.use(
   cors({
-    origin: allowedOrigins,
+    origin: (origin, callback) => {
+      // allow requests with no origin (mobile apps, curl, same-origin)
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error(`CORS blocked: ${origin}`));
+      }
+    },
     methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
     credentials: true,
   })
 );
+
 app.use(cookieParser());
 app.use(morganMiddleware);
 app.use(express.json({ limit: "50mb" }));

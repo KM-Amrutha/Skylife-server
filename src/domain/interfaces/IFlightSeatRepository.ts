@@ -42,4 +42,8 @@ export interface IFlightSeatRepository {
 
   // Delete all flight seats when flight is deleted
   deleteFlightSeatsByFlightId(flightId: string): Promise<void>;
+  // add to existing interface:
+blockFlightSeatsBySeatId(seatId: string): Promise<number>;
+unblockFlightSeatsBySeatId(seatId: string): Promise<number>;
+findScheduledFlightSeatsBySeatId(seatId: string): Promise<IFlightSeat[]>;
 }

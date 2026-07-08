@@ -1,9 +1,13 @@
 import { Request, Response } from "express";
 import { injectable, inject } from "inversify";
 import { sendResponse } from "@shared/utils/http.response";
-import { StatusCodes } from "@shared/constants/index.constants";
+import { AIRCRAFT_MESSAGES,
+   StatusCodes,
+   SEAT_MESSAGES } from "@shared/constants/index.constants";
 import { TYPES_AIRCRAFT_USECASES } from "@di/types-usecases";
 import { IGenerateSeatsUseCase } from "@di/file-imports-index";
+
+
 
 @injectable()
 export class GenerateSeatsController {
@@ -20,7 +24,7 @@ export class GenerateSeatsController {
       if (!aircraftId) {
         sendResponse(
           res,
-          "Aircraft ID is required",
+          AIRCRAFT_MESSAGES.ID_REQUIRED,
           null,
           StatusCodes.BAD_REQUEST
         );
@@ -34,7 +38,7 @@ export class GenerateSeatsController {
 
       sendResponse(
         res,
-        `Successfully generated ${seats.length} seats`,
+        SEAT_MESSAGES.SEATS_GENERATED(seats.length),
         {
           totalSeats: seats.length,
           seats: seats

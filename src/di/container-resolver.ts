@@ -57,6 +57,9 @@ import {
    BookingDetailsController,
    GetBookingSummaryController,
    GetAdminWalletController,
+   ToggleSeatBlockController,
+   GetAircraftSeatsController,
+
 
    InitiateBookingController,
    RetryPaymentController,
@@ -67,9 +70,13 @@ import {
     GetAdminBookingsController,
     GetTicketController,
     CancelPassengerController,
+    GetProviderBookingByIdController,
+
     GetUserWalletController,
     GetProviderWalletController,
-    GetProviderBookingByIdController,
+    PayWithWalletController,
+    AddMoneyToWalletController,
+    AddMoneyToProviderWalletController,
 
    CreateOfferController,
    GetEligibleOffersController,
@@ -152,11 +159,16 @@ import {
    IGetAdminBookingsUseCase,
    IGetTicketUseCase,
    ICancelPassengerUseCase,
-   IGetUserWalletUseCase,
-   IGetProviderWalletUseCase,
    ISetProviderCommissionUseCase,
-   IGetAdminWalletUseCase,
    IGetProviderBookingByIdUseCase,
+   IToggleSeatBlockUseCase,
+   IGetAircraftSeatsUseCase,
+   IGetAdminWalletUseCase,
+    IGetUserWalletUseCase,
+   IGetProviderWalletUseCase,
+   IAddMoneyToProviderWalletUseCase,
+   IAddMoneyToWalletUseCase,
+   IPayWithWalletUseCase,
 
     IGetEligibleOffersUseCase,
     ICreateOfferUseCase,
@@ -181,6 +193,7 @@ import {TYPES_AUTH_CONTROLLERS,
      TYPES_FLIGHT_CONTROLLERS,
        TYPES_USER_CONTROLLERS,
        TYPES_BOOKING_CONTROLLERS,
+       TYPES_WALLET_CONTROLLERS,
        TYPES_OFFER_CONTROLLERS,
        TYPES_FOOD_CONTROLLERS,
 
@@ -197,6 +210,7 @@ import {TYPES_AUTH_USECASES,
    TYPES_BOOKING_USECASES,
    TYPES_OFFER_USECASES,
    TYPES_FOOD_USECASES,
+   TYPES_WALLET_USECASES,
 
 } 
  from "@di/types-usecases";
@@ -244,6 +258,8 @@ export const updateUserProfileController = container.get<UpdateUserProfileContro
 export const getAdminDashboardController = container.get<GetAdminDashboardController>(TYPES_ADMIN_CONTROLLERS.GetAdminDashboardController);
 export const setProviderCommissionController = container.get<SetProviderCommissionController>(TYPES_ADMIN_CONTROLLERS.SetProviderCommissionController);
 export const getAdminWalletController = container.get<GetAdminWalletController>(TYPES_ADMIN_CONTROLLERS.GetAdminWalletController);
+export const toggleSeatBlockController = container.get<ToggleSeatBlockController>(TYPES_AIRCRAFT_CONTROLLERS.ToggleSeatBlockController);
+export const getAircraftSeatsController = container.get<GetAircraftSeatsController>(TYPES_AIRCRAFT_CONTROLLERS.GetAircraftSeatsController);
 
 export const createAircraftController = container.get<CreateAircraftController>(TYPES_AIRCRAFT_CONTROLLERS.CreateAircraftController);
 export const getProviderAircraftsController = container.get<GetProviderAircraftsController>(TYPES_AIRCRAFT_CONTROLLERS.GetProviderAircraftsController);
@@ -289,9 +305,12 @@ export const getProviderBookingsController = container.get<GetProviderBookingsCo
 export const getAdminBookingsController = container.get<GetAdminBookingsController>(TYPES_BOOKING_CONTROLLERS.GetAdminBookingsController);
 export const getTicketController = container.get<GetTicketController>(TYPES_BOOKING_CONTROLLERS.GetTicketController);
 export const cancelPassengerController = container.get<CancelPassengerController>(TYPES_BOOKING_CONTROLLERS.CancelPassengerController); 
-export const getUserWalletController = container.get<GetUserWalletController>(TYPES_BOOKING_CONTROLLERS.GetUserWalletController); 
-export const getProviderWalletController = container.get<GetProviderWalletController>(TYPES_BOOKING_CONTROLLERS.GetProviderWalletController); 
 export const getProviderBookingByIdController = container.get<GetProviderBookingByIdController>(TYPES_BOOKING_CONTROLLERS.GetProviderBookingByIdController);
+export const getUserWalletController = container.get<GetUserWalletController>(TYPES_WALLET_CONTROLLERS.GetUserWalletController); 
+export const getProviderWalletController = container.get<GetProviderWalletController>(TYPES_WALLET_CONTROLLERS.GetProviderWalletController); 
+export const payWithWalletController = container.get<PayWithWalletController>(TYPES_WALLET_CONTROLLERS.PayWithWalletController);
+export const addMoneyToWalletController = container.get<AddMoneyToWalletController>(TYPES_WALLET_CONTROLLERS.AddMoneyToWalletController);
+export const addMoneyToProviderWalletController = container.get<AddMoneyToProviderWalletController>(TYPES_WALLET_CONTROLLERS.AddMoneyToProviderWalletController);
 
 export const createOfferController = container.get<CreateOfferController>(TYPES_OFFER_CONTROLLERS.CreateOfferController);
 export const getProviderOffersController = container.get<GetProviderOffersController>(TYPES_OFFER_CONTROLLERS.GetProviderOffersController)
@@ -330,6 +349,8 @@ export const updateUserStatusUseCase = container.get<IUpdateUserStatusUseCase>(T
 export const getAdminDashboardUseCase = container.get<IGetAdminDashboardUseCase>(TYPES_ADMIN_USECASES.GetAdminDashboardUseCase);
 export const setProviderCommissionUseCase  = container.get<ISetProviderCommissionUseCase>(TYPES_ADMIN_USECASES.SetProviderCommissionUseCase);
 export const getAdminWalletUseCasse = container.get<IGetAdminWalletUseCase>(TYPES_ADMIN_USECASES.GetAdminWalletUseCase);
+export const toggleSeatBlockUseCase = container.get<IToggleSeatBlockUseCase>(TYPES_AIRCRAFT_USECASES.ToggleSeatBlockUseCase);
+export const getAircraftSeatsUseCase = container.get<IGetAircraftSeatsUseCase>(TYPES_AIRCRAFT_USECASES.GetAircraftSeatsUseCase);
 
 export const GetUserProfileUseCase = container.get<IGetUserProfileUseCase>(TYPES_USER_USECASES.GetUserProfileUseCase);
 export const UpdateUserProfileUseCase = container.get<IUpdateUserProfileUseCase>(TYPES_USER_USECASES.UpdateUserProfileUseCase);
@@ -378,9 +399,12 @@ export const getProviderBookingsUseCase = container.get<IGetProviderBookingsUseC
 export const getAdminBookingsUseCase = container.get<IGetAdminBookingsUseCase>(TYPES_BOOKING_USECASES.GetAdminBookingsUseCase); 
 export const getTicketUseCase = container.get<IGetTicketUseCase>(TYPES_BOOKING_USECASES.GetTicketUseCase);
 export const cancelPassengerUseCase = container.get<ICancelPassengerUseCase>(TYPES_BOOKING_USECASES.CancelPassengerUseCase);
-export const getUserWalletUseCase = container.get<IGetUserWalletUseCase>(TYPES_BOOKING_USECASES.GetUserWalletUseCase);
-export const getProviderWalletUseCase = container.get<IGetProviderWalletUseCase>(TYPES_BOOKING_USECASES.GetProviderWalletUseCase);
 export const getProviderBookingByIdUseCase = container.get<IGetProviderBookingByIdUseCase>(TYPES_BOOKING_USECASES.GetProviderBookingByIdUseCase);
+export const getUserWalletUseCase = container.get<IGetUserWalletUseCase>(TYPES_WALLET_USECASES.GetUserWalletUseCase);
+export const getProviderWalletUseCase = container.get<IGetProviderWalletUseCase>(TYPES_WALLET_USECASES.GetProviderWalletUseCase);
+export const addMoneyToProviderWalletUseCase = container.get<IAddMoneyToProviderWalletUseCase>(TYPES_WALLET_USECASES.AddMoneyToProviderWalletUseCase);
+export const addMoneyToWalletUseCase = container.get<IAddMoneyToWalletUseCase>(TYPES_WALLET_USECASES.AddMoneyToWalletUseCase);
+export const payWithWalletUseCase = container.get<IPayWithWalletUseCase>(TYPES_WALLET_USECASES.PayWithWalletUseCase);
 
 export const createOfferUseCase =container.get<ICreateOfferUseCase>(TYPES_OFFER_USECASES.CreateOfferUseCase);
 export const getEligibleOffersUseCase = container.get<IGetEligibleOffersUseCase>(TYPES_OFFER_USECASES.GetEligibleOffersUseCase);

@@ -1,0 +1,208 @@
+08-07-2026 12:21:52 [[32MINFO[39M]: POST /auth/sign-in 200 552 - 467.704 ms
+08-07-2026 12:22:03 [[32MINFO[39M]: GET /user/wallet 200 520 - 138.086 ms
+08-07-2026 12:22:03 [[32MINFO[39M]: GET /user/wallet 304 - - 107.274 ms
+08-07-2026 12:22:29 [[32MINFO[39M]: POST /user/wallet/add-money 200 159 - 271.732 ms
+08-07-2026 12:22:29 [[32MINFO[39M]: GET /user/wallet 200 677 - 103.895 ms
+08-07-2026 12:51:20 [[31MERROR[39M]: [/user/profile] No access token provided. Please include a valid access token in your request.: No access token provided. Please include a valid access token in your request.
+Error: No access token provided. Please include a valid access token in your request.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:16:10
+    at Generator.next (<anonymous>)
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:4:12)
+    at authenticate (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:11:5)
+    at Layer.handleRequest (C:\Users\amrut\Desktop\airticketbooking\back-end\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\amrut\Desktop\airticketbooking\back-end\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\amrut\Desktop\airticketbooking\back-end\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\amrut\Desktop\airticketbooking\back-end\node_modules\router\index.js:435:11)
+08-07-2026 12:51:20 [[32MINFO[39M]: GET /user/profile 401 133 - 380.780 ms
+08-07-2026 12:51:20 [[31MERROR[39M]: [/user/profile] No access token provided. Please include a valid access token in your request.: No access token provided. Please include a valid access token in your request.
+Error: No access token provided. Please include a valid access token in your request.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:16:10
+    at Generator.next (<anonymous>)
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:4:12)
+    at authenticate (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:11:5)
+    at Layer.handleRequest (C:\Users\amrut\Desktop\airticketbooking\back-end\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\amrut\Desktop\airticketbooking\back-end\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\amrut\Desktop\airticketbooking\back-end\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\amrut\Desktop\airticketbooking\back-end\node_modules\router\index.js:435:11)
+08-07-2026 12:51:20 [[32MINFO[39M]: GET /user/profile 401 133 - 44.817 ms
+08-07-2026 12:51:21 [[32MINFO[39M]: POST /auth/refresh-token 200 143 - 182.229 ms
+08-07-2026 12:51:21 [[32MINFO[39M]: POST /auth/refresh-token 200 143 - 17.547 ms
+08-07-2026 12:51:23 [[32MINFO[39M]: GET /user/profile 200 540 - 1562.686 ms
+08-07-2026 12:51:23 [[32MINFO[39M]: GET /user/profile 304 - - 125.745 ms
+08-07-2026 12:51:23 [[32MINFO[39M]: GET /user/wallet 304 - - 440.732 ms
+08-07-2026 12:51:23 [[32MINFO[39M]: GET /user/wallet 304 - - 100.843 ms
+08-07-2026 12:51:42 [[32MINFO[39M]: POST /auth/sign-in 200 552 - 238.049 ms
+08-07-2026 12:51:52 [[32MINFO[39M]: GET /user/wallet 304 - - 107.089 ms
+08-07-2026 12:51:53 [[32MINFO[39M]: GET /user/wallet 304 - - 108.028 ms
+08-07-2026 12:52:02 [[32MINFO[39M]: POST /user/wallet/add-money 200 158 - 283.787 ms
+08-07-2026 12:52:02 [[32MINFO[39M]: GET /user/wallet 200 833 - 93.521 ms
+08-07-2026 12:52:09 [[32MINFO[39M]: GET /user/wallet 304 - - 89.085 ms
+08-07-2026 12:52:09 [[32MINFO[39M]: GET /user/wallet 304 - - 100.148 ms
+08-07-2026 12:52:44 [[32MINFO[39M]: POST /user/wallet/add-money 200 158 - 236.204 ms
+08-07-2026 12:52:44 [[32MINFO[39M]: GET /user/wallet 200 989 - 95.456 ms
+08-07-2026 12:58:55 [[32MINFO[39M]: GET /user/wallet 304 - - 254.618 ms
+08-07-2026 12:58:56 [[32MINFO[39M]: GET /user/wallet 304 - - 105.885 ms
+08-07-2026 12:58:59 [[32MINFO[39M]: GET /user/bookings?page=1&limit=4 200 5809 - 274.380 ms
+08-07-2026 12:58:59 [[32MINFO[39M]: GET /user/bookings?page=1&limit=4 304 - - 129.467 ms
+08-07-2026 12:59:19 [[32MINFO[39M]: GET /user/bookings?page=1&limit=4 304 - - 104.166 ms
+08-07-2026 12:59:19 [[32MINFO[39M]: GET /user/bookings?page=1&limit=4 304 - - 98.828 ms
+08-07-2026 13:00:03 [[32MINFO[39M]: GET /user/bookings?page=1&limit=4 304 - - 101.244 ms
+08-07-2026 13:00:03 [[32MINFO[39M]: GET /user/bookings?page=1&limit=4 304 - - 100.344 ms
+08-07-2026 13:03:43 [[31MERROR[39M]: [/user/bookings?page=1&limit=4] No access token provided. Please include a valid access token in your request.: No access token provided. Please include a valid access token in your request.
+Error: No access token provided. Please include a valid access token in your request.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:31:10
+    at Generator.throw (<anonymous>)
+    at rejected (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:6:65)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+08-07-2026 13:03:43 [[32MINFO[39M]: GET /user/bookings?page=1&limit=4 401 133 - 178.200 ms
+08-07-2026 13:03:43 [[31MERROR[39M]: [/user/bookings?page=1&limit=4] No access token provided. Please include a valid access token in your request.: No access token provided. Please include a valid access token in your request.
+Error: No access token provided. Please include a valid access token in your request.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:31:10
+    at Generator.throw (<anonymous>)
+    at rejected (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:6:65)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+08-07-2026 13:03:43 [[32MINFO[39M]: GET /user/bookings?page=1&limit=4 401 133 - 4.274 ms
+08-07-2026 13:03:43 [[32MINFO[39M]: POST /auth/refresh-token 200 143 - 23.012 ms
+08-07-2026 13:03:43 [[32MINFO[39M]: POST /auth/refresh-token 200 143 - 7.053 ms
+08-07-2026 13:03:44 [[32MINFO[39M]: GET /user/bookings?page=1&limit=4 304 - - 203.252 ms
+08-07-2026 13:03:44 [[32MINFO[39M]: GET /user/bookings?page=1&limit=4 304 - - 112.739 ms
+08-07-2026 13:03:47 [[32MINFO[39M]: GET /user/bookings?page=1&limit=4 304 - - 113.912 ms
+08-07-2026 13:03:48 [[32MINFO[39M]: GET /user/bookings?page=1&limit=4 304 - - 118.761 ms
+08-07-2026 13:03:49 [[32MINFO[39M]: GET /user/wallet 304 - - 115.997 ms
+08-07-2026 13:03:49 [[32MINFO[39M]: GET /user/wallet 304 - - 97.488 ms
+08-07-2026 13:03:51 [[32MINFO[39M]: GET /user/wallet 304 - - 107.070 ms
+08-07-2026 13:03:51 [[32MINFO[39M]: GET /user/wallet 304 - - 119.206 ms
+08-07-2026 13:06:15 [[32MINFO[39M]: POST /auth/sign-in 200 552 - 316.269 ms
+08-07-2026 13:06:36 [[32MINFO[39M]: GET /user/destinations/search?q=a 400 96 - 26.141 ms
+08-07-2026 13:06:38 [[32MINFO[39M]: GET /user/destinations/search?q=c 400 96 - 0.932 ms
+08-07-2026 13:06:38 [[32MINFO[39M]: GET /user/destinations/search?q=ch 200 4984 - 217.315 ms
+08-07-2026 13:06:38 [[32MINFO[39M]: GET /user/destinations/search?q=che 200 5029 - 70.696 ms
+08-07-2026 13:06:38 [[32MINFO[39M]: GET /user/destinations/search?q=chen 200 4894 - 62.678 ms
+08-07-2026 13:06:38 [[32MINFO[39M]: GET /user/destinations/search?q=chenn 200 322 - 64.298 ms
+08-07-2026 13:06:38 [[32MINFO[39M]: GET /user/destinations/search?q=chenna 200 322 - 71.318 ms
+08-07-2026 13:06:41 [[32MINFO[39M]: GET /user/destinations/search?q=b 400 96 - 3.039 ms
+08-07-2026 13:06:41 [[32MINFO[39M]: GET /user/destinations/search?q=be 200 4896 - 50.901 ms
+08-07-2026 13:06:41 [[32MINFO[39M]: GET /user/destinations/search?q=ber 200 4955 - 57.523 ms
+08-07-2026 13:06:42 [[32MINFO[39M]: GET /user/destinations/search?q=bern 200 1635 - 90.897 ms
+08-07-2026 13:06:48 [[32MINFO[39M]: GET /user/flights/search?from=MAA&to=BRN&departureDate=2026-07-10&passengers=1&tripType=one-way&page=1&limit=6 200 1111 - 257.714 ms
+08-07-2026 13:06:50 [[32MINFO[39M]: POST /user/bookings/segment 200 1075 - 277.306 ms
+08-07-2026 13:06:51 [[32MINFO[39M]: GET /user/bookings/3e067baa-63a6-4f40-bd92-3da12a6aba0b/segment 200 1069 - 64.111 ms
+08-07-2026 13:06:51 [[32MINFO[39M]: GET /user/bookings/3e067baa-63a6-4f40-bd92-3da12a6aba0b/segment 304 - - 50.617 ms
+08-07-2026 13:06:54 [[32MINFO[39M]: GET /user/bookings/3e067baa-63a6-4f40-bd92-3da12a6aba0b/seats-map 200 45333 - 412.530 ms
+08-07-2026 13:06:54 [[32MINFO[39M]: GET /user/bookings/3e067baa-63a6-4f40-bd92-3da12a6aba0b/seats-map 304 - - 227.371 ms
+08-07-2026 13:06:54 [[32MINFO[39M]: GET /user/aircrafts/6a41fd80ec2fadb4c292216b/foods 200 141 - 682.399 ms
+08-07-2026 13:06:54 [[32MINFO[39M]: GET /user/aircrafts/6a41fd80ec2fadb4c292216b/foods 304 - - 136.506 ms
+08-07-2026 13:07:03 [[32MINFO[39M]: POST /user/bookings/3e067baa-63a6-4f40-bd92-3da12a6aba0b/seat-lock 200 267 - 363.194 ms
+08-07-2026 13:07:38 [[32MINFO[39M]: POST /user/bookings/3e067baa-63a6-4f40-bd92-3da12a6aba0b/details 200 1078 - 161.104 ms
+08-07-2026 13:07:39 [[32MINFO[39M]: GET /user/bookings/3e067baa-63a6-4f40-bd92-3da12a6aba0b/summary 200 1917 - 90.649 ms
+08-07-2026 13:07:39 [[32MINFO[39M]: GET /user/bookings/3e067baa-63a6-4f40-bd92-3da12a6aba0b/offers 200 90 - 141.317 ms
+08-07-2026 13:07:39 [[32MINFO[39M]: GET /user/bookings/3e067baa-63a6-4f40-bd92-3da12a6aba0b/summary 304 - - 65.389 ms
+08-07-2026 13:07:39 [[32MINFO[39M]: GET /user/bookings/3e067baa-63a6-4f40-bd92-3da12a6aba0b/offers 304 - - 95.787 ms
+08-07-2026 13:07:39 [[32MINFO[39M]: GET /user/wallet 304 - - 431.221 ms
+08-07-2026 13:07:39 [[32MINFO[39M]: GET /user/wallet 304 - - 90.275 ms
+08-07-2026 13:08:31 [[32MINFO[39M]: POST /user/bookings/pay-with-wallet 404 82 - 2.943 ms
+08-07-2026 13:08:38 [[32MINFO[39M]: POST /user/bookings/pay-with-wallet 404 82 - 0.854 ms
+08-07-2026 13:10:29 [[32MINFO[39M]: GET /user/profile 304 - - 357.617 ms
+08-07-2026 13:10:29 [[32MINFO[39M]: GET /user/profile 304 - - 98.666 ms
+08-07-2026 13:10:30 [[32MINFO[39M]: GET /user/bookings/3e067baa-63a6-4f40-bd92-3da12a6aba0b/summary 304 - - 190.672 ms
+08-07-2026 13:10:30 [[32MINFO[39M]: GET /user/wallet 304 - - 200.748 ms
+08-07-2026 13:10:30 [[32MINFO[39M]: GET /user/bookings/3e067baa-63a6-4f40-bd92-3da12a6aba0b/offers 304 - - 224.643 ms
+08-07-2026 13:10:30 [[32MINFO[39M]: GET /user/bookings/3e067baa-63a6-4f40-bd92-3da12a6aba0b/summary 304 - - 115.604 ms
+08-07-2026 13:10:30 [[32MINFO[39M]: GET /user/wallet 304 - - 136.925 ms
+08-07-2026 13:10:30 [[32MINFO[39M]: GET /user/bookings/3e067baa-63a6-4f40-bd92-3da12a6aba0b/offers 304 - - 130.413 ms
+08-07-2026 13:11:00 [[32MINFO[39M]: GET /user/profile 304 - - 320.536 ms
+08-07-2026 13:11:00 [[32MINFO[39M]: GET /user/profile 304 - - 98.727 ms
+08-07-2026 13:11:00 [[32MINFO[39M]: GET /user/bookings/3e067baa-63a6-4f40-bd92-3da12a6aba0b/summary 304 - - 67.134 ms
+08-07-2026 13:11:00 [[32MINFO[39M]: GET /user/wallet 304 - - 97.551 ms
+08-07-2026 13:11:00 [[32MINFO[39M]: GET /user/bookings/3e067baa-63a6-4f40-bd92-3da12a6aba0b/offers 304 - - 126.536 ms
+08-07-2026 13:11:00 [[32MINFO[39M]: GET /user/bookings/3e067baa-63a6-4f40-bd92-3da12a6aba0b/summary 304 - - 61.536 ms
+08-07-2026 13:11:00 [[32MINFO[39M]: GET /user/wallet 304 - - 105.787 ms
+08-07-2026 13:11:00 [[32MINFO[39M]: GET /user/bookings/3e067baa-63a6-4f40-bd92-3da12a6aba0b/offers 304 - - 106.155 ms
+08-07-2026 13:11:18 [[32MINFO[39M]: POST /user/wallet/pay 200 167 - 11091.783 ms
+08-07-2026 13:11:21 [[32MINFO[39M]: GET /user/bookings/6a4dff13ce96fdcd8585e8e7 200 1594 - 215.324 ms
+08-07-2026 13:11:21 [[32MINFO[39M]: GET /user/bookings/6a4dff13ce96fdcd8585e8e7/ticket 200 1351 - 159.962 ms
+08-07-2026 13:11:21 [[32MINFO[39M]: GET /user/bookings/6a4dff13ce96fdcd8585e8e7 304 - - 186.033 ms
+08-07-2026 13:11:21 [[32MINFO[39M]: GET /user/bookings/6a4dff13ce96fdcd8585e8e7/ticket 304 - - 133.394 ms
+08-07-2026 13:13:22 [[32MINFO[39M]: GET /user/bookings?page=1&limit=4 200 5605 - 109.777 ms
+08-07-2026 13:13:22 [[32MINFO[39M]: GET /user/bookings?page=1&limit=4 304 - - 103.899 ms
+08-07-2026 13:13:30 [[32MINFO[39M]: GET /user/bookings/6a4dff13ce96fdcd8585e8e7 304 - - 175.767 ms
+08-07-2026 13:13:30 [[32MINFO[39M]: GET /user/bookings/6a4dff13ce96fdcd8585e8e7/ticket 304 - - 137.619 ms
+08-07-2026 13:13:30 [[32MINFO[39M]: GET /user/bookings/6a4dff13ce96fdcd8585e8e7 304 - - 205.177 ms
+08-07-2026 13:13:30 [[32MINFO[39M]: GET /user/bookings/6a4dff13ce96fdcd8585e8e7/ticket 304 - - 136.002 ms
+08-07-2026 13:13:37 [[32MINFO[39M]: GET /user/wallet 200 1197 - 94.284 ms
+08-07-2026 13:13:37 [[32MINFO[39M]: GET /user/wallet 304 - - 93.196 ms
+08-07-2026 15:28:51 [[31MERROR[39M]: [/auth/sign-in] The password you entered is incorrect. Please try again.: The password you entered is incorrect. Please try again.
+Error: The password you entered is incorrect. Please try again.
+    at SignInUseCase.<anonymous> (C:\Users\amrut\Desktop\airticketbooking\back-end\src\application\usecases\auth\signin-user.usecases.ts:71:33)
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\Users\amrut\Desktop\airticketbooking\back-end\src\application\usecases\auth\signin-user.usecases.ts:17:58)
+08-07-2026 15:28:51 [[32MINFO[39M]: POST /auth/sign-in 400 111 - 368.147 ms
+08-07-2026 15:29:00 [[31MERROR[39M]: [/auth/sign-in] The password you entered is incorrect. Please try again.: The password you entered is incorrect. Please try again.
+Error: The password you entered is incorrect. Please try again.
+    at SignInUseCase.<anonymous> (C:\Users\amrut\Desktop\airticketbooking\back-end\src\application\usecases\auth\signin-user.usecases.ts:71:33)
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\Users\amrut\Desktop\airticketbooking\back-end\src\application\usecases\auth\signin-user.usecases.ts:17:58)
+08-07-2026 15:29:00 [[32MINFO[39M]: POST /auth/sign-in 400 111 - 254.646 ms
+08-07-2026 15:29:13 [[32MINFO[39M]: POST /auth/sign-in 200 310 - 249.969 ms
+08-07-2026 15:29:25 [[32MINFO[39M]: GET /user/wallet 200 520 - 268.661 ms
+08-07-2026 15:29:25 [[32MINFO[39M]: GET /user/wallet 304 - - 189.384 ms
+08-07-2026 15:29:41 [[32MINFO[39M]: GET /user/destinations/search?q=c 400 96 - 13.959 ms
+08-07-2026 15:29:42 [[32MINFO[39M]: GET /user/destinations/search?q=ch 304 - - 132.096 ms
+08-07-2026 15:29:42 [[32MINFO[39M]: GET /user/destinations/search?q=che 304 - - 113.075 ms
+08-07-2026 15:29:42 [[32MINFO[39M]: GET /user/destinations/search?q=chen 304 - - 75.834 ms
+08-07-2026 15:29:42 [[32MINFO[39M]: GET /user/destinations/search?q=chenn 304 - - 68.295 ms
+08-07-2026 15:29:45 [[32MINFO[39M]: GET /user/destinations/search?q=b 400 96 - 1.053 ms
+08-07-2026 15:29:45 [[32MINFO[39M]: GET /user/destinations/search?q=be 304 - - 65.037 ms
+08-07-2026 15:29:45 [[32MINFO[39M]: GET /user/destinations/search?q=ber 304 - - 68.074 ms
+08-07-2026 15:29:45 [[32MINFO[39M]: GET /user/destinations/search?q=bern 304 - - 72.068 ms
+08-07-2026 15:29:51 [[32MINFO[39M]: GET /user/flights/search?from=MAA&to=BRN&departureDate=2026-07-10&passengers=1&tripType=one-way&page=1&limit=6 304 - - 245.278 ms
+08-07-2026 15:29:54 [[32MINFO[39M]: POST /user/bookings/segment 200 1075 - 441.403 ms
+08-07-2026 15:29:55 [[32MINFO[39M]: GET /user/bookings/c49cd9a6-e138-4069-99fa-7ea3835be301/segment 200 1069 - 248.909 ms
+08-07-2026 15:29:55 [[32MINFO[39M]: GET /user/bookings/c49cd9a6-e138-4069-99fa-7ea3835be301/segment 304 - - 66.852 ms
+08-07-2026 15:30:00 [[32MINFO[39M]: GET /user/aircrafts/6a41fd80ec2fadb4c292216b/foods 304 - - 178.084 ms
+08-07-2026 15:30:00 [[32MINFO[39M]: GET /user/bookings/c49cd9a6-e138-4069-99fa-7ea3835be301/seats-map 200 45371 - 291.632 ms
+08-07-2026 15:30:00 [[32MINFO[39M]: GET /user/aircrafts/6a41fd80ec2fadb4c292216b/foods 304 - - 153.053 ms
+08-07-2026 15:30:00 [[32MINFO[39M]: GET /user/bookings/c49cd9a6-e138-4069-99fa-7ea3835be301/seats-map 304 - - 308.655 ms
+08-07-2026 15:30:44 [[32MINFO[39M]: POST /user/bookings/c49cd9a6-e138-4069-99fa-7ea3835be301/seat-lock 200 267 - 306.002 ms
+08-07-2026 15:31:06 [[32MINFO[39M]: POST /user/bookings/c49cd9a6-e138-4069-99fa-7ea3835be301/details 200 1075 - 178.327 ms
+08-07-2026 15:31:06 [[32MINFO[39M]: GET /user/bookings/c49cd9a6-e138-4069-99fa-7ea3835be301/summary 200 1914 - 65.972 ms
+08-07-2026 15:31:06 [[32MINFO[39M]: GET /user/bookings/c49cd9a6-e138-4069-99fa-7ea3835be301/offers 200 90 - 115.312 ms
+08-07-2026 15:31:06 [[32MINFO[39M]: GET /user/wallet 304 - - 122.171 ms
+08-07-2026 15:31:06 [[32MINFO[39M]: GET /user/bookings/c49cd9a6-e138-4069-99fa-7ea3835be301/summary 304 - - 75.779 ms
+08-07-2026 15:31:07 [[32MINFO[39M]: GET /user/bookings/c49cd9a6-e138-4069-99fa-7ea3835be301/offers 304 - - 110.358 ms
+08-07-2026 15:31:07 [[32MINFO[39M]: GET /user/wallet 304 - - 108.598 ms
+08-07-2026 15:37:13 [[32MINFO[39M]: POST /user/bookings/initiate 201 214 - 2099.218 ms
+08-07-2026 16:27:47 [[31MERROR[39M]: [/user/profile] No access token provided. Please include a valid access token in your request.: No access token provided. Please include a valid access token in your request.
+Error: No access token provided. Please include a valid access token in your request.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:16:10
+    at Generator.next (<anonymous>)
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:4:12)
+    at authenticate (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:11:5)
+    at Layer.handleRequest (C:\Users\amrut\Desktop\airticketbooking\back-end\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\amrut\Desktop\airticketbooking\back-end\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\amrut\Desktop\airticketbooking\back-end\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\amrut\Desktop\airticketbooking\back-end\node_modules\router\index.js:435:11)
+08-07-2026 16:27:47 [[32MINFO[39M]: GET /user/profile 401 133 - 244.907 ms
+08-07-2026 16:27:47 [[31MERROR[39M]: [/user/profile] No access token provided. Please include a valid access token in your request.: No access token provided. Please include a valid access token in your request.
+Error: No access token provided. Please include a valid access token in your request.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:16:10
+    at Generator.next (<anonymous>)
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:4:12)
+    at authenticate (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:11:5)
+    at Layer.handleRequest (C:\Users\amrut\Desktop\airticketbooking\back-end\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\amrut\Desktop\airticketbooking\back-end\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\amrut\Desktop\airticketbooking\back-end\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\amrut\Desktop\airticketbooking\back-end\node_modules\router\index.js:435:11)
+08-07-2026 16:27:47 [[32MINFO[39M]: GET /user/profile 401 133 - 17.940 ms
+08-07-2026 16:27:48 [[32MINFO[39M]: POST /auth/refresh-token 200 143 - 110.140 ms
+08-07-2026 16:27:48 [[32MINFO[39M]: POST /auth/refresh-token 200 143 - 8.170 ms
+08-07-2026 16:27:49 [[32MINFO[39M]: GET /user/profile 200 298 - 702.137 ms
+08-07-2026 16:27:50 [[32MINFO[39M]: GET /user/profile 304 - - 115.890 ms

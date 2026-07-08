@@ -1,27 +1,15 @@
-import { IOtpRepository ,
-  IUserRepository,
-  IProviderRepository,
-  IEmailService,
-  IOtpService,
-  IOtpUseCase,
-
-} from "@di/file-imports-index";
-
-import { OtpDTO } from "@application/dtos/auth-dtos";
-
-import { OTP_MESSAGES } from "@shared/constants/index.constants";
-import { validationError } from "@presentation/middlewares/error.middleware";
-
 import { injectable, inject } from "inversify";
+import { IUserRepository, IProviderRepository, IEmailService, IOtpService, IOtpUseCase } from "@di/file-imports-index";
+import { VerifyOtpDTO, ResendOtpDTO, OtpSessionPayload } from "@application/dtos/auth-dtos";
+import { OTP_MESSAGES, OTP_CONFIG } from "@shared/constants/index.constants";
+import { validationError } from "@presentation/middlewares/error.middleware";
+import { IRedisService } from "@application/interfaces/service/cache/IRedis.service";
 import { TYPES_REPOSITORIES } from "@di/types-repositories";
 import { TYPES_SERVICES } from "@di/types-services";
-
 
 @injectable()
 export class OtpUseCase implements IOtpUseCase {
   constructor(
-    @inject(TYPES_REPOSITORIES.OtpRepository)
-    private _otpRepository: IOtpRepository,
     @inject(TYPES_REPOSITORIES.UserRepository)
     private _userRepository: IUserRepository,
     @inject(TYPES_REPOSITORIES.ProviderRepository)
@@ -29,67 +17,64 @@ export class OtpUseCase implements IOtpUseCase {
     @inject(TYPES_SERVICES.EmailService)
     private _emailService: IEmailService,
     @inject(TYPES_SERVICES.OtpService)
-    private _otpService: IOtpService
+    private _otpService: IOtpService,
+    @inject(TYPES_SERVICES.RedisService)
+    private _redisService: IRedisService,
   ) {}
 
-  async createOtp({ email, otp }: OtpDTO): Promise<void> {
-     await this._otpRepository.create({ email, otp });
-  }
+  async verifyOtp({ otpSessionId, otp }: VerifyOtpDTO): Promise<void> {
+    const sessionKey = `${OTP_CONFIG.REDIS_PREFIX}${otpSessionId}`;
+    const session = await this._redisService.get<OtpSessionPayload>(sessionKey);
 
-  async verifyOtp({ email, otp }: OtpDTO): Promise<void> {
-    const otpData = await this._otpRepository.findOne({ email, otp });
+    if (!session) throw new validationError(OTP_MESSAGES.EXPIRED);
 
-    if (!otpData) {
+    if (session.attempts >= OTP_CONFIG.MAX_ATTEMPTS) {
+      await this._redisService.delete(sessionKey);
+      throw new validationError(OTP_MESSAGES.MAX_ATTEMPTS);
+    }
+
+    if (session.otp !== otp) {
+      await this._redisService.set(sessionKey, { ...session, attempts: session.attempts + 1 }, OTP_CONFIG.TTL_SECONDS);
       throw new validationError(OTP_MESSAGES.INVALID);
     }
 
-    const { email: userEmail } = otpData;
+    const user = await this._userRepository.findOne({ email: session.email });
+    const provider = await this._providerRepository.getProviderByEmail(session.email);
 
-    const userData = await this._userRepository.findOne({ email: userEmail });
-    const providerData = await this._providerRepository.getProviderByEmail(userEmail);
-
-    if (userData) {
-      await this._userRepository.updateUserVerificationStatus( userEmail );
+    if (user) {
+      await this._userRepository.updateUserVerificationStatus(session.email);
+    } else if (provider) {
+      await this._providerRepository.updateVerificationStatus(provider.id, true);
+    } else {
+      throw new validationError("No account found for this session");
     }
 
-    if (providerData) {
-      await this._providerRepository.updateVerificationStatus(providerData.id, true);
-    }
-
-    if (!userData && !providerData) {
-      throw new validationError("No user or provider found with this email");
-    }
-
-    await this._otpRepository.delete(String(otpData?.id));
+    await this._redisService.delete(sessionKey);
   }
 
-  async resendOtp({ email }: { email: string }): Promise<void> {
-    const userData = await this._userRepository.findOne({ email });
-    const providerData = await this._providerRepository.getProviderByEmail(email);
+  async resendOtp({ otpSessionId }: ResendOtpDTO): Promise<void> {
+    const sessionKey = `${OTP_CONFIG.REDIS_PREFIX}${otpSessionId}`;
+    const cooldownKey = `${OTP_CONFIG.RESEND_COOLDOWN_PREFIX}${otpSessionId}`;
 
-    if (!userData && !providerData) {
-      throw new validationError("No account found with this email");
-    }
-    if (userData?.otpVerified || providerData?.isVerified) {
-      throw new validationError(OTP_MESSAGES.VERIFIED);
+    const session = await this._redisService.get<OtpSessionPayload>(sessionKey);
+    if (!session) throw new validationError(OTP_MESSAGES.EXPIRED);
+
+    if (session.resendCount >= OTP_CONFIG.MAX_RESENDS) {
+      await this._redisService.delete(sessionKey);
+      throw new validationError(OTP_MESSAGES.MAX_RESENDS);
     }
 
-    
+    const onCooldown = await this._redisService.exists(cooldownKey);
+    if (onCooldown) throw new validationError(OTP_MESSAGES.RESEND_COOLDOWN);
+
     const newOtp = this._otpService.generateOtp(6);
-    
-    
-    const existingOtp = await this._otpRepository.findOne({ email });
-    if (existingOtp) {
-      await this._otpRepository.delete(String(existingOtp.id));
-    }
+    await this._redisService.set(sessionKey, { ...session, otp: newOtp, attempts: 0, resendCount: session.resendCount + 1 }, OTP_CONFIG.TTL_SECONDS);
+    await this._redisService.set(cooldownKey, 1, OTP_CONFIG.RESEND_COOLDOWN_SECONDS);
 
-    await this._otpRepository.create({ email, otp: newOtp });
-
-    const entityType = userData ? "user" : "provider";
     await this._emailService.sendEmail({
-      to: email,
-      subject: `OTP for ${entityType.charAt(0).toUpperCase() + entityType.slice(1)} Registration`,
-      text: `Your OTP is ${newOtp}. Please do not share this OTP with anyone.`,
+      to: session.email,
+      subject: "OTP Resend",
+      text: `Your new OTP is ${newOtp}. Valid for 5 minutes. Do not share this with anyone.`,
     });
   }
 }

@@ -17,4 +17,4 @@ export * from "@shared/constants/foodMessages/food.messages";
 export * from "@shared/constants/bookingMessages/booking.messages";
 export * from "@shared/constants/offerMessages/offer.messages";
 export * from "@shared/constants/seatMessages/seat.messages"
-
+export * from "@shared/constants/walletMessages/wallet.messages";

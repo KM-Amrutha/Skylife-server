@@ -7,9 +7,26 @@ export interface FindEmailDTO {
  email:string;
 }
 
-export interface OtpDTO {
-    email:string;
-    otp:string;
+export interface CreateOtpSessionDTO {
+  email: string;
+  purpose: 'signup' | 'forgotPassword';
+}
+
+export interface OtpSessionPayload {
+  email: string;
+  otp: string;
+  purpose: 'signup' | 'forgotPassword';
+  attempts: number;
+  resendCount: number;
+}
+
+export interface VerifyOtpDTO {
+  otpSessionId: string;
+  otp: string;
+}
+
+export interface ResendOtpDTO {
+  otpSessionId: string;
 }
 
 
@@ -29,7 +46,7 @@ export interface UpdatePasswordDTO {
 
 
 export enum RoleType {
-  Trainer = "trainer",
+  Provider = "provider",
   User = "user",
   Admin = "admin",
 }

@@ -3,6 +3,7 @@ import {
   IProviderWalletTransaction,
 } from "@domain/entities/providerWallet.entity";
 import {
+  AddMoneyResponseDTO,
   ProviderWalletResponseDTO,
   ProviderWalletTransactionResponseDTO,
 } from "@application/dtos/wallet-dtos";
@@ -40,4 +41,15 @@ export class ProviderWalletMapper {
       updatedAt: wallet.updatedAt.toISOString(),
     };
   }
+static toAddMoneyResponseDTO(
+  wallet: IProviderWallet,
+  transactionId: string,
+  amount: number
+): AddMoneyResponseDTO {
+  return {
+    balance: wallet.balance,
+    transactionId,
+    amount,
+  };
+}
 }

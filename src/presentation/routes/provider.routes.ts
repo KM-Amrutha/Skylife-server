@@ -14,6 +14,7 @@ import { completeProviderProfileController,
     generateSeatsController,
     getSeatLayoutsController,
     deletleSeatLayoutController,
+    toggleSeatBlockController,
     availableAircraftsForScheduleController,
     createFlightController,
       getProviderFlightsController,
@@ -34,7 +35,9 @@ import { completeProviderProfileController,
     foodStatusChangeController,
     getProviderBookingsController,
     getProviderWalletController,
-    getProviderBookingByIdController
+    getProviderBookingByIdController,
+    getAircraftSeatsController,
+    addMoneyToProviderWalletController,
 
  } from "@di/container-resolver";
 
@@ -56,6 +59,8 @@ providerRoutes.get('/aircraft/available', authenticate, asyncHandler(availableAi
 
 providerRoutes.get('/aircraft/:aircraftId/seat-layouts', authenticate, asyncHandler(getSeatLayoutsController.handle.bind(getSeatLayoutsController)));
 providerRoutes.delete('/seat-layouts/:layoutId', authenticate, asyncHandler(deletleSeatLayoutController.handle.bind(deletleSeatLayoutController))); 
+providerRoutes.patch('/aircraft/:aircraftId/seats/:seatId/toggle-block', authenticate, asyncHandler(toggleSeatBlockController.handle.bind(toggleSeatBlockController)));
+providerRoutes.get("/aircraft/:aircraftId/seats",authenticate,asyncHandler(getAircraftSeatsController.handle.bind(getAircraftSeatsController)));
 
 providerRoutes.post('/aircraft/:aircraftId/generate-seats', authenticate, asyncHandler(generateSeatsController.handle.bind(generateSeatsController)));
 
@@ -87,5 +92,7 @@ providerRoutes.patch('/foods/:foodId/status', authenticate, asyncHandler(foodSta
 
 providerRoutes.get('/bookings', authenticate, asyncHandler(getProviderBookingsController.handle.bind(getProviderBookingsController)));
 providerRoutes.get('/wallet', authenticate, asyncHandler(getProviderWalletController.handle.bind(getProviderWalletController)));
+providerRoutes.post("/wallet/add-money", authenticate, asyncHandler(addMoneyToProviderWalletController.handle.bind(addMoneyToProviderWalletController)));
+
 export default providerRoutes;
 

@@ -3,7 +3,7 @@ import { injectable, inject } from "inversify";
 import { sendResponse } from "@shared/utils/http.response";
 import { AUTH_MESSAGES, StatusCodes } from "@shared/constants/index.constants";
 import { GoogleAuthUseCase } from "@di/file-imports-index";
-import { setRefreshTokenCookie } from "@shared/utils/cookie";
+import { setAuthCookies } from "@shared/utils/cookie";
 import { TYPES_AUTH_USECASES } from "@di/types-usecases";
 
 @injectable()
@@ -12,53 +12,26 @@ export class GoogleAuthController {
     @inject(TYPES_AUTH_USECASES.GoogleAuthUseCase)
     private googleAuthUseCase: GoogleAuthUseCase
   ) {}
+
   async handle(req: Request, res: Response): Promise<void> {
-  try {
     const { token } = req.body;
 
     if (!token || typeof token !== "string") {
-      sendResponse(
-        res,
-        "Invalid Google credential",
-        null,
-        StatusCodes.BAD_REQUEST
-      );
-      return; // early return to stop execution
+      sendResponse(res, "Invalid Google credential", null, StatusCodes.BAD_REQUEST);
+      return;
     }
 
     const { userData, accessToken, refreshToken } =
       await this.googleAuthUseCase.execute({ token });
 
-    setRefreshTokenCookie(res, refreshToken);
+    setAuthCookies(res, accessToken, refreshToken);
 
+    // match signinUser shape — "userData" key, no accessToken in body
     sendResponse(
       res,
       AUTH_MESSAGES.LOGIN_SUCCESS,
-      {
-        user: userData,
-        accessToken,
-        role: userData.role,
-      },
+      { userData },
       StatusCodes.OK
     );
-  } catch (error: any) {
-    console.error("Google Auth Controller Error:", error);
-
-    if (error.message.includes("GOOGLE_AUTH_FAILED") || error.message.includes("EMAIL_NOT_FOUND")) {
-      sendResponse(
-        res,
-        "Invalid Google credential",
-        null,
-        StatusCodes.UNAUTHORIZED
-      );
-      return;
-    }
-    sendResponse(
-      res,
-      AUTH_MESSAGES.INTERNAL_SERVER_ERROR,
-      null,
-      StatusCodes.INTERNAL_SERVER_ERROR
-    );
   }
-}
 }

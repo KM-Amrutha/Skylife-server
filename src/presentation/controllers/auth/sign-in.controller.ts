@@ -3,7 +3,7 @@ import { injectable, inject } from "inversify";
 import { sendResponse } from "@shared/utils/http.response";
 import { AUTH_MESSAGES, StatusCodes } from "@shared/constants/index.constants";
 import { SignInUseCase } from "@di/file-imports-index";
-import { setRefreshTokenCookie } from "@shared/utils/cookie";
+import { setAuthCookies } from "@shared/utils/cookie";  
 import { TYPES_AUTH_USECASES } from "@di/types-usecases";
 
 
@@ -19,13 +19,15 @@ export class SignInController {
     
        const result = await this._signinUseCase.execute(req.body);
 
-    setRefreshTokenCookie(res, result.refreshToken);
+    setAuthCookies(res, result.accessToken, result.refreshToken);
 
-    const data = "userData" in result
-    ? { userData: result.userData, accessToken: result.accessToken }
-    : { providerData: result.providerData, accessToken: result.accessToken };
+   const data =
+      "userData" in result
+        ? { userData: result.userData }
+        : { providerData: result.providerData };
 
-  sendResponse(res, AUTH_MESSAGES.LOGIN_SUCCESS, data, StatusCodes.OK);
-  
+    sendResponse(res, AUTH_MESSAGES.LOGIN_SUCCESS, data, StatusCodes.OK);
   }
+  
+  
 }

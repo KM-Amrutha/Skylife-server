@@ -45,6 +45,8 @@ export const TYPES_AIRCRAFT_CONTROLLERS = {
     GenerateSeatsController: Symbol.for("GenerateSeatsController"), 
     GetSeatLayoutsController: Symbol.for("GetSeatLayoutsController"),
     DeleteSeatLayoutController: Symbol.for("DeleteSeatLayoutController"),
+    ToggleSeatBlockController: Symbol.for("ToggleSeatBlockController"),
+    GetAircraftSeatsController: Symbol.for("GetAircraftSeatsController"),
 }
 export const TYPES_FLIGHT_CONTROLLERS = {
     ApproveFlightController: Symbol.for("ApproveFlightController"),
@@ -81,10 +83,16 @@ export const TYPES_BOOKING_CONTROLLERS = {
     GetAdminBookingsController: Symbol.for("GetAdminBookingsController"),
     GetTicketController: Symbol.for("GetTicketController"),
     CancelPassengerController: Symbol.for("CancelPassengerController"),
-    GetUserWalletController: Symbol.for("GetUserWalletController"),
-   GetProviderWalletController: Symbol.for("GetProviderWalletController"),
    GetProviderBookingByIdController: Symbol.for("GetProviderBookingByIdController"),
 
+}
+
+export const TYPES_WALLET_CONTROLLERS = {
+    GetUserWalletController: Symbol.for("GetUserWalletController"),
+    GetProviderWalletController: Symbol.for("GetProviderWalletController"),
+    AddMoneyToWalletController: Symbol.for("AddMoneyToWalletController"),
+    AddMoneyToProviderWalletController: Symbol.for("AddMoneyToProviderWalletController"),
+    PayWithWalletController: Symbol.for("PayWithWalletController"),
 }
 
 export const TYPES_OFFER_CONTROLLERS = {

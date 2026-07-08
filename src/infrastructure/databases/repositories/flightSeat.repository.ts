@@ -192,5 +192,85 @@ export class FlightSeatRepository
 
   async deleteFlightSeatsByFlightId(flightId: string): Promise<void> {
     await FlightSeatModel.deleteMany({ flightId }).exec();
-  }
+  };
+
+  async findScheduledFlightSeatsBySeatId(seatId: string): Promise<IFlightSeat[]> {
+  const docs = await FlightSeatModel.aggregate([
+    { $match: { seatId } },
+    {
+      $addFields: {
+        flightIdObj: { $toObjectId: "$flightId" }, // ← convert string → ObjectId
+      },
+    },
+    {
+      $lookup: {
+        from: "flights",
+        localField: "flightIdObj", // ← use converted field
+        foreignField: "_id",
+        as: "flight",
+      },
+    },
+    { $unwind: "$flight" },
+    { $match: { "flight.flightStatus": "scheduled" } },
+    { $project: this.baseProjection() },
+  ]);
+  return docs.map((doc) => ({ ...doc, id: doc._id.toString() }));
+}
+
+async blockFlightSeatsBySeatId(seatId: string): Promise<number> {
+  const result = await FlightSeatModel.aggregate([
+    { $match: { seatId } },
+    { $addFields: { flightIdObj: { $toObjectId: "$flightId" } } },
+    {
+      $lookup: {
+        from: "flights",
+        localField: "flightIdObj",
+        foreignField: "_id",
+        as: "flight",
+      },
+    },
+    { $unwind: "$flight" },
+    { $match: { "flight.flightStatus": "scheduled" } },
+    { $project: { _id: 1 } },
+  ]);
+
+  const ids = result.map((doc) => doc._id);
+  if (ids.length === 0) return 0;
+
+  const updated = await FlightSeatModel.updateMany(
+    { _id: { $in: ids } },
+    { isBlocked: true }
+  ).exec();
+
+  return updated.modifiedCount;
+}
+
+async unblockFlightSeatsBySeatId(seatId: string): Promise<number> {
+  const result = await FlightSeatModel.aggregate([
+    { $match: { seatId } },
+    { $addFields: { flightIdObj: { $toObjectId: "$flightId" } } },
+    {
+      $lookup: {
+        from: "flights",
+        localField: "flightIdObj",
+        foreignField: "_id",
+        as: "flight",
+      },
+    },
+    { $unwind: "$flight" },
+    { $match: { "flight.flightStatus": "scheduled" } },
+    { $project: { _id: 1 } },
+  ]);
+
+  const ids = result.map((doc) => doc._id);
+  if (ids.length === 0) return 0;
+
+  const updated = await FlightSeatModel.updateMany(
+    { _id: { $in: ids } },
+    { isBlocked: false }
+  ).exec();
+
+  return updated.modifiedCount;
+}
+ 
 }

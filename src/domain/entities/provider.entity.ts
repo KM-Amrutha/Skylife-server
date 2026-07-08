@@ -22,6 +22,7 @@ export interface IProvider {
   updatedAt: Date;
   isActive: boolean;
   isVerified: boolean;
+  otpVerified?: boolean;
   adminApproval: boolean; 
   isProfileComplete: boolean; 
   profileStatus: 'pending' | 'approved' | 'rejected';

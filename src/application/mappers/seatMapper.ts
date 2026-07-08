@@ -1,7 +1,7 @@
 import { ISeat } from "@domain/entities/seat.entity";
 import { ISeatLayout } from "@domain/entities/seatLayout.entity";
 import { ISeatType } from "@domain/entities/seatType.entity";
-import { SeatDetailsDTO, SeatLayoutDetailsDTO, SeatTypeDTO } from "@application/dtos/seat-dtos";
+import { SeatDetailsDTO, SeatLayoutDetailsDTO, SeatTypeDTO, ToggleSeatBlockResponseDTO } from "@application/dtos/seat-dtos";
 
 export class SeatMapper {
   /**
@@ -93,5 +93,23 @@ export class SeatMapper {
    */
   static toSeatTypeDTOs(seatTypes: ISeatType[]): SeatTypeDTO[] {
     return seatTypes.map((seatType) => this.toSeatTypeDTO(seatType));
-  }
+  };
+  static toToggleSeatBlockResponseDTO(
+  seat: ISeat,
+  affectedFlightSeats: number,
+  refundIssued: boolean,
+  refundAmount?: number,
+  userId?: string
+): ToggleSeatBlockResponseDTO {
+  return {
+    seatId: seat.id,
+    seatNumber: seat.seatNumber,
+    isBlocked: seat.isBlocked,
+    affectedFlightSeats,
+    refundIssued,
+    ...(refundAmount !== undefined && { refundAmount }),
+    ...(userId !== undefined && { userId }),
+  };
+};
+
 }

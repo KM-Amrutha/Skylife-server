@@ -1,0 +1,334 @@
+30-06-2026 17:07:43 [[32MINFO[39M]: POST /auth/sign-in 200 552 - 886.059 ms
+30-06-2026 17:13:36 [[32MINFO[39M]: GET /user/profile 304 - - 1283.646 ms
+30-06-2026 17:13:36 [[32MINFO[39M]: GET /user/profile 304 - - 209.865 ms
+30-06-2026 17:56:46 [[31MERROR[39M]: [/user/profile] No access token provided. Please include a valid access token in your request.: No access token provided. Please include a valid access token in your request.
+Error: No access token provided. Please include a valid access token in your request.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:16:10
+    at Generator.next (<anonymous>)
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:4:12)
+    at authenticate (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:11:5)
+    at Layer.handleRequest (C:\Users\amrut\Desktop\airticketbooking\back-end\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\amrut\Desktop\airticketbooking\back-end\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\amrut\Desktop\airticketbooking\back-end\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\amrut\Desktop\airticketbooking\back-end\node_modules\router\index.js:435:11)
+30-06-2026 17:56:46 [[32MINFO[39M]: GET /user/profile 401 133 - 278.799 ms
+30-06-2026 17:56:46 [[31MERROR[39M]: [/user/profile] No access token provided. Please include a valid access token in your request.: No access token provided. Please include a valid access token in your request.
+Error: No access token provided. Please include a valid access token in your request.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:16:10
+    at Generator.next (<anonymous>)
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:4:12)
+    at authenticate (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:11:5)
+    at Layer.handleRequest (C:\Users\amrut\Desktop\airticketbooking\back-end\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\amrut\Desktop\airticketbooking\back-end\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\amrut\Desktop\airticketbooking\back-end\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\amrut\Desktop\airticketbooking\back-end\node_modules\router\index.js:435:11)
+30-06-2026 17:56:46 [[32MINFO[39M]: GET /user/profile 401 133 - 10.330 ms
+30-06-2026 17:56:46 [[32MINFO[39M]: POST /auth/refresh-token 200 143 - 57.225 ms
+30-06-2026 17:56:46 [[32MINFO[39M]: POST /auth/refresh-token 200 143 - 7.732 ms
+30-06-2026 17:56:48 [[32MINFO[39M]: GET /user/profile 304 - - 1475.211 ms
+30-06-2026 17:56:48 [[32MINFO[39M]: GET /user/profile 304 - - 290.581 ms
+30-06-2026 18:08:19 [[31MERROR[39M]: [/user/profile] No access token provided. Please include a valid access token in your request.: No access token provided. Please include a valid access token in your request.
+Error: No access token provided. Please include a valid access token in your request.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:31:10
+    at Generator.throw (<anonymous>)
+    at rejected (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:6:65)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+30-06-2026 18:08:19 [[32MINFO[39M]: GET /user/profile 401 133 - 142.150 ms
+30-06-2026 18:08:19 [[31MERROR[39M]: [/user/profile] No access token provided. Please include a valid access token in your request.: No access token provided. Please include a valid access token in your request.
+Error: No access token provided. Please include a valid access token in your request.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:31:10
+    at Generator.throw (<anonymous>)
+    at rejected (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:6:65)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+30-06-2026 18:08:19 [[32MINFO[39M]: GET /user/profile 401 133 - 7.608 ms
+30-06-2026 18:08:19 [[32MINFO[39M]: POST /auth/refresh-token 200 143 - 21.694 ms
+30-06-2026 18:08:19 [[32MINFO[39M]: POST /auth/refresh-token 200 143 - 6.314 ms
+30-06-2026 18:08:36 [[32MINFO[39M]: GET /user/profile 304 - - 16500.044 ms
+30-06-2026 18:08:37 [[32MINFO[39M]: GET /user/profile 304 - - 572.649 ms
+30-06-2026 18:16:28 [[32MINFO[39M]: GET /user/profile 304 - - 16494.954 ms
+30-06-2026 18:16:29 [[32MINFO[39M]: GET /user/profile 304 - - 1077.229 ms
+30-06-2026 18:26:00 [[31MERROR[39M]: [/user/profile] No access token provided. Please include a valid access token in your request.: No access token provided. Please include a valid access token in your request.
+Error: No access token provided. Please include a valid access token in your request.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:16:10
+    at Generator.next (<anonymous>)
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:4:12)
+    at authenticate (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:11:5)
+    at Layer.handleRequest (C:\Users\amrut\Desktop\airticketbooking\back-end\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\amrut\Desktop\airticketbooking\back-end\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\amrut\Desktop\airticketbooking\back-end\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\amrut\Desktop\airticketbooking\back-end\node_modules\router\index.js:435:11)
+30-06-2026 18:26:00 [[32MINFO[39M]: GET /user/profile 401 133 - 257.726 ms
+30-06-2026 18:26:00 [[31MERROR[39M]: [/user/profile] No access token provided. Please include a valid access token in your request.: No access token provided. Please include a valid access token in your request.
+Error: No access token provided. Please include a valid access token in your request.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:16:10
+    at Generator.next (<anonymous>)
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:4:12)
+    at authenticate (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\auth.middleware.ts:11:5)
+    at Layer.handleRequest (C:\Users\amrut\Desktop\airticketbooking\back-end\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\amrut\Desktop\airticketbooking\back-end\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\amrut\Desktop\airticketbooking\back-end\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\amrut\Desktop\airticketbooking\back-end\node_modules\router\index.js:435:11)
+30-06-2026 18:26:00 [[32MINFO[39M]: GET /user/profile 401 133 - 14.360 ms
+30-06-2026 18:26:00 [[32MINFO[39M]: POST /auth/refresh-token 200 143 - 116.882 ms
+30-06-2026 18:26:01 [[32MINFO[39M]: POST /auth/refresh-token 200 143 - 40.654 ms
+30-06-2026 18:26:08 [[32MINFO[39M]: GET /user/profile 304 - - 7567.730 ms
+30-06-2026 18:26:11 [[32MINFO[39M]: GET /user/profile 304 - - 2815.384 ms
+30-06-2026 18:32:46 [[32MINFO[39M]: POST /auth/sign-in 200 314 - 12097.498 ms
+30-06-2026 18:32:47 [[31MERROR[39M]: [/admin/dashboard] The authentication header is missing. Please include the Authorization header with a valid token.: The authentication header is missing. Please include the Authorization header with a valid token.
+Error: The authentication header is missing. Please include the Authorization header with a valid token.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\admin.middleware.ts:14:10
+    at Generator.next (<anonymous>)
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\admin.middleware.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\admin.middleware.ts:4:12)
+    at authenticateAdmin (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\admin.middleware.ts:11:5)
+    at Layer.handleRequest (C:\Users\amrut\Desktop\airticketbooking\back-end\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\amrut\Desktop\airticketbooking\back-end\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\amrut\Desktop\airticketbooking\back-end\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\amrut\Desktop\airticketbooking\back-end\node_modules\router\index.js:435:11)
+30-06-2026 18:32:47 [[32MINFO[39M]: GET /admin/dashboard 401 152 - 28.223 ms
+30-06-2026 18:32:47 [[31MERROR[39M]: [/admin/dashboard] The authentication header is missing. Please include the Authorization header with a valid token.: The authentication header is missing. Please include the Authorization header with a valid token.
+Error: The authentication header is missing. Please include the Authorization header with a valid token.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\admin.middleware.ts:14:10
+    at Generator.next (<anonymous>)
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\admin.middleware.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\admin.middleware.ts:4:12)
+    at authenticateAdmin (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\admin.middleware.ts:11:5)
+    at Layer.handleRequest (C:\Users\amrut\Desktop\airticketbooking\back-end\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\amrut\Desktop\airticketbooking\back-end\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\amrut\Desktop\airticketbooking\back-end\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\amrut\Desktop\airticketbooking\back-end\node_modules\router\index.js:435:11)
+30-06-2026 18:32:47 [[32MINFO[39M]: GET /admin/dashboard 401 152 - 11.637 ms
+30-06-2026 18:32:47 [[32MINFO[39M]: POST /auth/refresh-token 200 143 - 33.768 ms
+30-06-2026 18:32:47 [[32MINFO[39M]: POST /auth/refresh-token 200 143 - 32.651 ms
+30-06-2026 18:32:47 [[31MERROR[39M]: [/admin/dashboard] The authentication header is missing. Please include the Authorization header with a valid token.: The authentication header is missing. Please include the Authorization header with a valid token.
+Error: The authentication header is missing. Please include the Authorization header with a valid token.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\admin.middleware.ts:14:10
+    at Generator.next (<anonymous>)
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\admin.middleware.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\admin.middleware.ts:4:12)
+    at authenticateAdmin (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\admin.middleware.ts:11:5)
+    at Layer.handleRequest (C:\Users\amrut\Desktop\airticketbooking\back-end\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\amrut\Desktop\airticketbooking\back-end\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\amrut\Desktop\airticketbooking\back-end\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\amrut\Desktop\airticketbooking\back-end\node_modules\router\index.js:435:11)
+30-06-2026 18:32:47 [[32MINFO[39M]: GET /admin/dashboard 401 152 - 4.878 ms
+30-06-2026 18:32:47 [[31MERROR[39M]: [/admin/dashboard] The authentication header is missing. Please include the Authorization header with a valid token.: The authentication header is missing. Please include the Authorization header with a valid token.
+Error: The authentication header is missing. Please include the Authorization header with a valid token.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\admin.middleware.ts:14:10
+    at Generator.next (<anonymous>)
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\admin.middleware.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\admin.middleware.ts:4:12)
+    at authenticateAdmin (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\admin.middleware.ts:11:5)
+    at Layer.handleRequest (C:\Users\amrut\Desktop\airticketbooking\back-end\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\amrut\Desktop\airticketbooking\back-end\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\amrut\Desktop\airticketbooking\back-end\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\amrut\Desktop\airticketbooking\back-end\node_modules\router\index.js:435:11)
+30-06-2026 18:32:47 [[32MINFO[39M]: GET /admin/dashboard 401 152 - 22.801 ms
+30-06-2026 18:33:10 [[31MERROR[39M]: [/admin/providers/pending] The authentication header is missing. Please include the Authorization header with a valid token.: The authentication header is missing. Please include the Authorization header with a valid token.
+Error: The authentication header is missing. Please include the Authorization header with a valid token.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\admin.middleware.ts:14:10
+    at Generator.next (<anonymous>)
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\admin.middleware.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\admin.middleware.ts:4:12)
+    at authenticateAdmin (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\admin.middleware.ts:11:5)
+    at Layer.handleRequest (C:\Users\amrut\Desktop\airticketbooking\back-end\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\amrut\Desktop\airticketbooking\back-end\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\amrut\Desktop\airticketbooking\back-end\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\amrut\Desktop\airticketbooking\back-end\node_modules\router\index.js:435:11)
+30-06-2026 18:33:10 [[32MINFO[39M]: GET /admin/providers/pending 401 152 - 4.735 ms
+30-06-2026 18:33:10 [[31MERROR[39M]: [/admin/providers/pending] The authentication header is missing. Please include the Authorization header with a valid token.: The authentication header is missing. Please include the Authorization header with a valid token.
+Error: The authentication header is missing. Please include the Authorization header with a valid token.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\admin.middleware.ts:14:10
+    at Generator.next (<anonymous>)
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\admin.middleware.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\admin.middleware.ts:4:12)
+    at authenticateAdmin (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\admin.middleware.ts:11:5)
+    at Layer.handleRequest (C:\Users\amrut\Desktop\airticketbooking\back-end\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\amrut\Desktop\airticketbooking\back-end\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\amrut\Desktop\airticketbooking\back-end\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\amrut\Desktop\airticketbooking\back-end\node_modules\router\index.js:435:11)
+30-06-2026 18:33:10 [[32MINFO[39M]: GET /admin/providers/pending 401 152 - 3.237 ms
+30-06-2026 18:33:10 [[32MINFO[39M]: POST /auth/refresh-token 200 143 - 4.779 ms
+30-06-2026 18:33:10 [[32MINFO[39M]: POST /auth/refresh-token 200 143 - 5.839 ms
+30-06-2026 18:33:10 [[31MERROR[39M]: [/admin/providers/pending] The authentication header is missing. Please include the Authorization header with a valid token.: The authentication header is missing. Please include the Authorization header with a valid token.
+Error: The authentication header is missing. Please include the Authorization header with a valid token.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\admin.middleware.ts:14:10
+    at Generator.next (<anonymous>)
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\admin.middleware.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\admin.middleware.ts:4:12)
+    at authenticateAdmin (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\admin.middleware.ts:11:5)
+    at Layer.handleRequest (C:\Users\amrut\Desktop\airticketbooking\back-end\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\amrut\Desktop\airticketbooking\back-end\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\amrut\Desktop\airticketbooking\back-end\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\amrut\Desktop\airticketbooking\back-end\node_modules\router\index.js:435:11)
+30-06-2026 18:33:10 [[32MINFO[39M]: GET /admin/providers/pending 401 152 - 2.912 ms
+30-06-2026 18:33:10 [[31MERROR[39M]: [/admin/providers/pending] The authentication header is missing. Please include the Authorization header with a valid token.: The authentication header is missing. Please include the Authorization header with a valid token.
+Error: The authentication header is missing. Please include the Authorization header with a valid token.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\admin.middleware.ts:14:10
+    at Generator.next (<anonymous>)
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\admin.middleware.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\admin.middleware.ts:4:12)
+    at authenticateAdmin (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\admin.middleware.ts:11:5)
+    at Layer.handleRequest (C:\Users\amrut\Desktop\airticketbooking\back-end\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\amrut\Desktop\airticketbooking\back-end\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\amrut\Desktop\airticketbooking\back-end\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\amrut\Desktop\airticketbooking\back-end\node_modules\router\index.js:435:11)
+30-06-2026 18:33:10 [[32MINFO[39M]: GET /admin/providers/pending 401 152 - 2.748 ms
+30-06-2026 19:24:31 [[32MINFO[39M]: POST /auth/sign-in 200 314 - 815.491 ms
+30-06-2026 19:24:31 [[32MINFO[39M]: GET /admin/dashboard 200 266 - 163.384 ms
+30-06-2026 19:24:31 [[32MINFO[39M]: GET /admin/dashboard 304 - - 64.446 ms
+30-06-2026 19:24:38 [[32MINFO[39M]: GET /admin/providers/pending 304 - - 107.384 ms
+30-06-2026 19:24:38 [[32MINFO[39M]: GET /admin/providers/pending 304 - - 48.203 ms
+30-06-2026 19:24:40 [[32MINFO[39M]: GET /admin/flights/pending-approval 304 - - 68.600 ms
+30-06-2026 19:24:40 [[32MINFO[39M]: GET /admin/flights/pending-approval 304 - - 45.174 ms
+30-06-2026 19:24:41 [[32MINFO[39M]: GET /admin/providers/pending 304 - - 69.181 ms
+30-06-2026 19:24:41 [[32MINFO[39M]: GET /admin/providers/pending 304 - - 47.975 ms
+30-06-2026 19:24:44 [[32MINFO[39M]: GET /admin/providers/pending 304 - - 48.006 ms
+30-06-2026 19:24:44 [[32MINFO[39M]: GET /admin/providers/pending 304 - - 45.383 ms
+30-06-2026 19:26:04 [[32MINFO[39M]: POST /auth/sign-in 200 314 - 218.818 ms
+30-06-2026 19:26:04 [[32MINFO[39M]: GET /admin/dashboard 304 - - 57.211 ms
+30-06-2026 19:26:05 [[32MINFO[39M]: GET /admin/dashboard 304 - - 70.042 ms
+30-06-2026 19:37:14 [[31MERROR[39M]: [/admin/dashboard] No access token provided. Please include a valid access token in your request.: No access token provided. Please include a valid access token in your request.
+Error: No access token provided. Please include a valid access token in your request.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\admin.middleware.ts:22:10
+    at Generator.throw (<anonymous>)
+    at rejected (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\admin.middleware.ts:6:65)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+30-06-2026 19:37:15 [[32MINFO[39M]: GET /admin/dashboard 401 133 - 1509.945 ms
+30-06-2026 19:37:35 [[31MERROR[39M]: [/admin/dashboard] No access token provided. Please include a valid access token in your request.: No access token provided. Please include a valid access token in your request.
+Error: No access token provided. Please include a valid access token in your request.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\admin.middleware.ts:22:10
+    at Generator.throw (<anonymous>)
+    at rejected (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\admin.middleware.ts:6:65)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+30-06-2026 19:37:35 [[32MINFO[39M]: GET /admin/dashboard 401 133 - 87.233 ms
+30-06-2026 19:37:35 [[31MERROR[39M]: [/admin/dashboard] No access token provided. Please include a valid access token in your request.: No access token provided. Please include a valid access token in your request.
+Error: No access token provided. Please include a valid access token in your request.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\admin.middleware.ts:22:10
+    at Generator.throw (<anonymous>)
+    at rejected (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\admin.middleware.ts:6:65)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+30-06-2026 19:37:35 [[32MINFO[39M]: GET /admin/dashboard 401 133 - 15.345 ms
+30-06-2026 19:37:36 [[32MINFO[39M]: POST /auth/refresh-token 200 143 - 110.449 ms
+30-06-2026 19:37:36 [[32MINFO[39M]: POST /auth/refresh-token 200 143 - 19.079 ms
+30-06-2026 19:37:37 [[32MINFO[39M]: GET /admin/dashboard 200 266 - 641.880 ms
+30-06-2026 19:37:37 [[32MINFO[39M]: GET /admin/dashboard 304 - - 81.193 ms
+30-06-2026 19:43:06 [[32MINFO[39M]: POST /auth/sign-in 200 314 - 375.832 ms
+30-06-2026 19:43:07 [[32MINFO[39M]: GET /admin/dashboard 304 - - 55.743 ms
+30-06-2026 19:43:07 [[32MINFO[39M]: GET /admin/dashboard 304 - - 68.183 ms
+30-06-2026 19:43:26 [[32MINFO[39M]: GET /admin/providers/pending 304 - - 66.825 ms
+30-06-2026 19:43:26 [[32MINFO[39M]: GET /admin/providers/pending 304 - - 64.223 ms
+30-06-2026 19:46:59 [[32MINFO[39M]: GET /admin/dashboard 304 - - 70.183 ms
+30-06-2026 19:46:59 [[32MINFO[39M]: GET /admin/dashboard 304 - - 50.209 ms
+30-06-2026 19:47:15 [[32MINFO[39M]: GET /admin/dashboard 304 - - 55.444 ms
+30-06-2026 19:47:15 [[32MINFO[39M]: GET /admin/dashboard 304 - - 50.440 ms
+30-06-2026 19:48:13 [[32MINFO[39M]: GET /admin/dashboard 304 - - 73.805 ms
+30-06-2026 19:48:14 [[32MINFO[39M]: GET /favicon.ico 404 82 - 27.023 ms
+30-06-2026 19:48:45 [[32MINFO[39M]: GET /admin/dashboard 304 - - 85.916 ms
+30-06-2026 20:11:44 [[32MINFO[39M]: POST /auth/sign-in 200 314 - 417.806 ms
+30-06-2026 20:14:56 [[32MINFO[39M]: POST /auth/sign-in 200 314 - 513.548 ms
+30-06-2026 22:43:23 [[32MINFO[39M]: POST /auth/sign-in 200 314 - 337.097 ms
+30-06-2026 22:43:23 [[32MINFO[39M]: GET /admin/dashboard 304 - - 419.900 ms
+30-06-2026 22:43:24 [[32MINFO[39M]: GET /admin/dashboard 304 - - 343.135 ms
+30-06-2026 22:43:24 [[32MINFO[39M]: GET /admin/dashboard 304 - - 44.295 ms
+30-06-2026 22:43:24 [[32MINFO[39M]: GET /admin/dashboard 304 - - 45.737 ms
+30-06-2026 22:43:28 [[32MINFO[39M]: GET /admin/providers/pending 304 - - 60.771 ms
+30-06-2026 22:43:28 [[32MINFO[39M]: GET /admin/providers/pending 304 - - 48.405 ms
+30-06-2026 22:43:30 [[32MINFO[39M]: GET /admin/flights/pending-approval 304 - - 57.867 ms
+30-06-2026 22:43:30 [[32MINFO[39M]: GET /admin/flights/pending-approval 304 - - 40.471 ms
+30-06-2026 22:43:33 [[32MINFO[39M]: GET /admin/dashboard 304 - - 67.660 ms
+30-06-2026 22:43:33 [[32MINFO[39M]: GET /admin/dashboard 304 - - 57.446 ms
+30-06-2026 22:43:33 [[32MINFO[39M]: GET /admin/flights/pending-approval 304 - - 327.531 ms
+30-06-2026 22:43:33 [[32MINFO[39M]: GET /admin/flights/pending-approval 304 - - 47.043 ms
+30-06-2026 22:43:35 [[32MINFO[39M]: GET /admin/dashboard 304 - - 44.207 ms
+30-06-2026 22:43:35 [[32MINFO[39M]: GET /admin/dashboard 304 - - 52.661 ms
+30-06-2026 22:43:36 [[32MINFO[39M]: GET /admin/providers/pending 304 - - 55.470 ms
+30-06-2026 22:43:37 [[32MINFO[39M]: GET /admin/providers/pending 304 - - 41.805 ms
+30-06-2026 22:43:38 [[32MINFO[39M]: GET /admin/dashboard 304 - - 52.839 ms
+30-06-2026 22:43:39 [[32MINFO[39M]: GET /admin/dashboard 304 - - 46.875 ms
+30-06-2026 22:43:39 [[32MINFO[39M]: GET /admin/providers/pending 304 - - 49.351 ms
+30-06-2026 22:43:39 [[32MINFO[39M]: GET /admin/providers/pending 304 - - 50.877 ms
+30-06-2026 22:43:40 [[32MINFO[39M]: GET /admin/providers?page=1&limit=3 304 - - 228.964 ms
+30-06-2026 22:43:40 [[32MINFO[39M]: GET /admin/providers?page=1&limit=3 304 - - 102.892 ms
+30-06-2026 22:43:42 [[32MINFO[39M]: GET /admin/dashboard 304 - - 45.182 ms
+30-06-2026 22:43:42 [[32MINFO[39M]: GET /admin/dashboard 304 - - 46.583 ms
+30-06-2026 22:43:42 [[32MINFO[39M]: GET /admin/providers?page=1&limit=3 304 - - 91.990 ms
+30-06-2026 22:43:42 [[32MINFO[39M]: GET /admin/providers?page=1&limit=3 304 - - 84.618 ms
+30-06-2026 22:43:44 [[32MINFO[39M]: GET /admin/users?page=1&limit=3 200 1073 - 134.215 ms
+30-06-2026 22:43:44 [[32MINFO[39M]: GET /admin/users?page=1&limit=3 304 - - 84.410 ms
+30-06-2026 22:43:46 [[32MINFO[39M]: GET /admin/dashboard 304 - - 43.984 ms
+30-06-2026 22:43:46 [[32MINFO[39M]: GET /admin/dashboard 304 - - 45.760 ms
+30-06-2026 22:43:48 [[32MINFO[39M]: GET /admin/dashboard 304 - - 160.558 ms
+30-06-2026 22:43:48 [[32MINFO[39M]: GET /admin/dashboard 304 - - 47.350 ms
+30-06-2026 22:43:48 [[32MINFO[39M]: GET /admin/dashboard 304 - - 102.466 ms
+30-06-2026 22:43:49 [[32MINFO[39M]: GET /admin/dashboard 304 - - 77.838 ms
+30-06-2026 22:43:57 [[32MINFO[39M]: POST /auth/sign-out/ 200 137 - 10.695 ms
+30-06-2026 22:44:01 [[31MERROR[39M]: [/admin/dashboard] No access token provided. Please include a valid access token in your request.: No access token provided. Please include a valid access token in your request.
+Error: No access token provided. Please include a valid access token in your request.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\admin.middleware.ts:14:10
+    at Generator.next (<anonymous>)
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\admin.middleware.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\admin.middleware.ts:4:12)
+    at authenticateAdmin (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\admin.middleware.ts:11:5)
+    at Layer.handleRequest (C:\Users\amrut\Desktop\airticketbooking\back-end\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\amrut\Desktop\airticketbooking\back-end\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\amrut\Desktop\airticketbooking\back-end\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\amrut\Desktop\airticketbooking\back-end\node_modules\router\index.js:435:11)
+30-06-2026 22:44:01 [[32MINFO[39M]: GET /admin/dashboard 401 133 - 55.155 ms
+30-06-2026 22:44:01 [[31MERROR[39M]: [/admin/dashboard] No access token provided. Please include a valid access token in your request.: No access token provided. Please include a valid access token in your request.
+Error: No access token provided. Please include a valid access token in your request.
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\admin.middleware.ts:14:10
+    at Generator.next (<anonymous>)
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\admin.middleware.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\admin.middleware.ts:4:12)
+    at authenticateAdmin (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\middlewares\admin.middleware.ts:11:5)
+    at Layer.handleRequest (C:\Users\amrut\Desktop\airticketbooking\back-end\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\amrut\Desktop\airticketbooking\back-end\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\amrut\Desktop\airticketbooking\back-end\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\amrut\Desktop\airticketbooking\back-end\node_modules\router\index.js:435:11)
+30-06-2026 22:44:01 [[32MINFO[39M]: GET /admin/dashboard 401 133 - 2.239 ms
+30-06-2026 22:44:01 [[31MERROR[39M]: [/auth/refresh-token] Refresh token is missing. Please ensure you provide a valid refresh token.: Refresh token is missing. Please ensure you provide a valid refresh token.
+Error: Refresh token is missing. Please ensure you provide a valid refresh token.
+    at TokenUseCase.<anonymous> (C:\Users\amrut\Desktop\airticketbooking\back-end\src\application\usecases\auth\token.usecase.ts:34:13)
+    at Generator.next (<anonymous>)
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\application\usecases\auth\token.usecase.ts:20:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\amrut\Desktop\airticketbooking\back-end\src\application\usecases\auth\token.usecase.ts:16:12)
+    at TokenUseCase.refreshAccessToken (C:\Users\amrut\Desktop\airticketbooking\back-end\src\application\usecases\auth\token.usecase.ts:47:16)
+    at RefreshAccessTokenController.<anonymous> (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\controllers\auth\refresh-access-token.controller.ts:19:53)
+    at Generator.next (<anonymous>)
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\controllers\auth\refresh-access-token.controller.ts:20:71
+    at new Promise (<anonymous>)
+30-06-2026 22:44:01 [[32MINFO[39M]: POST /auth/refresh-token 403 129 - 32.076 ms
+30-06-2026 22:44:01 [[31MERROR[39M]: [/auth/refresh-token] Refresh token is missing. Please ensure you provide a valid refresh token.: Refresh token is missing. Please ensure you provide a valid refresh token.
+Error: Refresh token is missing. Please ensure you provide a valid refresh token.
+    at TokenUseCase.<anonymous> (C:\Users\amrut\Desktop\airticketbooking\back-end\src\application\usecases\auth\token.usecase.ts:34:13)
+    at Generator.next (<anonymous>)
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\application\usecases\auth\token.usecase.ts:20:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\amrut\Desktop\airticketbooking\back-end\src\application\usecases\auth\token.usecase.ts:16:12)
+    at TokenUseCase.refreshAccessToken (C:\Users\amrut\Desktop\airticketbooking\back-end\src\application\usecases\auth\token.usecase.ts:47:16)
+    at RefreshAccessTokenController.<anonymous> (C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\controllers\auth\refresh-access-token.controller.ts:19:53)
+    at Generator.next (<anonymous>)
+    at C:\Users\amrut\Desktop\airticketbooking\back-end\src\presentation\controllers\auth\refresh-access-token.controller.ts:20:71
+    at new Promise (<anonymous>)
+30-06-2026 22:44:01 [[32MINFO[39M]: POST /auth/refresh-token 403 129 - 5.749 ms
+30-06-2026 22:48:32 [[32MINFO[39M]: POST /auth/provider/sign-up/ 200 502 - 5314.920 ms

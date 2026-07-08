@@ -22,6 +22,9 @@ import {
     getTicketController,
     cancelPassengerController,
     getUserWalletController,
+    payWithWalletController,
+    addMoneyToWalletController,
+    
 
     
     getEligibleOffersController,
@@ -55,4 +58,7 @@ userRoutes.get('/bookings', authenticate, asyncHandler(getUserBookingsController
 userRoutes.get('/bookings/:bookingId/ticket', authenticate, asyncHandler(getTicketController.handle.bind(getTicketController)));
 userRoutes.delete('/bookings/:bookingId/passengers/:passengerId', authenticate, asyncHandler(cancelPassengerController.handle.bind(cancelPassengerController)));
 userRoutes.get('/wallet', authenticate, asyncHandler(getUserWalletController.handle.bind(getUserWalletController)));    
+userRoutes.post("/wallet/add-money", authenticate, asyncHandler(addMoneyToWalletController.handle.bind(addMoneyToWalletController)));
+userRoutes.post("/wallet/pay", authenticate, asyncHandler(payWithWalletController.handle.bind(payWithWalletController))); 
+
 export default userRoutes;

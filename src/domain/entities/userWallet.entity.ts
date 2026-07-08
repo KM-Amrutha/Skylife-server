@@ -1,6 +1,6 @@
 export interface IWalletTransaction {
   transactionId: string;
-  type: "credit";
+  type: "credit"| "debit";
   amount: number;
   description: string;
   bookingId?: string;

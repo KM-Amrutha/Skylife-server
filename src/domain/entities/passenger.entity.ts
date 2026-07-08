@@ -1,5 +1,4 @@
 
-// import { IBookingPassengerSegment } from "./booking.entity";
 export interface IPassenger {
   passengerId: string;
   name: string;

@@ -1,7 +1,9 @@
 import { IWallet, IWalletTransaction } from "@domain/entities/userWallet.entity";
 import {
+  PayWithWalletResponseDTO,
   UserWalletResponseDTO,
   UserWalletTransactionResponseDTO,
+  AddMoneyResponseDTO
 } from "@application/dtos/wallet-dtos";
 
 export class UserWalletMapper {
@@ -35,4 +37,24 @@ export class UserWalletMapper {
       updatedAt: wallet.updatedAt.toISOString(),
     };
   }
+
+static toAddMoneyResponseDTO(
+  wallet: IWallet,
+  transactionId: string,
+  amount: number
+): AddMoneyResponseDTO {
+  return {
+    balance: wallet.balance,
+    transactionId,
+    amount,
+  };
+}
+
+static toPayWithWalletResponseDTO(
+  bookingId: string,
+  amountDeducted: number,
+  remainingBalance: number
+): PayWithWalletResponseDTO {
+  return { bookingId, amountDeducted, remainingBalance };
+}
 }
