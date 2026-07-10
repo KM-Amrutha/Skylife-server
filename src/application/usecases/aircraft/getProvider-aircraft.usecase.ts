@@ -34,9 +34,7 @@ export class GetProviderAircraftsUseCase implements IGetProviderAircraftsUseCase
     if (!provider.isVerified) throw new ForbiddenError(AUTH_MESSAGES.ACCOUNT_NOT_VERIFIED);
   }
 
-  private sortAircraftsByStatus(
-    aircrafts: Awaited<ReturnType<IAircraftRepository["findByProviderId"]>>["aircrafts"]
-  ) {
+  private sortAircraftsByStatus(aircrafts:AircraftDetailsDTO[]):AircraftDetailsDTO[] {
     const statusOrder = { active: 1, maintenance: 2, inactive: 3 };
     return [...aircrafts].sort((a, b) => {
       const statusComparison = statusOrder[a.status] - statusOrder[b.status];
@@ -69,10 +67,11 @@ export class GetProviderAircraftsUseCase implements IGetProviderAircraftsUseCase
       };
     }
 
-    const sorted = this.sortAircraftsByStatus(aircrafts);
+    const aircraftDTOs = AircraftMapper.toAircraftDTOs(aircrafts);
+    const sorted = this.sortAircraftsByStatus(aircraftDTOs);
 
     return {
-      aircraftsList: AircraftMapper.toAircraftDTOs(sorted),
+      aircraftsList: sorted,
       paginationData: { totalPages, currentPage },
     };
   }

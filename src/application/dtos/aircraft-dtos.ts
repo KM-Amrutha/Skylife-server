@@ -1,3 +1,5 @@
+export type AircraftStatus = "active" | "inactive" | "maintenance";
+
 export interface CreateAircraftDTO {
   providerId: string;
   aircraftType: string;
@@ -10,8 +12,8 @@ export interface CreateAircraftDTO {
   lavatoryCount: number;
   baseStationId: string;
   currentLocationId: string;
-  availableFrom: Date;                       
-  status: "active" | "inactive" | "maintenance";
+  availableFrom: string; 
+  status: AircraftStatus;
 }
 
 export interface UpdateAircraftDTO {
@@ -23,13 +25,13 @@ export interface UpdateAircraftDTO {
   lavatoryCount?: number;
   baseStationId?: string;
   currentLocationId?: string;
-  availableFrom?: Date;                       
-  status?: "active" | "inactive" | "maintenance";
+  availableFrom?: string;
+  status?: AircraftStatus;
 }
 
 export interface UpdateAircraftStatusDTO {
   aircraftId: string;
-  status: "active" | "inactive" | "maintenance";
+  status: AircraftStatus;
 }
 
 export interface UpdateAircraftLocationDTO {
@@ -38,7 +40,7 @@ export interface UpdateAircraftLocationDTO {
 }
 
 export interface AircraftDetailsDTO {
-  id: string;                                
+  id: string;
   providerId: string;
   aircraftType: string;
   aircraftName: string;
@@ -48,22 +50,22 @@ export interface AircraftDetailsDTO {
   flyingRangeKm: number;
   engineCount: number;
   lavatoryCount: number;
-  availableFrom: string;                       
+  availableFrom: string; 
   baseStationId: string;
   currentLocationId: string;
-  status: "active" | "inactive" | "maintenance";
-  createdAt: Date;                         
-  updatedAt: Date;                           
+  status: AircraftStatus;
+  createdAt: string; 
+  updatedAt: string; 
   baseStation?: {
-    id: string;                             
+    id: string;
     name: string;
-    city: string;
-    country: string;
+    city: string;  
+    country: string; 
   };
   currentLocation?: {
-    id: string;                          
+    id: string;
     name: string;
-    city: string;
-    country: string;
+    city: string;   
+    country: string; 
   };
 }

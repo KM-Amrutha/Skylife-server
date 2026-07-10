@@ -2,10 +2,9 @@ import { IAircraft } from "@domain/entities/aircraft.entity";
 import { AircraftDetailsDTO } from "@application/dtos/aircraft-dtos";
 
 export class AircraftMapper {
-
   static toAircraftDTO(aircraft: IAircraft): AircraftDetailsDTO {
     return {
-      id: aircraft.id,                            
+      id: aircraft.id,
       providerId: aircraft.providerId,
       aircraftType: aircraft.aircraftType,
       aircraftName: aircraft.aircraftName,
@@ -15,25 +14,23 @@ export class AircraftMapper {
       flyingRangeKm: aircraft.flyingRangeKm,
       engineCount: aircraft.engineCount,
       lavatoryCount: aircraft.lavatoryCount,
-      availableFrom: aircraft.availableFrom
-        ? aircraft.availableFrom.toISOString()
-        : aircraft.availableFrom,                
+      availableFrom: aircraft.availableFrom.toISOString(),
       baseStationId: aircraft.baseStationId,
       currentLocationId: aircraft.currentLocationId,
       status: aircraft.status,
-      createdAt: aircraft.createdAt,  
-      updatedAt: aircraft.updatedAt,  
+      createdAt: aircraft.createdAt.toISOString(),
+      updatedAt: aircraft.updatedAt.toISOString(),
       ...(aircraft.baseStation && {
         baseStation: {
-          id: aircraft.baseStation.id,           
+          id: aircraft.baseStation.id,
           name: aircraft.baseStation.name,
-          city: aircraft.baseStation.municipality, 
+          city: aircraft.baseStation.municipality,
           country: aircraft.baseStation.isoCountry,
         },
       }),
       ...(aircraft.currentLocation && {
         currentLocation: {
-          id: aircraft.currentLocation.id,      
+          id: aircraft.currentLocation.id,
           name: aircraft.currentLocation.name,
           city: aircraft.currentLocation.municipality,
           country: aircraft.currentLocation.isoCountry,

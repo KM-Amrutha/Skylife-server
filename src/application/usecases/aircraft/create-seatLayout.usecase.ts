@@ -22,6 +22,8 @@ import {
   SEAT_MESSAGES,
 } from "@shared/constants/index.constants";
 import { SeatMapper } from "@application/mappers/seatMapper";
+import { AircraftMapper } from "@application/mappers/aircraftMapper";
+import { AircraftDetailsDTO } from "@application/dtos/aircraft-dtos";
 
 @injectable()
 export class CreateSeatLayoutUseCase implements ICreateSeatLayoutUseCase {
@@ -44,15 +46,17 @@ export class CreateSeatLayoutUseCase implements ICreateSeatLayoutUseCase {
     if (!provider.isVerified) throw new ForbiddenError(AUTH_MESSAGES.ACCOUNT_NOT_VERIFIED);
   }
 
-  // ✅ return type inferred from repo — no IAircraft import needed
-  private async validateAircraftOwnership(aircraftId: string, providerId: string) {
-    const aircraft = await this._aircraftRepository.getAircraftById(aircraftId);
-    if (!aircraft) throw new NotFoundError(AIRCRAFT_MESSAGES.NOT_FOUND);
-    if (aircraft.providerId !== providerId) {
-      throw new ForbiddenError(AIRCRAFT_MESSAGES.CONFIGURE_FORBIDDEN);           
-    }
-    return aircraft;
+ private async validateAircraftOwnership(
+  aircraftId: string,
+  providerId: string
+): Promise<AircraftDetailsDTO> {
+  const aircraft = await this._aircraftRepository.getAircraftById(aircraftId);
+  if (!aircraft) throw new NotFoundError(AIRCRAFT_MESSAGES.NOT_FOUND);
+  if (aircraft.providerId !== providerId) {
+    throw new ForbiddenError(AIRCRAFT_MESSAGES.CONFIGURE_FORBIDDEN);
   }
+  return AircraftMapper.toAircraftDTO(aircraft); 
+}
 
   private validateLayoutFormat(layout: string): void {
     const validLayouts = getValidLayouts();
@@ -138,7 +142,7 @@ export class CreateSeatLayoutUseCase implements ICreateSeatLayoutUseCase {
 
   
   private validateTotalSeatCapacity(
-    aircraft: Awaited<ReturnType<IAircraftRepository["getAircraftById"]>>,
+    aircraft: AircraftDetailsDTO,
     existingLayoutsSeats: number,
     newStartRow: number,
     newEndRow: number,

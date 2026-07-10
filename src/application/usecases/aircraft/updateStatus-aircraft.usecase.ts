@@ -38,21 +38,21 @@ export class UpdateAircraftStatusUseCase implements IUpdateAircraftStatusUseCase
     if (!provider.isVerified) throw new ForbiddenError(AUTH_MESSAGES.ACCOUNT_NOT_VERIFIED);
   }
 
-
-  private async validateOwnership(aircraftId: string, providerId: string) {
+  private async validateOwnership(
+    aircraftId: string,
+    providerId: string
+  ): Promise<AircraftDetailsDTO> {
     const aircraft = await this._aircraftRepository.getAircraftById(aircraftId);
     if (!aircraft) throw new NotFoundError(AIRCRAFT_MESSAGES.NOT_FOUND);
     if (aircraft.providerId !== providerId) {
-      throw new ForbiddenError(AIRCRAFT_MESSAGES.UPDATE_FORBIDDEN);             
+      throw new ForbiddenError(AIRCRAFT_MESSAGES.UPDATE_FORBIDDEN);
     }
-    return aircraft;
+    return AircraftMapper.toAircraftDTO(aircraft);
   }
 
   private validateStatusTransition(currentStatus: string, newStatus: string): void {
     if (currentStatus === newStatus) {
-      throw new ConflictError(
-        AIRCRAFT_MESSAGES.ALREADY_IN_STATUS(newStatus)                        
-      );
+      throw new ConflictError(AIRCRAFT_MESSAGES.ALREADY_IN_STATUS(newStatus));
     }
 
     const validTransitions: Record<string, string[]> = {
@@ -64,7 +64,7 @@ export class UpdateAircraftStatusUseCase implements IUpdateAircraftStatusUseCase
     const allowedStatuses = validTransitions[currentStatus];
     if (!allowedStatuses || !allowedStatuses.includes(newStatus)) {
       throw new ConflictError(
-        AIRCRAFT_MESSAGES.INVALID_STATUS_TRANSITION(currentStatus, newStatus)  
+        AIRCRAFT_MESSAGES.INVALID_STATUS_TRANSITION(currentStatus, newStatus)
       );
     }
   }
@@ -78,19 +78,13 @@ export class UpdateAircraftStatusUseCase implements IUpdateAircraftStatusUseCase
     }
   }
 
-  
-  private validateAircraftAvailability(
-    aircraft: Awaited<ReturnType<IAircraftRepository["getAircraftById"]>>,
-    newStatus: string
-  ): void {
-    if (!aircraft) return;
-
+  private validateAircraftAvailability(aircraft: AircraftDetailsDTO, newStatus: string): void {
     if (newStatus === "active") {
       const now = new Date();
       const availableFrom = new Date(aircraft.availableFrom);
       if (availableFrom > now) {
         throw new ConflictError(
-          AIRCRAFT_MESSAGES.CANNOT_ACTIVATE_NOT_YET_AVAILABLE(              
+          AIRCRAFT_MESSAGES.CANNOT_ACTIVATE_NOT_YET_AVAILABLE(
             availableFrom.toISOString()
           )
         );
@@ -105,11 +99,11 @@ export class UpdateAircraftStatusUseCase implements IUpdateAircraftStatusUseCase
     if (newStatus === "active") {
       const { aircrafts } = await this._aircraftRepository.findByProviderId(providerId);
 
-
-      const activeCount = aircrafts.filter((a) => a.status === "active").length;
+      const aircraftDTOs = AircraftMapper.toAircraftDTOs(aircrafts);
+      const activeCount = aircraftDTOs.filter((a) => a.status === "active").length;
 
       if (activeCount >= 50) {
-        throw new ConflictError(AIRCRAFT_MESSAGES.MAX_ACTIVE_AIRCRAFT_REACHED); 
+        throw new ConflictError(AIRCRAFT_MESSAGES.MAX_ACTIVE_AIRCRAFT_REACHED);
       }
     }
   }
@@ -117,9 +111,7 @@ export class UpdateAircraftStatusUseCase implements IUpdateAircraftStatusUseCase
   private validateStatusValue(status: string): void {
     const validStatuses = ["active", "inactive", "maintenance"];
     if (!validStatuses.includes(status)) {
-      throw new validationError(
-        AIRCRAFT_MESSAGES.INVALID_STATUS_VALUE(validStatuses)                  
-      );
+      throw new validationError(AIRCRAFT_MESSAGES.INVALID_STATUS_VALUE(validStatuses));
     }
   }
 
@@ -137,6 +129,7 @@ export class UpdateAircraftStatusUseCase implements IUpdateAircraftStatusUseCase
 
     this.validateStatusValue(data.status);
 
+    
     const [aircraft] = await Promise.all([
       this.validateOwnership(data.aircraftId, providerId),
       this.validateProvider(providerId),
@@ -148,13 +141,11 @@ export class UpdateAircraftStatusUseCase implements IUpdateAircraftStatusUseCase
 
     await this.checkUpcomingFlightsForStatusChange(data.aircraftId, data.status);
 
-    const updatedAircraft = await this._aircraftRepository.updateAircraft(
-      data.aircraftId,
-      { status: data.status }
-    );
+    const updatedAircraft = await this._aircraftRepository.updateAircraft(data.aircraftId, {
+      status: data.status,
+    });
     if (!updatedAircraft) throw new NotFoundError(AIRCRAFT_MESSAGES.NOT_FOUND);
 
-  
     return AircraftMapper.toAircraftDTO(updatedAircraft);
   }
 }

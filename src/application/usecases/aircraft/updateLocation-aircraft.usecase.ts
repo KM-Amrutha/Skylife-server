@@ -20,6 +20,7 @@ import { TYPES_REPOSITORIES, TYPES_AIRCRAFT_REPOSITORIES } from "@di/types-repos
 import { IUpdateAircraftLocationUseCase } from "@di/file-imports-index";
 import { AircraftMapper } from "@application/mappers/aircraftMapper";
 
+
 @injectable()
 export class UpdateAircraftLocationUseCase implements IUpdateAircraftLocationUseCase {
   constructor(
@@ -60,9 +61,7 @@ export class UpdateAircraftLocationUseCase implements IUpdateAircraftLocationUse
   }
 
 
-  private validateAircraftStatus(
-    aircraft: Awaited<ReturnType<IAircraftRepository["getAircraftById"]>>
-  ): void {
+  private validateAircraftStatus(aircraft: AircraftDetailsDTO): void {
     if (!aircraft) return;
 
     if (aircraft.status === "maintenance") {
@@ -104,14 +103,7 @@ export class UpdateAircraftLocationUseCase implements IUpdateAircraftLocationUse
     ]);
   }
 
-  private async logLocationChange(
-    aircraftId: string,
-    oldLocationId: string,
-    newLocationId: string,
-    providerId: string
-  ): Promise<void> {
-    // TODO: Implement when AuditLog module is ready
-  }
+ 
 
   async execute(
     providerId: string,
@@ -129,16 +121,18 @@ export class UpdateAircraftLocationUseCase implements IUpdateAircraftLocationUse
       throw new validationError(AIRCRAFT_MESSAGES.INVALID_DESTINATION_ID_FORMAT); 
     }
 
-    const [aircraft] = await Promise.all([
-      this.validateOwnership(data.aircraftId, providerId),
+   const aircraftEntity = await this.validateOwnership(data.aircraftId, providerId);
+    
+    await Promise.all([
       this.validateProvider(providerId),
       this.validateDestination(data.currentLocationId),
     ]);
+    const aircraftDTO = AircraftMapper.toAircraftDTO(aircraftEntity);
 
-    this.validateAircraftStatus(aircraft);
+    this.validateAircraftStatus(aircraftDTO);
 
     this.validateLocationChange(
-      aircraft.currentLocationId,
+      aircraftDTO.currentLocationId,
       data.currentLocationId
     );
 
@@ -149,13 +143,6 @@ export class UpdateAircraftLocationUseCase implements IUpdateAircraftLocationUse
       { currentLocationId: data.currentLocationId }
     );
     if (!updatedAircraft) throw new NotFoundError(AIRCRAFT_MESSAGES.NOT_FOUND);
-
-    await this.logLocationChange(
-      data.aircraftId,
-      aircraft.currentLocationId,
-      data.currentLocationId,
-      providerId
-    );
 
     
     return AircraftMapper.toAircraftDTO(updatedAircraft);

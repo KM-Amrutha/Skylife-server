@@ -38,23 +38,24 @@ export class DeleteFlightUseCase implements IDeleteFlightUseCase {
     if (!provider.isVerified) throw new ForbiddenError(AUTH_MESSAGES.ACCOUNT_NOT_VERIFIED);
   }
 
-  private async validateFlightOwnership(flightId: string, providerId: string) {
+  private async validateFlightOwnership(
+    flightId: string,
+    providerId: string
+  ): Promise<FlightDetailsDTO> {
     const flight = await this._flightRepository.getFlightDetails(flightId);
 
     if (!flight) throw new NotFoundError(FLIGHT_MESSAGES.NOT_FOUND);
     if (flight.providerId !== providerId) {
-      throw new ForbiddenError(FLIGHT_MESSAGES.DELETE_FORBIDDEN);  
+      throw new ForbiddenError(FLIGHT_MESSAGES.DELETE_FORBIDDEN);
     }
 
-    return flight;
+    return FlightMapper.toFlightDetailsDTO(flight);
   }
 
-  private validateFlightStatus(flight: Awaited<ReturnType<typeof this._flightRepository.getFlightDetails>>): void {
-    if (!flight) return;
-
+  private validateFlightStatus(flight: FlightDetailsDTO): void {
     if (flight.flightStatus !== "scheduled") {
       throw new validationError(
-        FLIGHT_MESSAGES.CANNOT_DELETE_NON_SCHEDULED(flight.flightStatus)  
+        FLIGHT_MESSAGES.CANNOT_DELETE_NON_SCHEDULED(flight.flightStatus)
       );
     }
 
@@ -74,7 +75,7 @@ export class DeleteFlightUseCase implements IDeleteFlightUseCase {
     }
 
     if (!flightId.match(/^[0-9a-fA-F]{24}$/)) {
-      throw new validationError(FLIGHT_MESSAGES.INVALID_FLIGHT_ID_FORMAT);   
+      throw new validationError(FLIGHT_MESSAGES.INVALID_FLIGHT_ID_FORMAT);
     }
 
     const [flight] = await Promise.all([
@@ -88,11 +89,9 @@ export class DeleteFlightUseCase implements IDeleteFlightUseCase {
     if (!deleted) throw new NotFoundError(FLIGHT_MESSAGES.NOT_FOUND);
 
     if (flight.aircraftId) {
-      await this._aircraftRepository.updateStatus(
-        flight.aircraftId.toString(),
-        "active"
-      );
+      await this._aircraftRepository.updateStatus(flight.aircraftId, "active");
     }
+
     return FlightMapper.toFlightDetailsDTO(deleted);
   }
 }
