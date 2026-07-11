@@ -6,12 +6,14 @@ Skylife is a full-stack aircraft ticket booking platform with three user roles: 
 Clean Architecture — 4 layers:
 strictly follows solid principles
  Presentation → Application → Domain → Infrastructure 
-Layer responsibilities:
+
+## Layer responsibilities:
+```
 Domain:           Entities + Repository Interfaces
-Application:      UseCases + DTOs + Mappers + Service Interfaces  
+Application:      UseCases + DTOs + Mappers + Service & Usecase Interfaces  
 Infrastructure:   Repos + Models + Services + Config + Jobs
 Presentation:     Controllers + Routes + Middlewares
-
+```
 ## 2. Tech Stack
 
 ### Backend
