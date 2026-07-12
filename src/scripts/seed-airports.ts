@@ -2,7 +2,7 @@ import fs from 'fs';
 import csv from 'csv-parser';
 import mongoose from 'mongoose';
 import DestinationModel from '../infrastructure/databases/models/destination.model';
-// import { IDestination } from '@domain/entities/destination.entity';
+
 import { find } from 'geo-tz';
 
 const BATCH_SIZE = 1000;

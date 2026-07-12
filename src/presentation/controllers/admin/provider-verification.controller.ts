@@ -4,7 +4,7 @@ import { injectable, inject } from "inversify";
 import { IGetPendingProvidersUseCase,
           IRejectProviderUseCase,
           IVerifyProviderUseCase,
-         } from "di/file-imports-index"
+         } from "@di/file-imports-index"
 
 import { TYPES_PROVIDER_USECASES } from "@di/types-usecases";
 import { StatusCodes } from "@shared/constants/http.status.codes";

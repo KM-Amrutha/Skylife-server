@@ -12,7 +12,7 @@ export interface CreateAircraftDTO {
   lavatoryCount: number;
   baseStationId: string;
   currentLocationId: string;
-  availableFrom: string; 
+  availableFrom: Date; 
   status: AircraftStatus;
 }
 
@@ -25,7 +25,7 @@ export interface UpdateAircraftDTO {
   lavatoryCount?: number;
   baseStationId?: string;
   currentLocationId?: string;
-  availableFrom?: string;
+  availableFrom?: Date;
   status?: AircraftStatus;
 }
 
@@ -50,7 +50,7 @@ export interface AircraftDetailsDTO {
   flyingRangeKm: number;
   engineCount: number;
   lavatoryCount: number;
-  availableFrom: string; 
+  availableFrom: Date; 
   baseStationId: string;
   currentLocationId: string;
   status: AircraftStatus;

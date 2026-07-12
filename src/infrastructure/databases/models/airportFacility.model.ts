@@ -1,4 +1,3 @@
-import { IAirportFacility } from "@domain/entities/airportFacility.entity";
 import mongoose, { Schema } from "mongoose";
 
 const airportFacilitySchema: Schema = new Schema(
@@ -33,7 +32,7 @@ const airportFacilitySchema: Schema = new Schema(
 airportFacilitySchema.index({ destinationId: 1 });
 airportFacilitySchema.index({ facilityType: 1 });
 
-const AirportFacilityModel = mongoose.model<IAirportFacility>(
+const AirportFacilityModel = mongoose.model(
   "AirportFacility",
   airportFacilitySchema
 );

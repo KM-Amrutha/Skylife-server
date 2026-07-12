@@ -76,7 +76,7 @@ export {CreateUserUseCase} from "@application/usecases/auth/create-user.usecases
 export {CheckUserBlockStatusUseCase} from "@application/usecases/auth/check-user-blockstatus.usecase";
 export {TokenUseCase} from "@application/usecases/auth/token.usecase";
 export {CreateProviderUseCase} from "@application/usecases/auth/create-provider.usecase";
-export {OtpUseCase} from "application/usecases/auth/otp.usecase";
+export {OtpUseCase} from "@application/usecases/auth/otp.usecase";
 export {SignInUseCase} from "@application/usecases/auth/signin-user.usecases";
 export {ForgotPasswordUseCase} from "@application/usecases/auth/forgot-password.usecase";
 export{SendPasswordRestLinkUseCase} from "@application/usecases/auth/send-password-reset-link.usecase";
@@ -104,7 +104,7 @@ export {GetAllProvidersUseCase} from "@application/usecases/admin/getAll-provide
 export {UpdateProviderStatusUseCase} from "@application/usecases/admin/update-providerStatus.usecase";
 export {GetAllUsersUseCase} from "@application/usecases/admin/getAll-users.usecase";
 export {UpdateUserStatusUseCase} from "@application/usecases/admin/update-usersStatus.usecase";
-export {GetAdminDashboardUseCase} from "application/usecases/admin/get-adminDashboard.usecase";
+export {GetAdminDashboardUseCase} from "@application/usecases/admin/get-adminDashboard.usecase";
 export {SetProviderCommissionUseCase} from "@application/usecases/admin/set-providerCommision.usecase";
 export {GetAdminWalletUseCase} from "@application/usecases/admin/get-adminWallet.usecase";
 
@@ -209,8 +209,8 @@ export {IGetPendingProvidersUseCase} from "@application/interfaces/usecase/admin
 export {IRejectProviderUseCase} from "@application/interfaces/usecase/admin/IRejectedProvider.usecase";
 export {IVerifyProviderUseCase} from "@application/interfaces/usecase/admin/IVerifyProvider.usecase";
 export {IUpdateUserStatusUseCase} from "@application/interfaces/usecase/admin/IUpdate-userStatus.usecase";
-export {IGetAdminDashboardUseCase} from "application/interfaces/usecase/admin/IGetAdminDashboard.usecase";
-export {ISetProviderCommissionUseCase} from "application/interfaces/usecase/admin/ISet-providerCommisionUsecase";
+export {IGetAdminDashboardUseCase} from "@application/interfaces/usecase/admin/IGetAdminDashboard.usecase";
+export {ISetProviderCommissionUseCase} from "@application/interfaces/usecase/admin/ISet-providerCommisionUsecase";
 export {IGetAdminWalletUseCase} from "@application/interfaces/usecase/admin/IGet-adminWalletUsecase";
 export {IToggleSeatBlockUseCase} from "@application/interfaces/usecase/aircraft/IToggle-seatBlockUsecase";
 export {IGetAircraftSeatsUseCase} from "@application/interfaces/usecase/aircraft/IGet-AricraftSeatsUsecase";
@@ -297,14 +297,14 @@ export {IDeleteFoodUseCase} from "@application/interfaces/usecase/food/IDelete-f
 
 //   Authentication Controllers 
 
-export {SignUpUserController} from "@presentation/controllers/auth/sign-up-user.constroller";
+export {SignUpUserController} from "@presentation/controllers/auth/sign-up-user.controller";
 export {SignUpProviderController} from "@presentation/controllers/auth/sign-up-provider.controller";
 export {OtpController} from "@presentation/controllers/auth/otp.controller";
 export {SignInController} from "@presentation/controllers/auth/sign-in.controller";
 export {SignOutController} from"@presentation/controllers/auth/sign-out.controller";
 export {RefreshAccessTokenController} from "@presentation/controllers/auth/refresh-access-token.controller";
 export {ForgotPasswordController} from "@presentation/controllers/auth/forget-password.controller";
-export {PasswordResetLinkController} from "presentation/controllers/auth/genereate-password-link.controller";
+export {PasswordResetLinkController} from "@presentation/controllers/auth/genereate-password-link.controller";
 export {GoogleAuthController} from "@presentation/controllers/auth/google-auth.controller"; 
 export {ChangePasswordController} from "@presentation/controllers/auth/change-password.controller"
 
@@ -317,7 +317,7 @@ export {GetAllUsersController} from "@presentation/controllers/admin/get-allUser
 export {UpdateUserStatusController} from "@presentation/controllers/admin/update-userStatus.controller";
 export {GetAdminDashboardController} from "@presentation/controllers/admin/get-adminDashboard.controller";
 export {SetProviderCommissionController} from "@presentation/controllers/admin/set-providerCommission.controller";
-export {GetAdminWalletController} from "@presentation/controllers/admin/get-adminWallet.controllers";
+export {GetAdminWalletController} from "@presentation/controllers/admin/get-adminWallet.controller";
  
 // Provider Controllers
 export {CompleteProviderProfileController} from "@presentation/controllers/provider/completeProviderProfile.controller";
@@ -399,5 +399,5 @@ export {UpdateFoodController} from "@presentation/controllers/food/updateFood.co
 export {DeleteFoodController} from "@presentation/controllers/food/deleteFood.controller";
 export {GetFoodsByProviderController} from "@presentation/controllers/food/getFoodsByProvider.controller";
 export {GetFoodsByAircraftController} from "@presentation/controllers/food/getFoodsByAricraft.controller";
-export {FoodStatusChangeController} from "presentation/controllers/food/foodStatusChange.controller";
+export {FoodStatusChangeController} from "@presentation/controllers/food/foodStatusChange.controller";
 

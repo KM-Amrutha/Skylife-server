@@ -14,7 +14,7 @@ export class AircraftMapper {
       flyingRangeKm: aircraft.flyingRangeKm,
       engineCount: aircraft.engineCount,
       lavatoryCount: aircraft.lavatoryCount,
-      availableFrom: aircraft.availableFrom.toISOString(),
+      availableFrom: aircraft.availableFrom,
       baseStationId: aircraft.baseStationId,
       currentLocationId: aircraft.currentLocationId,
       status: aircraft.status,

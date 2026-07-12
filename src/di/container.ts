@@ -28,11 +28,11 @@ import { TYPES_AUTH_USECASES,
          TYPES_WALLET_USECASES
         } 
          from "@di/types-usecases";
-import { TYPES_SERVICES } from "di/types-services"
+import { TYPES_SERVICES } from "@di/types-services"
 
 import { TYPES_REPOSITORIES,
      TYPES_AIRCRAFT_REPOSITORIES,
-      TYPES_BOOKING_REPOSITORIES }   from "di/types-repositories"
+      TYPES_BOOKING_REPOSITORIES }   from "@di/types-repositories"
 
 import {
 UserRepository,
