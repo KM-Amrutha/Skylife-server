@@ -1,8 +1,6 @@
 services:
   app:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: amruthakm777/skylife-backend:latest
     container_name: skylife-backend
     restart: unless-stopped
     ports:

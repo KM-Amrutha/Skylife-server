@@ -15,6 +15,7 @@ import rateLimiter from "@presentation/middlewares/ratelimit.middleware";
 import { handleWebhookController } from "@di/container-resolver";
 
 const app = express();
+app.set("trust proxy", 1);
 
 // ── stripe webhook — raw body MUST come before express.json() ──────────────
 app.post(
